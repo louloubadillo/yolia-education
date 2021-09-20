@@ -30,7 +30,6 @@ body{
 .nav ol {
     display: flex;
     list-style-type: none;
-
 }
 
 .nav li {
@@ -117,4 +116,9 @@ body{
 .grade-title .fa-stack { 
     font-size: 1.7em;
     align-self: center;
+}
+
+.fa-stack:hover{ 
+    width: 100%;
+    font-size: 2em;
 }
