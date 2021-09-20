@@ -20,6 +20,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    background-color: hsl(195, 41%, 77%)
 }
 
 .nav img {
@@ -54,7 +55,7 @@ body{
 
 .description{
     background-color: rgb(218, 218, 218);
-    color: #474747;
+    color: #0C366B;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -85,6 +86,7 @@ body{
 .grade ul{
     list-style-position: inside;
     list-style-type: none;
+    color:#0C366B;
 }
 
 .grade ul li {
@@ -113,10 +115,12 @@ body{
     display: flex;
     justify-content: center;
     align-content: center;
+    color:#0C366B;
 }
 
 .grade-title{
     width: 100%;
+    padding:10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -132,4 +136,9 @@ body{
 #index-grades:hover{ 
     width: 100%;
     font-size: 2em;
+}
+
+hr{
+    border-color: #92C9DB;
+    border-width: .1px;
 }
