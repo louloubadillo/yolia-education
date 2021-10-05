@@ -180,3 +180,18 @@ hr{
     border-color: #92C9DB;
     border-width: .1px;
 }
+
+.boton-ejercicio{
+    padding: .5em;
+    background-color: darkcyan;
+    font-size: 13px;
+    margin-right: 5px;
+    border-radius: 6px;
+    color: white;
+    border-color: #0C366B;
+}
+
+.boton-ejercicio:hover{
+    background-color: #0C366B;
+    border-color: darkcyan;
+}
