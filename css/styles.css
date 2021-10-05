@@ -1,3 +1,13 @@
+/*
+Colores
+#fca546
+#ffbf01
+#25ac8a
+#4f7bca
+#d0b8ed
+#ff8ca7
+*/
+
 *{
     margin: 0;
     padding: 0; 
@@ -20,7 +30,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color: hsl(195, 41%, 77%)
+    background-color: hsl(0, 0%, 98%)
 }
 
 .nav img {
@@ -113,10 +123,38 @@ body{
     margin: 2vh 0;
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-content: center;
+    flex-direction: column;
     color:#0C366B;
+    text-align: center;
 }
+
+.ejercicios{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+ejercicio-a-contar{
+    margin: 2vh 4vw; 
+    max-width: 250px;
+}
+
+ejercicio-figuras{
+    margin: 2vh 4vw; 
+    max-width: 250px;
+}
+
+ejercicio-figuras-esp{
+    margin: 2vh 4vw; 
+    max-width: 250px;
+}
+
+ejercicio-numeros{
+    margin: 2vh 4vw; 
+    max-width: 250px;
+}
+
+
 
 .grade-title{
     width: 100%;
