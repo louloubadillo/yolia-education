@@ -142,3 +142,34 @@ hr{
     border-color: #92C9DB;
     border-width: .1px;
 }
+
+.pregunta {
+    display: flex;
+    align-self: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.pregunta input::-webkit-outer-spin-button,
+.pregunta input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+.pregunta input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.pregunta div {
+    text-align: right;
+    padding: 0.8em;
+    margin: 0.5em;
+}
+
+.pregunta input {
+    background-color: #ffffffdd;
+    border-radius: 5px;
+    border: solid grey 2px;
+    font: inherit;
+}
