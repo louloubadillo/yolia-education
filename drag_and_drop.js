@@ -27,10 +27,16 @@ function dragEnter(event) {
 
 function dragOver(event) {
     event.preventDefault();
+    if(!event.target.classList.contains("correct")) {
+        event.target.style.removeProperty("background-color");
+        event.target.classList.add("drag-enter");
+    }
 }
 
 function dragLeave(event) {
-    event.target.classList.remove("drag-enter");
+    if(!event.target.classList.contains("correct")) {
+        event.target.classList.remove("drag-enter");
+    }
 }
 
 function drop(event) {
@@ -43,12 +49,11 @@ function drop(event) {
         // Change value of text content (but not ID, otherwise they'll be harder to verify)
         if(draggableElementId !== droppableElementId) {
             const draggableElement = document.getElementById(draggableElementId);
-            const droppableElementBgColor = event.target.style.backgroundColor;
             const droppableElementTextContent = event.target.textContent;
             
-            event.target.style.backgroundColor = draggableElement.style.backgroundColor;
+            event.target.classList.add('dropped');
             event.target.textContent = draggableElement.textContent;
-            draggableElement.style.backgroundColor = droppableElementBgColor;
+            draggableElement.classList.add('dropped');
             draggableElement.textContent = droppableElementTextContent;
         }
     }
