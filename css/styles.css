@@ -15,7 +15,7 @@ Colores
 }
 
 html{
-    background-color: white;
+    background-color: rgb(248, 229, 232);
     /* font-family: 'Poppins', sans-serif; */
     font-family: 'Merriweather Sans', sans-serif;
 }
@@ -30,7 +30,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color: hsl(0, 0%, 98%)
+    background-color: hsl(195, 41%, 77%);
 }
 
 .nav img {
