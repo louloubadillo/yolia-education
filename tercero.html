@@ -8,8 +8,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;800&display=swap" rel="stylesheet"> 
         <script src="tercero_respuestas.js"></script>
+        <script src="drag_and_drop.js" defer></script>
     </head>
     <body>
         <div class="nav">
@@ -37,18 +38,42 @@
             <div class="tema">
                 <h3>Sumas</h3>
             </div>
+            <p>Ayuda a Juan a ordenar y resolver las siguientes sumas. Arrastra los números para indicar el menor con 1 y el mayor con 5.</p>
             <div class="pregunta" id="S1Q1">
                 <div>
-                    <label class="sumas" for="q1.1">543 <br> + 2395 <br> 32 <br></label>
-                    <input type="number" id="q1.1" style="text-align: right; width: 5em;"> <br>
+                    <div>
+                        <label class="sumas" for="q1.1">543 <br> + 2395 <br> 32 <br></label>
+                        <input type="number" id="q1.1" style="text-align: right; width: 5em;">
+                    </div>
+                    <div draggable="true" class="mover" id="no1">1</div>
                 </div>
                 <div>
-                    <label class="sumas" for="q1.2">8 <br> + 762 <br> 3456 <br></label>
-                    <input type="number" id="q1.2" style="text-align: right; width: 5em;"> <br>
+                    <div>
+                        <label class="sumas" for="q1.2">8 <br> + 762 <br> 3456 <br></label>
+                        <input type="number" id="q1.2" style="text-align: right; width: 5em;">
+                    </div>
+                    <div draggable="true" class="mover" id="no2">2</div>
                 </div>
                 <div>
-                    <label class="sumas" for="q1.3">1567 <br> + 3459 <br> 237 <br></label>
-                    <input type="number" id="q1.3" style="text-align: right; width: 5em;"> <br>
+                    <div>
+                        <label class="sumas" for="q1.3">1567 <br> + 3459 <br> 237 <br></label>
+                        <input type="number" id="q1.3" style="text-align: right; width: 5em;">
+                    </div>
+                    <div draggable="true" class="mover" id="no3">3</div>
+                </div>
+                <div>
+                    <div>
+                        <label class="sumas" for="q1.4">48 <br> + 874 <br> 2865 <br></label>
+                        <input type="number" id="q1.4" style="text-align: right; width: 5em;">
+                    </div>
+                    <div draggable="true" class="mover" id="no4">4</div>
+                </div>
+                <div>
+                    <div>
+                        <label class="sumas" for="q1.5">23 <br> + 582 <br> 7692 <br></label>
+                        <input type="number" id="q1.5" style="text-align: right; width: 5em;">
+                    </div>
+                    <div draggable="true" class="mover" id="no5">5</div>
                 </div>
                 <button onclick="checkAnswers('#S1Q1')">Check!</button>
             </div>
