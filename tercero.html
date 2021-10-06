@@ -7,7 +7,8 @@
         <link rel="stylesheet" href="css/styles.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+        <script src="https://kit.fontawesome.com/b300d4e394.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;800&display=swap" rel="stylesheet"> 
         <script src="tercero.js" defer></script>
         <script src="drag_and_drop.js" defer></script>
@@ -40,7 +41,7 @@
             </div>
             <div class="seccion" id="seccion1">
                 <p class="pregunta-texto">
-                    Ayuda a Juan a ordenar y resolver las siguientes sumas. Arrastra los recuadros para indicar el mayor con 1 y el menor con 5.
+                    Ayuda a Juan a ordenar y resolver las siguientes sumas. Arrastra los circulitos para indicar el mayor con 1 y el menor con 5.
                 </p>
                 <div class="pregunta">
                     <div>
@@ -80,7 +81,27 @@
                     </div>
                 </div>
                 
-                <p class="pregunta-texto"></p>
+                <p class="pregunta-texto">
+                    A un maratón asistieron 534 mujeres y 723 hombres. ¿Cuántas personas participaron en el maratón?
+                </p>
+                <div class="pregunta">
+                    <div>
+                        <i class="fas fa-female" style="font-size: 20vh; color: #FFBF01;"></i>
+                        <p>534</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-male" style="font-size: 20vh; color: #25AC8A;"></i>
+                        <p>723</p>
+                    </div>
+                    <div>
+                        <div class="parte">
+                            <label class="sumas" for="q1.6">534 <br> + 723 <br></label>
+                            <input type="number" id="q1.6">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="auto1"></div>
             </div>
             <button onclick="checkAnswers('#seccion1')">Check!</button>
             
