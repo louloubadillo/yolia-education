@@ -143,11 +143,19 @@ hr{
     border-width: .1px;
 }
 
+.pregunta-texto {
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+}
+
 .pregunta {
     display: flex;
     align-self: center;
     flex-wrap: wrap;
     justify-content: center;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -162,12 +170,11 @@ hr{
 }
 
 .pregunta div {
-    text-align: right;
     padding: 0.8em;
     margin: 0.5em;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    justify-content: center;
 }
 
 .pregunta input {
@@ -179,23 +186,29 @@ hr{
     padding-right: 0.2em;
 }
 
+.parte {
+    border-radius: 10px;
+}
+
 .sumas {
     text-align: right;
     width: 5em;
     padding-right: 0.2em;
     border-bottom: solid 1px;
     margin-bottom: 3px;
+    padding-bottom: 3px;
 }
 
 .mover {
     cursor: grab;
     width: 3em;
     height: 3em;
-    border: solid black 2px;
     align-self: center;
     text-align: center;
     user-select: none;
     margin: 0;
+    background-color: #d5d7e4;
+    border-radius: 100%;
 }
 
 .drag-start {

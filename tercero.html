@@ -38,45 +38,50 @@
             <div class="tema">
                 <h3>Sumas</h3>
             </div>
-            <p>Ayuda a Juan a ordenar y resolver las siguientes sumas. Arrastra los números para indicar el menor con 1 y el mayor con 5.</p>
-            <div class="pregunta" id="S1Q1">
-                <div>
+            <div class="seccion" id="seccion1">
+                <p class="pregunta-texto">Ayuda a Juan a ordenar y resolver las siguientes sumas. Arrastra los recuadros para indicar el mayor con 1 y el menor con 5.</p>
+                <div class="pregunta" id="S1Q1">
                     <div>
-                        <label class="sumas" for="q1.1">543 <br> + 2395 <br> 32 <br></label>
-                        <input type="number" id="q1.1" style="text-align: right; width: 5em;">
+                        <div class="parte">
+                            <label class="sumas" for="q1.1">543 <br> + 2395 <br> 32 <br></label>
+                            <input type="number" id="q1.1" style="text-align: right; width: 5em;">
+                        </div>
+                        <div draggable="true" class="mover" id="no1">1</div>
                     </div>
-                    <div draggable="true" class="mover" id="no1">1</div>
-                </div>
-                <div>
                     <div>
-                        <label class="sumas" for="q1.2">8 <br> + 762 <br> 3456 <br></label>
-                        <input type="number" id="q1.2" style="text-align: right; width: 5em;">
+                        <div class="parte">
+                            <label class="sumas" for="q1.2">8 <br> + 762 <br> 3456 <br></label>
+                            <input type="number" id="q1.2" style="text-align: right; width: 5em;">
+                        </div>
+                        <div draggable="true" class="mover" id="no2">2</div>
                     </div>
-                    <div draggable="true" class="mover" id="no2">2</div>
-                </div>
-                <div>
                     <div>
-                        <label class="sumas" for="q1.3">1567 <br> + 3459 <br> 237 <br></label>
-                        <input type="number" id="q1.3" style="text-align: right; width: 5em;">
+                        <div class="parte">
+                            <label class="sumas" for="q1.3">1567 <br> + 3459 <br> 237 <br></label>
+                            <input type="number" id="q1.3" style="text-align: right; width: 5em;">
+                        </div>
+                        <div draggable="true" class="mover" id="no3">3</div>
                     </div>
-                    <div draggable="true" class="mover" id="no3">3</div>
-                </div>
-                <div>
                     <div>
-                        <label class="sumas" for="q1.4">48 <br> + 874 <br> 2865 <br></label>
-                        <input type="number" id="q1.4" style="text-align: right; width: 5em;">
+                        <div class="parte">
+                            <label class="sumas" for="q1.4">48 <br> + 874 <br> 2865 <br></label>
+                            <input type="number" id="q1.4" style="text-align: right; width: 5em;">
+                        </div>
+                        <div draggable="true" class="mover" id="no4">4</div>
                     </div>
-                    <div draggable="true" class="mover" id="no4">4</div>
-                </div>
-                <div>
                     <div>
-                        <label class="sumas" for="q1.5">23 <br> + 582 <br> 7692 <br></label>
-                        <input type="number" id="q1.5" style="text-align: right; width: 5em;">
+                        <div class="parte">
+                            <label class="sumas" for="q1.5">23 <br> + 582 <br> 7692 <br></label>
+                            <input type="number" id="q1.5" style="text-align: right; width: 5em;">
+                        </div>
+                        <div draggable="true" class="mover" id="no5">5</div>
                     </div>
-                    <div draggable="true" class="mover" id="no5">5</div>
                 </div>
-                <button onclick="checkAnswers('#S1Q1')">Check!</button>
+                
+                <p class="pregunta-texto"></p>
             </div>
+            <button onclick="checkAnswers('#seccion1')">Check!</button>
+            
             <hr>
             <div class="tema">
                 <h3>Restas</h3>

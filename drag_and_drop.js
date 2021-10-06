@@ -20,7 +20,7 @@ function dragEnd(event) {
 }
 
 function dragEnter(event) {
-    if(!event.target.classList.contains("dropped")) {
+    if(!event.target.classList.contains("correct")) {
         event.target.classList.add("drag-enter");
     }
 }
@@ -39,7 +39,7 @@ function drop(event) {
     const draggableElementId = event.dataTransfer.getData("text");
     const droppableElementId = event.target.id;
 
-    if(!event.target.classList.contains("dropped")) {
+    if(!event.target.classList.contains("correct")) {
         // Change value of text content (but not ID, otherwise they'll be harder to verify)
         if(draggableElementId !== droppableElementId) {
             const draggableElement = document.getElementById(draggableElementId);
