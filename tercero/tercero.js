@@ -99,14 +99,10 @@ function checkAnswers(id) {
     scoreDiv.classList.add('report');
     scoreDiv.innerHTML = `${correctAmt}/${totalAmt}`;
     currSection.appendChild(scoreDiv);
-    if(correctAmt == totalAmt) {
-        alert('Felicidades!')
-    }
 }
 
 function addOperation(key, ints, sign, prgn) {
     prgn.className = 'pregunta';
-    prgn.style = 'padding-top: 0.5em;';
     prgn.style.flexDirection = 'column';
     prgn.style.backgroundColor = key[key.length-1]%2 == 0 ? '#f8f8f8' : '#fff';
 
