@@ -117,8 +117,10 @@ body{
     justify-content: center;
     align-content: center;
     flex-direction: column;
-    color:#0C366B;
     text-align: center;
+}
+.tema h3 {
+    color:#0C366B;
 }
 
 .grade-title{
@@ -153,8 +155,7 @@ hr{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 1.5em;
-    color: black;
+    padding-top: 1em;
 }
 .pregunta-texto i {
     width: 2em;
@@ -174,6 +175,9 @@ hr{
     flex-direction: column;
     align-items: center;
 }
+.pregunta-texto:first-child {
+    margin-top: 2vh;
+}
 
 .pregunta {
     display: flex;
@@ -183,7 +187,6 @@ hr{
     padding-left: 5%;
     padding-right: 5%;
     margin-bottom: 1em;
-    color: black;
 }
 /* Chrome, Safari, Edge, Opera */
 .pregunta input::-webkit-outer-spin-button,
