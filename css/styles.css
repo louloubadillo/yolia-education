@@ -120,8 +120,8 @@ body{
 }
 
 .tema{
-    margin: 2vh 0;
     width: 100%;
+    padding: 2vh 0;
     display: flex;
     flex-direction: column;
     color:#0C366B;
@@ -154,7 +154,20 @@ ejercicio-numeros{
     max-width: 250px;
 }
 
+ejercicio-agrupemos{
+    margin: 2vh 4vw; 
+    max-width: 250px;
+}
 
+ejercicio-clasificar{
+    margin: 2vh 4vw; 
+    max-width: 250px;
+}
+
+ejercicio-simbolos{
+    margin: 2vh 4vw; 
+    max-width: 250px;
+}
 
 .grade-title{
     width: 100%;
