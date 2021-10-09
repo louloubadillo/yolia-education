@@ -16,139 +16,139 @@ function getRandom(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
 
-function checkAnswers(id) {
-    let currSection = document.querySelector(id);
+function checkBasic(id) {
+    let currQuestion = document.getElementById(id);
+    let intentos = parseInt(currQuestion.getAttribute('intentos'));
 
-    // Select all questions
-    let questions = currSection.querySelectorAll('.pregunta');
     let totalAmt = 0;
     let correctAmt = 0;
 
-    for (let i = 0; i < questions.length; i++) {
-        // Get inputs from each question
-        let a = Array.from(questions[i].querySelectorAll('input')).reduce((acc, input) => ({...acc, [input.id]: input.value}), {});        
-        
-        // Check if inputs are correct
-        for (const key in a) {
-            let ele = document.getElementById(key);
-            if (z.isCorrect(key, a[key])) {
-                ele.parentNode.style.backgroundColor = '#b4f7b7';
-                ele.setAttribute("disabled", "");
-                ele.style.background = '#fff0'
-                ele.style.color = 'black';
-                ele.style.fontWeight = 'bolder';
-                ele.parentNode.classList.remove("incorrect");
-                correctAmt++;
-            } else {
-                ele.parentNode.classList.add("incorrect");
-            }
-            ele.style.borderColor = "#fff0";
-            totalAmt++;
-        }
-
-        // Select mover elements (if there are any)
-        let movers = questions[i].querySelectorAll('.mover');
+    let a = Array.from(currQuestion.querySelectorAll('input')).reduce((acc, input) => ({...acc, [input.id]: input.value}), {});        
     
-        // Check if movers are correct
-        if (movers.length) {
-            let b = Array.from(movers).reduce((acc, div) => ({...acc, [div.id]: div.textContent}), {});
-        
-            for (const key in b) {
-                let ele = document.getElementById(key);
-                totalAmt++;
-                if (z.isCorrect(key, b[key])) {
-                    ele.style.backgroundColor = '#b4f7b7';
-                    ele.style.cursor = "default";
-                    ele.setAttribute("draggable", "false");
-                    ele.classList.add("correct");
-                    ele.classList.remove("incorrect");
-                    correctAmt++;
-                } else {
-                    ele.classList.add("incorrect");
-                    ele.classList.remove("dropped")
-                }
-            }
-        }
-
-        // Add symbol depending on amount of correct answers
-        let icon = questions[i].previousElementSibling.querySelector('i')
-        if(icon == null) {
-            icon = document.createElement('i');
-            icon.setAttribute("aria-hidden","true");
-        }
-
-        if (questions[i].querySelectorAll('.incorrect').length == 0) {
-            icon.className = 'fa fa-check';
-            icon.style.backgroundColor = '#25AC8A';
-            // Color question block accordingly
-            questions[i].style.backgroundColor = '#9fff9f77';
-            questions[i].previousElementSibling.style.backgroundColor = '#9fff9f77';
+    // Check if inputs are correct
+    for (const key in a) {
+        let ele = document.getElementById(key);
+        if (z.isCorrect(key, a[key])) {
+            ele.parentNode.style.backgroundColor = '#b4f7b7';
+            ele.setAttribute("disabled", "");
+            ele.style.background = '#fff0'
+            ele.style.color = 'black';
+            ele.style.fontWeight = 'bolder';
+            ele.parentNode.classList.remove("incorrect");
+            correctAmt++;
         } else {
-            icon.className = 'fa fa-times';
-            icon.style.backgroundColor = '#FF0076';
-            // Color question block accordingly
-            // questions[i].style.backgroundColor = '#f997';
-            // questions[i].previousElementSibling.style.backgroundColor = '#f997';
+            ele.parentNode.classList.add("incorrect");
         }
-        questions[i].previousElementSibling.children[0].append(icon);
-        // questions[i].previousElementSibling.prepend(icon);
+        ele.style.borderColor = "#fff0";
+        totalAmt++;
     }
 
-    // Show score for section
-    let scoreDiv = document.createElement('div');
-    scoreDiv.classList.add('report');
-    scoreDiv.innerHTML = `${correctAmt}/${totalAmt}`;
-    currSection.appendChild(scoreDiv);
+    // Select mover elements (if there are any)
+    let movers = currQuestion.querySelectorAll('.mover');
+
+    // Check if movers are correct
+    if (movers.length) {
+        let b = Array.from(movers).reduce((acc, div) => ({...acc, [div.id]: div.textContent}), {});
+    
+        for (const key in b) {
+            let ele = document.getElementById(key);
+            totalAmt++;
+            if (z.isCorrect(key, b[key])) {
+                ele.style.backgroundColor = '#b4f7b7';
+                ele.style.cursor = "default";
+                ele.setAttribute("draggable", "false");
+                ele.classList.add("stiff");
+                ele.classList.remove("incorrect");
+                correctAmt++;
+            } else {
+                ele.classList.add("incorrect");
+                ele.classList.remove("dropped")
+            }
+        }
+    }
+
+    // Add symbol depending on amount of correct answers
+    let icon = currQuestion.children[0].querySelector('i')
+    if(icon == null) {
+        icon = document.createElement('i');
+        icon.setAttribute("aria-hidden","true");
+    }
+    
+    // let icon = document.createElement('i');
+    // icon.setAttribute("aria-hidden","true");
+
+    if (correctAmt == totalAmt) {
+        icon.className = 'fa fa-check';
+        icon.style.backgroundColor = '#25AC8A';
+        currQuestion.style.backgroundColor = '#9fff9f77';
+        currQuestion.setAttribute('score', correctAmt/totalAmt + intentos*0.1);
+
+        // Disable check button
+        currQuestion.children[2].style.display = "none";
+    } else {
+        icon.className = 'fa fa-times';
+        icon.style.backgroundColor = '#FF0076';
+        currQuestion.setAttribute('intentos', intentos-1);
+    }
+        
+    if (intentos == 0) {
+        // Disable check button
+        currQuestion.children[2].style.display = "none";
+
+        // Add icon
+        icon.className = "fas fa-heart-broken";
+
+        
+        // Show correct answers
+        currQuestion.querySelectorAll('.incorrect').forEach(el => {
+            el.setAttribute('draggable', 'false');
+            el.classList.add('stiff');
+            let inpt = el.children[1];
+            inpt.setAttribute("disabled", "true");
+            inpt.value = z.getAnswer(inpt.getAttribute('id'));
+            inpt.style.color = 'black';
+            inpt.style.fontWeight = 'bolder';
+            inpt.style.background = '#fff0';
+        });
+    }
+
+    currQuestion.children[0].children[0].append(icon);
 }
 
-function addOperation(key, ints, sign, prgn) {
-    prgn.className = 'pregunta';
-    prgn.style.flexDirection = 'column';
-    prgn.style.backgroundColor = key[key.length-1]%2 == 0 ? '#f8f8f8' : '#fff';
-
-    let part = document.createElement('div');
-    part.className = 'parte';
-
-    let lbl = document.createElement('label');
-    lbl.className = 'sumas';
-    lbl.setAttribute('for', key);
+function addOperation(key, ints, sign) {
     let oprt = '';
     for (let i = 0; i < ints.length-1; i++) {
         oprt += ints[i] + '<br>'
     }
     oprt += sign + ' ' + ints[ints.length-1];
-    lbl.innerHTML = oprt;
 
-    let inpt = document.createElement('input');
-    inpt.type = 'number';
-    inpt.id = key;
+    let part =
+    `<div class="parte">
+        <label class="sumas" for="${key}">${oprt}</label>
+        <input type="number" id="${key}">
+    </div>`
 
-    let cnt = document.createElement('div');
-    cnt.appendChild(part);
-
-    part.appendChild(lbl);
-    part.appendChild(inpt);
-    return cnt;
-}
-
-function addQuestionName() {
-    let sections = document.querySelectorAll('.seccion');
-
-    for (let i = 0; i < sections.length; i++) {
-        let questions = sections[i].querySelectorAll('.pregunta-texto');
-        let x = 1;
-
-        for (let j = 0; j < questions.length; j++, x++) {
-            let ele = document.createElement('h4');
-            ele.innerHTML = `Pregunta ${x}`;
-            questions[j].prepend(ele);
-        }
+    // Save answer
+    let k = 0;
+    switch (sign) {
+        case "+":
+            ints.forEach(el => { k += el; });
+            break;
+        case "-":
+            k = ints[0];
+            for (let i = 1; i < ints.length; i++) { k -= ints[i]; }
+            break;
+        default:
+            break;
     }
+    z.setAnswer(key, k);
+
+    return part;
 }
 
-function addBasic(data, key, currDiv) {
+function addBasic(data, key, i, qID) {
     let ints = [];
-        
+    
     let img = document.createElement('div');
     img.style.flexDirection = "row";
     img.style.paddingBottom = 0;
@@ -162,15 +162,8 @@ function addBasic(data, key, currDiv) {
         let randInt = getRandom(data[2][i][1], data[2][i][2]);
         ints.push(randInt);
         text = text.replace(data[2][i][0], randInt);
-
-        // Generate amount of images necessary
-        let dv = document.createElement('div');
-        let img_i = document.createElement('i');
-        img_i.className = data[4][i];
         let sty = `color: ${colors[getRandom(0,colors.length)]};`;
-        let caption = document.createElement('p');
-        caption.innerHTML = randInt;
-
+        
         // If any image has a particular styling
         if(data[5] != undefined) {
             for (let j = 0; j < data[5].length; j++) {
@@ -178,60 +171,80 @@ function addBasic(data, key, currDiv) {
             }
         }
 
-        img_i.style = sty;
+        let image = 
+        `<div>
+            <i class="${data[4][i]}" style="${sty}"></i>
+            <p>${randInt}</p>
+        </div>`;
 
-        dv.appendChild(img_i);
-        dv.appendChild(caption);
-        img.appendChild(dv);
+        img.innerHTML += image;
     }
 
     let txtDiv = document.createElement('p');
     txtDiv.className = 'pregunta-texto';
-    txtDiv.innerHTML = text;
-    txtDiv.style.backgroundColor = key[key.length-1]%2 == 0 ? '#f8f8f8' : '#fff';
+    txtDiv.innerHTML = `<h4>Pregunta ${i}</h4>${text}`;
 
-    currDiv.appendChild(txtDiv);
     let prgn = document.createElement('div');
-    let cnt = addOperation(key, ints, data[3], prgn);
+    prgn.className = 'pregunta-cont';
+    prgn.style.flexDirection = 'column';
+    
+    let cnt = document.createElement('div');
+    cnt.innerHTML = addOperation(key, ints, data[3]);
+    cnt.style.padding = '0';
     
     prgn.appendChild(img);
     prgn.appendChild(cnt);
-    currDiv.appendChild(prgn);
+    
+    let finalCnt = document.createElement('div');
+    finalCnt.className = 'pregunta';
+    finalCnt.id = qID;
+    finalCnt.setAttribute('intentos', 2);
+    finalCnt.setAttribute('score', 0);
+    finalCnt.appendChild(txtDiv);
+    finalCnt.appendChild(prgn);
 
-    // Save answer
-    let k = 0;
-    switch (data[3]) {
-        case "+":
-            for(const i in ints) { k += ints[i]; }
-            break;
-        case "-":
-            k = ints[0];
-            for (let i = 1; i < ints.length; i++) { k -= ints[i]; }
-            break;
-        default:
-            break;
-    }
-    z.setAnswer(key, k);
+    return finalCnt;
 }
 
-function addSort() {
-    
+function addSort(data, currDiv) {
+    let ints = [];
+
+    for (let i = 0; i < data[3].length; i++) {
+        // Generate random numbers and add them to the text
+        let randInt = getRandom(data[2][i][1], data[2][i][2]);
+        ints.push(randInt);
+    }
+
+    // <div>
+    //     addOperation
+    //     <div draggable="true" class="mover" id="no5">5</div>
+    // </div>
 }
 
 function addQuestions(index, id) {
     let preguntas = z.getSection(index);
     let currDiv = document.getElementById(id);
-
+    
+    let i = 1;
+    
     for (const key in preguntas) {
+        let qID = `${id}-${i}`;
+
+        let button = document.createElement('button');
+        button.innerText = "Check!";
+        button.style.width = "5em";
+        
         switch (preguntas[key][0]) {
             case "basic":
-                addBasic(preguntas[key], key, currDiv);
+                button.setAttribute('onclick', `checkBasic('${qID}')`);
+                currDiv.append(addBasic(preguntas[key], key, i, qID));
                 break;
         
             default:
                 break;
         }
-    }
 
-    addQuestionName()
+        currDiv.lastElementChild.append(button);
+        i++;
+    }
 }
