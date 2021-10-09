@@ -9,6 +9,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet"> 
+        <script src="cuarto-js/cuarto-1.js" defer></script>
+        <script src="cuarto-js/cuarto-2.js" defer></script>
     </head>
     <body>
         <div class="nav">
@@ -36,21 +38,27 @@
             <div class="tema">
                 <h3>Líneas poligoniales</h3>
                 <p style="margin-top: 10px;">Observa las siguientes figuras. Señala qué clase de línea poligonial es</p>
+                <p style="margin-top: 10px; color: red; font-weight: bold;" id=tries1>Intentos restantes: 3</p>
                 <div class="ejercicios">
-                    <ejercicio-figuras>
-                        <img src="images/línea-poligonal-abierta-1.png"/>
-                        <button type="button" class="boton-ejercicio">Poligonal abierta</button>
-                        <button type="button" class="boton-ejercicio">Poligonal cerrada</button>
+                    <ejercicio-figuras id="p1">
+                        <img class="poligonales" src="images/línea-poligonal-abierta-1.png"/>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers1('p1.1')">Poligonal abierta</button>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers1('p1.2')">Poligonal cerrada</button>
                     </ejercicio-figuras>
-                    <ejercicio-figuras>
-                        <img src="images/línea-poligonal-cerrada-2.png"/>
-                        <button type="button" class="boton-ejercicio">Poligonal abierta</button>
-                        <button type="button" class="boton-ejercicio">Poligonal cerrada</button>
+                    <ejercicio-figuras id="p2">
+                        <img class="poligonales" src="images/línea-poligonal-cerrada-2.png"/>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers1('p2.2')">Poligonal abierta</button>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers1('p2.1')">Poligonal cerrada</button>
                     </ejercicio-figuras>
-                    <ejercicio-figuras>
-                        <img src="images/línea-poligonal-abierta-2.png"/>
-                        <button type="button" class="boton-ejercicio">Poligonal abierta</button>
-                        <button type="button" class="boton-ejercicio">Poligonal cerrada</button>
+                    <ejercicio-figuras id="p3">
+                        <img class="poligonales" src="images/línea-poligonal-abierta-2.png"/>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers1('p3.1')">Poligonal abierta</button>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers1('p3.2')">Poligonal cerrada</button>
+                    </ejercicio-figuras>
+                    <ejercicio-figuras id="p4">
+                        <img class="poligonales" src="images/línea-poligonal-cerrada-1.png"/>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers1('p4.2')">Poligonal abierta</button>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers1('p4.1')">Poligonal cerrada</button>
                     </ejercicio-figuras>
                 </div>
             </div>
@@ -59,25 +67,41 @@
                 <h3>Polígonos</h3>
                 <p style="margin-top: 10px;">En cada una de las siguientes figuras señala el número de lados y vértices</p>
                 <div class="ejercicios">
-                    <ejercicio-figuras>
+                    <ejercicio-figuras id="p5">
                         <img src="images/triangulo.png"/>
-                        <p>Número de lados: </p><input type="text">
-                        <p>Número de vértices: </p><input type="text">
+                        <div style="padding-bottom: 10px;">
+                            <p>Número de lados: </p><input type="text" id="p5.1">
+                            <p>Número de vértices: </p><input type="text" id="p5.2">
+                        </div>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers2('p5')">Revisar</button>
+                        <p style="margin-top: 10px; color: red; font-weight: bold;" id=triesp5>Intentos restantes: 3</p>
                     </ejercicio-figuras>
-                    <ejercicio-figuras>
+                    <ejercicio-figuras id="p6">
                         <img src="images/hexagon.png"/>
-                        <p>Número de lados: </p><input type="text">
-                        <p>Número de vértices: </p><input type="text">
+                        <div style="padding-bottom: 10px;">
+                            <p>Número de lados: </p><input type="text" id="p6.1">
+                            <p>Número de vértices: </p><input type="text" id="p6.2">
+                        </div>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers2('p6')">Revisar</button>
+                        <p style="margin-top: 10px; color: red; font-weight: bold;" id=triesp6>Intentos restantes: 3</p>
                     </ejercicio-figuras>
-                    <ejercicio-figuras>
+                    <ejercicio-figuras id="p7">
                         <img src="images/rombo.png"/>
-                        <p>Número de lados: </p><input type="text">
-                        <p>Número de vértices: </p><input type="text">
+                        <div style="padding-bottom: 10px;">
+                            <p>Número de lados: </p><input type="text" id="p7.1">
+                            <p>Número de vértices: </p><input type="text" id="p7.2">
+                        </div>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers2('p7')">Revisar</button>
+                        <p style="margin-top: 10px; color: red; font-weight: bold;" id=triesp7>Intentos restantes: 3</p>
                     </ejercicio-figuras>
-                    <ejercicio-figuras>
+                    <ejercicio-figuras id="p8">
                         <img src="images/polygon.png"/>
-                        <p>Número de lados: </p><input type="text">
-                        <p>Número de vértices: </p><input type="text">
+                        <div style="padding-bottom: 10px;">
+                            <p>Número de lados: </p><input type="text" id="p8.1">
+                            <p>Número de vértices: </p><input type="text" id="p8.2">
+                        </div>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers2('p8')">Revisar</button>
+                        <p style="margin-top: 10px; color: red; font-weight: bold;" id=triesp8>Intentos restantes: 3</p>
                     </ejercicio-figuras>
                 </div>
             </div>
