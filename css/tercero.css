@@ -13,6 +13,7 @@
     flex-direction: column;
     align-items: center;
     padding-top: 1em;
+    margin-bottom: 2vh;
 }
 .pregunta-texto i {
     width: 2em;
@@ -43,34 +44,35 @@
     justify-content: center;
     padding-left: 5%;
     padding-right: 5%;
+    padding: 0.8em;
+    margin: 0.5em;
 }
 /* Chrome, Safari, Edge, Opera */
-.pregunta-cont input::-webkit-outer-spin-button,
-.pregunta-cont input::-webkit-inner-spin-button {
+/*.pregunta-cont*/ input::-webkit-outer-spin-button,
+/*.pregunta-cont*/ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 /* Firefox */
-.pregunta-cont input[type=number] {
+/*.pregunta-cont*/ input[type=number] {
     -moz-appearance: textfield;
 }
-.pregunta-cont div {
-    padding: 0.8em;
-    margin: 0.5em;
+.pregunta-cont div{
     display: flex;
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
 }
-.pregunta-cont input {
+/*.pregunta-cont*/ input {
     background-color: #ffffffdd;
-    border-radius: 5px;
-    border: solid grey 2px;
+    border-radius: 0.3em;
+    border: solid grey 0.09em;
     font: inherit;
     padding-left: 0.2em;
     padding-right: 0.2em;
     text-align: right; 
     width: 5em;
+    align-self: flex-end;
 }
 .pregunta-cont p {
     text-align: center;
@@ -78,35 +80,55 @@
 }
 .pregunta-cont i {
     font-size: 20vh;
-    padding-right: 2vh;
-    padding-left: 2vh;
+    padding: 2vh 4vh;
 }
 
 .parte {
     border-radius: 10px;
+    font-size: 1.2em;
+    padding: 0.8em;
+    margin: 0.5em;
+    align-items: flex-end;
 }
 
 .sumas {
     text-align: right;
-    width: 5em;
-    padding-right: 0.2em;
-    border-bottom: solid 1px;
-    margin-bottom: 3px;
-    padding-bottom: 3px;
+    border-bottom: solid black 0.05em;
+    margin-bottom: 0.23em;
+    padding-right: 0.29em;
+    padding-bottom: 0.1em;
+    /* width: 6em; */
+}
+
+.divisiones {
+    border-left: solid 1px;
+    border-top: solid 1px;
+    padding-left: 0.29em;
+    padding-right: 0.29em;
+    padding-top: 0.29em;
+    margin-top: 0.2em;
+    text-align: right;
+}
+
+.sign {
+    align-self: flex-end;
+    padding: 0.3em;
 }
 
 .mover {
+    display: flex;
     cursor: move;
     width: 3em;
     height: 3em;
+    align-items: center;
+    justify-content: center;
     align-self: center;
-    text-align: center;
     user-select: none;
     margin: 0;
     background-color: #d5d7e4;
     border-radius: 100%;
 }
-.mover:hover {
+.mover:hover, .draggable:hover {
     transform: scale(1.1);
 }
 
@@ -129,8 +151,27 @@
 .drag-enter {
     background-color: #D0B8ED;
     opacity: 0.8;
+    cursor: none;
 }
 
-.dropped {
+.mover-dropped {
     background-color: #D0B8ED;
+}
+
+.droppable {
+    background-color: #d5d7e4c2;
+    height: 1.5em;
+    width: 5em;
+    border-radius: 0.3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 0.2em;
+    align-self: flex-end;
+    border: solid #0000002b;
+}
+
+.draggable {
+    cursor: move;
 }

@@ -172,7 +172,7 @@ function addBasic(data, key, i, qID) {
         }
 
         let image = 
-        `<div>
+        `<div draggable="true" class="draggable">
             <i class="${data[4][i]}" style="${sty}"></i>
             <p>${randInt}</p>
         </div>`;
