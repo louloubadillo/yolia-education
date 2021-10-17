@@ -11,6 +11,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet"> 
         <script src="cuarto-js/cuarto-1.js" defer></script>
         <script src="cuarto-js/cuarto-2.js" defer></script>
+        <script src="cuarto-js/cuarto-3.js" defer></script>
+        <script src="cuarto-js/cuarto-4.js" defer></script>
     </head>
     <body>
         <div class="nav">
@@ -113,24 +115,25 @@
             <div class="tema">
                 <h3>Clasificando triángulos</h3>
                 <p style="margin-top: 10px;">Clasifica los triángulos según sus lados</p>
+                <p style="margin-top: 10px; color: red; font-weight: bold;" id=tries_cuarto3>Intentos restantes: 3</p>
                 <div class="ejercicios">
-                    <ejercicio-figuras style = "position:relative; right:2em;">
+                    <ejercicio-figuras style = "position:relative; right:2em;" id="cuarto3_1">
                         <img src="images/equilatero.png" style = "position:relative; right:2em;"/>
-                        <button type="button" class="boton-ejercicio">Equilatero</button>
-                        <button type="button" class="boton-ejercicio">Isósceles</button>
-                        <button type="button" class="boton-ejercicio">Escaleno</button>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers3('c31.1')">Equilatero</button>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers3('c31.2')">Isósceles</button>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers3('c31.3')">Escaleno</button>
                     </ejercicio-figuras>
-                    <ejercicio-figuras>
+                    <ejercicio-figuras id="cuarto3_2">
                         <img src="images/isoceles.png" style="width:80%"/>
-                        <button type="button" class="boton-ejercicio">Equilatero</button>
-                        <button type="button" class="boton-ejercicio">Isósceles</button>
-                        <button type="button" class="boton-ejercicio">Escaleno</button>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers3('c32.2')">Equilatero</button>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers3('c32.1')">Isósceles</button>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers3('c32.3')">Escaleno</button>
                     </ejercicio-figuras>
-                    <ejercicio-figuras>
+                    <ejercicio-figuras id="cuarto3_3">
                         <img src="images/escaleno.png" style="width:160%; padding-top:15%"/>
-                        <button type="button" class="boton-ejercicio">Equilatero</button>
-                        <button type="button" class="boton-ejercicio">Isósceles</button>
-                        <button type="button" class="boton-ejercicio">Escaleno</button>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers3('c33.2')">Equilatero</button>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers3('c33.3')">Isósceles</button>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers3('c33.1')">Escaleno</button>
                     </ejercicio-figuras>
                 </div>
             </div>
@@ -138,16 +141,23 @@
             <div class="tema">
                 <h3>Punto medio</h3>
                 <p style="margin-top: 10px;">Determina el punto medio de los siguientes segmentos</p>
+                <p style="margin-top: 10px; color: red; font-weight: bold;" id=tries_cuarto4>Intentos restantes: 3</p>
                 <div class="ejercicios">
-                    <ejercicio-figuras style="position:relative; right:8em;">
-                        <img src="images/linea-small.png" style="width:150%; position:relative; right:2em;"/>
-                        <p>Punto medio:</p><input type="text">
-                    </ejercicio-figuras>
-                    <ejercicio-figuras>
-                        <img src="images/linea-large.png" style="width:220%"/>
-                        <div style="position:relative; left:7em; bottom: 1em;">
-                            <p>Punto medio:</p><input type="text">
+                    <ejercicio-figuras style="position:relative; right:8em;" id="cuarto4_1">
+                        <div style="padding-bottom: 10px;">
+                            <img src="images/linea-small.png" style="width:150%; position:relative; right:2em;"/>
+                            <p>Punto medio:</p><input type="text" id=textbox4_1>
                         </div>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers4('p4_1')">Revisar</button>
+                    </ejercicio-figuras>
+                    <ejercicio-figuras id="cuarto4_2">
+                        <div>
+                            <img src="images/linea-large.png" style="width:220%"/>
+                            <div style="position:relative; left:7em; bottom: 1em;">
+                                <p>Punto medio:</p><input type="text" id=textbox4_2>
+                            </div>
+                        </div>
+                        <button type="button" style="position: relative; left: 110px;" class="boton-ejercicio" onclick="checkAnswers4('p4_2')">Revisar</button>
                     </ejercicio-figuras>
                 </div>  
             </div>

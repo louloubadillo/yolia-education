@@ -40,22 +40,22 @@ function checkAnswers2(id){
     let element1 = document.getElementById("p5");
     element1.appendChild(tag1);
     let num=0;
-    newID=id[1]
-    let tag
-    let oneCor
-    let twoCor
+    newID=id[1];
+    let tag;
+    let oneCor;
+    let twoCor;
     if (id[1]=="5"){
         if (p5done){
             return;
         }
-        tag=tag5
+        tag=tag5;
         let ans1 = document.getElementById("p5.1").value;
         let ans2 = document.getElementById("p5.2").value;
         if (ans1==3){
-            oneCor=true
+            oneCor=true;
         }
         if (ans2==3){
-            twoCor=true
+            twoCor=true;
         }
         num=5;
     }
@@ -63,14 +63,14 @@ function checkAnswers2(id){
         if (p6done){
             return;
         }
-        tag=tag6
+        tag=tag6;
         let ans1 = document.getElementById("p6.1").value;
         let ans2 = document.getElementById("p6.2").value;
         if (ans1==6){
-            oneCor=true
+            oneCor=true;
         }
         if (ans2==6){
-            twoCor=true
+            twoCor=true;
         }
         num=6;
     }
@@ -78,14 +78,14 @@ function checkAnswers2(id){
         if (p7done){
             return;
         }
-        tag=tag7
+        tag=tag7;
         let ans1 = document.getElementById("p7.1").value;
         let ans2 = document.getElementById("p7.2").value;
         if (ans1==4){
-            oneCor=true
+            oneCor=true;
         }
         if (ans2==4){
-            twoCor=true
+            twoCor=true;
         }
         num=7;
 
@@ -98,10 +98,10 @@ function checkAnswers2(id){
         let ans1 = document.getElementById("p8.1").value;
         let ans2 = document.getElementById("p8.2").value;
         if (ans1==5){
-            oneCor=true
+            oneCor=true;
         }
         if (ans2==5){
-            twoCor=true
+            twoCor=true;
         }
         num=8;
     }
@@ -113,7 +113,7 @@ function checkAnswers2(id){
         tag.textContent= "Incorrecto!";
         if (num==5){
             counter5--;
-            let tries=document.getElementById("triesp5")
+            let tries=document.getElementById("triesp5");
             tries.textContent="Intentos restantes: " +counter5;
             if (counter5==0){
                 p5done=true;
@@ -121,7 +121,7 @@ function checkAnswers2(id){
         }
         else if (num==6){
             counter6--;
-            let tries=document.getElementById("triesp6")
+            let tries=document.getElementById("triesp6");
             tries.textContent="Intentos restantes: " +counter6;
             if (counter6==0){
                 p6done=true;
@@ -129,7 +129,7 @@ function checkAnswers2(id){
         }
         else if (num==7){
             counter7--;
-            let tries=document.getElementById("triesp7")
+            let tries=document.getElementById("triesp7");
             tries.textContent="Intentos restantes: " +counter7;
             if (counter7==0){
                 p7done=true;
@@ -137,7 +137,7 @@ function checkAnswers2(id){
         }
         else if (num==8){
             counter8--;
-            let tries=document.getElementById("triesp8")
+            let tries=document.getElementById("triesp8");
             tries.textContent="Intentos restantes: " +counter8;
             if (counter8==0){
                 p8done=true;

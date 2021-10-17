@@ -29,18 +29,18 @@ function checkAnswers1(id){
         return;
     }
     newID=id[3]
-    let tag
+    let tag;
     if (id[1]=="1"){
-        tag=tag1
+        tag=tag1;
     }
     else if (id[1]=="2"){
-        tag=tag2
+        tag=tag2;
     }
     else if (id[1]=="3"){
-        tag=tag3
+        tag=tag3;
     }
     else if (id[1]=="4"){
-        tag=tag4
+        tag=tag4;
     }
     if (newID=="1"){
         tag.textContent= "Correcto!";
@@ -49,6 +49,6 @@ function checkAnswers1(id){
         counter1--;
         tag.textContent= "Incorrecto!";
     }
-    let tries=document.getElementById("tries1")
+    let tries=document.getElementById("tries1");
     tries.textContent="Intentos restantes: " +counter1;
 }
