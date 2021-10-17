@@ -11,6 +11,7 @@ let colors = [
 let z = new Preguntas();
 
 addQuestions('0', 'auto1')
+// addQuestions('0', 'auto1')
 
 function getRandom(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
@@ -33,7 +34,7 @@ function checkBasic(id) {
             ele.setAttribute("disabled", "");
             ele.style.background = '#fff0'
             ele.style.color = 'black';
-            ele.style.fontWeight = 'bolder';
+            ele.style.fontWeight = 'bold';
             ele.parentNode.classList.remove("incorrect");
             correctAmt++;
         } else {
@@ -68,14 +69,7 @@ function checkBasic(id) {
     }
 
     // Add symbol depending on amount of correct answers
-    let icon = currQuestion.children[0].querySelector('i')
-    if(icon == null) {
-        icon = document.createElement('i');
-        icon.setAttribute("aria-hidden","true");
-    }
-    
-    // let icon = document.createElement('i');
-    // icon.setAttribute("aria-hidden","true");
+    let icon = currQuestion.children[0].querySelector('.tries').children[2-intentos];
 
     if (correctAmt == totalAmt) {
         icon.className = 'fa fa-check';
@@ -85,19 +79,19 @@ function checkBasic(id) {
 
         // Disable check button
         currQuestion.children[2].style.display = "none";
-    } else {
+    } else if (intentos > 0){
         icon.className = 'fa fa-times';
         icon.style.backgroundColor = '#FF0076';
         currQuestion.setAttribute('intentos', intentos-1);
-    }
-        
-    if (intentos == 0) {
+    } else {
         // Disable check button
         currQuestion.children[2].style.display = "none";
-
+        
         // Add icon
         icon.className = "fas fa-heart-broken";
+        icon.style.backgroundColor = '#FF0076';
 
+        currQuestion.style.backgroundColor = '#f998';
         
         // Show correct answers
         currQuestion.querySelectorAll('.incorrect').forEach(el => {
@@ -107,12 +101,12 @@ function checkBasic(id) {
             inpt.setAttribute("disabled", "true");
             inpt.value = z.getAnswer(inpt.getAttribute('id'));
             inpt.style.color = 'black';
-            inpt.style.fontWeight = 'bolder';
+            inpt.style.fontWeight = 'bold';
             inpt.style.background = '#fff0';
         });
     }
 
-    currQuestion.children[0].children[0].append(icon);
+    // currQuestion.children[0].children[0].append(icon);
 }
 
 function addOperation(key, ints, sign) {
@@ -174,7 +168,7 @@ function addBasic(data, key, i, qID) {
         let image = 
         `<div draggable="true" class="draggable">
             <i class="${data[4][i]}" style="${sty}"></i>
-            <p>${randInt}</p>
+            ${randInt}
         </div>`;
 
         img.innerHTML += image;
@@ -182,7 +176,13 @@ function addBasic(data, key, i, qID) {
 
     let txtDiv = document.createElement('p');
     txtDiv.className = 'pregunta-texto';
-    txtDiv.innerHTML = `<h4>Pregunta ${i}</h4>${text}`;
+    txtDiv.innerHTML = `<h4>Pregunta ${i}</h4>
+    <div class="tries">
+        <i class="fas fa-question"></i>
+        <i class="fas fa-question"></i>
+        <i class="fas fa-question"></i>
+    </div>
+    <p>${text}</p>`;
 
     let prgn = document.createElement('div');
     prgn.className = 'pregunta-cont';
@@ -193,7 +193,7 @@ function addBasic(data, key, i, qID) {
     cnt.style.padding = '0';
     
     prgn.appendChild(img);
-    prgn.appendChild(cnt);
+    prgn.insertAdjacentHTML('beforeend', cnt.innerHTML);
     
     let finalCnt = document.createElement('div');
     finalCnt.className = 'pregunta';

@@ -8,12 +8,14 @@
         <link rel="stylesheet" href="css/tercero.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-        <script src="https://kit.fontawesome.com/b300d4e394.js" crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet">
         <script src="tercero/preguntas.js" defer></script>
         <script src="tercero/tercero.js" defer></script>
         <script src="tercero/drag_and_drop.js" defer></script>
+
+
+        <script src="https://kit.fontawesome.com/b300d4e394.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div class="nav">
@@ -41,16 +43,16 @@
             <div class="tema">
                 <h3>Sumas</h3>
                 <div class="seccion" id="seccion1">
-                    <p class="pregunta-texto">
+                    <!-- <p class="pregunta-texto">
                         Ayuda a Juan a ordenar y resolver las siguientes sumas. Arrastra los circulitos para indicar el mayor con 1 y el menor con 5.
                     </p>
                     <div class="pregunta-cont">
-                        <div>
+                        <div class="sort">
                             <div class="parte">
                                 <label class="sumas" for="q1.1">543 <br> + 2395 <br> 32 <br></label>
                                 <input type="number" id="q1.1" style="text-align: right; width: 5em;">
                             </div>
-                            <div draggable="true" class="mover" id="no1">1</div>
+                            <div draggable="true" class="mover drag-content" id="no1">1</div>
                         </div>
                         <div>
                             <div class="parte">
@@ -80,13 +82,13 @@
                             </div>
                             <div draggable="true" class="mover" id="no5">5</div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div id="auto1"></div>
                 </div> 
-                <div class="report">Puntuación...</div>
+                <!-- <div class="report">Puntuación...</div> -->
             </div>
-            <button onclick="checkAnswers('#seccion1')">Check!</button>
+            <!-- <button onclick="checkAnswers('#seccion1')">Check!</button> -->
             
             <hr>
             <div class="tema">
@@ -96,7 +98,7 @@
                 </div>
                 <div class="report">Puntuación...</div>
             </div>
-            <button onclick="checkAnswers('#seccion2')">Check!</button>
+            <!-- <button onclick="checkAnswers('#seccion2')">Check!</button> -->
             
             <hr>
             <div class="tema">
@@ -113,7 +115,13 @@
             <hr>
             <div class="tema">
                 <h3>División 1</h3>
+                <button onclick="addQuestions('5', 'seccion6')">Empezar</button>
+                <div class="seccion" id="seccion6">
+                </div>
+                <div class="report">Puntuación...</div>
             </div>
+            <button onclick="checkAnswers('#seccion2')">Check!</button>
+
             <hr>
              <div class="tema">
                 <h3>División 2</h3>

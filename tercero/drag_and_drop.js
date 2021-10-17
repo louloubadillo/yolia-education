@@ -32,7 +32,7 @@ function moverDragStart(event) {
 
 function dragStart(event) {
     event.target.classList.add("drag-start");
-    event.dataTransfer.setData("text", event.target.children[1].innerText);
+    event.dataTransfer.setData("text", event.target.innerText);
 }
 
 function dragEnd(event) {
@@ -40,20 +40,20 @@ function dragEnd(event) {
 }
 
 function dragEnter(event) {
-    if (!event.target.classList.contains("correct")) {
+    if (!event.target.classList.contains("stiff")) {
         event.target.classList.add("drag-enter");
     }
 }
 
 function dragOver(event) {
     event.preventDefault();
-    if (!event.target.classList.contains("correct")) {
+    if (!event.target.classList.contains("stiff")) {
         event.target.classList.add("drag-enter");
     }
 }
 
 function dragLeave(event) {
-    if (!event.target.classList.contains("correct")) {
+    if (!event.target.classList.contains("stiff")) {
         event.target.classList.remove("drag-enter");
     }
 }
@@ -64,15 +64,17 @@ function moverDrop(event) {
     const draggableElementId = event.dataTransfer.getData("text");
     const droppableElementId = event.target.id;
 
-    if (!event.target.classList.contains("correct")) {
+    if (!event.target.classList.contains("stiff")) {
         // Change value of text content (but not ID, otherwise they'll be harder to verify)
         if (draggableElementId != droppableElementId) {
             const draggableElement = document.getElementById(draggableElementId);
             const droppableElementTextContent = event.target.textContent;
 
             event.target.classList.add('mover-dropped');
+            event.target.style.removeProperty('background-color');
             event.target.textContent = draggableElement.textContent;
-            draggableElement.classList.add('mover-dropped');
+            // draggableElement.classList.add('mover-dropped');
+            draggableElement.style.removeProperty('background-color');
             draggableElement.textContent = droppableElementTextContent;
         }
     }

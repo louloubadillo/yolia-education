@@ -146,14 +146,3 @@ hr{
     border-color: #92C9DB;
     border-width: .1px;
 }
-
-button {
-    background-color: #9e1a96;
-    color: white;
-    font: inherit;
-    border: none;
-    height: 2em;
-    border-radius: 1em;
-    cursor: pointer;
-    align-self: center;
-}

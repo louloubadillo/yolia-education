@@ -3,9 +3,10 @@ let preguntas = `[{
     // "q1.s": [
     //     "sort",
     //     "Ayuda a Juan a resolver las siguientes sumas. Cuando acabes, arrastra los circulitos para indicar el mayor con 1 y el menor con 5.",
-    //     ["q1.1", "q1.2", "q1.3", "q1.4", "q1.5"],
+    //     ["q1.1", "q1.2", "q1.3"],
     //     [[3000, 200], [100, 20], [1, 50]],
-    //     ["no1", "no2", "no3", "no4", "no5"]
+    //     ["no1", "no2", "no3"],
+    //     "+"
     // ],
     `
     "q1.6": [
@@ -27,10 +28,13 @@ let preguntas = `[{
 {
     "q2.6": [
         "basic",
-        "Un cartero debe entregar int1 cartas por semana. Si el lunes repartió int2 y el martes int3, <br> ¿Cuántas cartas le faltan por repartir?",
-        [["int1", 7000, 8000], ["int2", 2000, 2500], ["int3", 1000, 2000]],
-        "-",
-        ["fas fa-mail-bulk", "fas fa-envelope", "far fa-envelope"]
+        "Un cartero debe entregar int1 cartas por semana. Si el lunes repartió int2 y el martes int3, <br> ¿Cuántas cartas le faltan por repartir?",`+
+        // ["int1, int2, int3"], 
+        // [1000, 8000],
+        `[["int1", 7000, 8000], ["int2", 2000, 2500], ["int3", 1000, 2000]],
+        "-",`+
+        // [["fas fa-mail-bulk", ""], ["fas fa-envelope", ""], ["far fa-envelope", ""]]
+        `["fas fa-mail-bulk", "fas fa-envelope", "far fa-envelope"]
     ],
     "q2.9": [
         "basic",
