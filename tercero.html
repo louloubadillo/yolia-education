@@ -8,14 +8,15 @@
         <link rel="stylesheet" href="css/tercero.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet">
-        <script src="tercero/preguntas.js" defer></script>
-        <script src="tercero/tercero.js" defer></script>
-        <script src="tercero/drag_and_drop.js" defer></script>
-
-
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
         <script src="https://kit.fontawesome.com/b300d4e394.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet">
+        <script src="tercero/operation.js" defer></script>
+        <script src="tercero/sort.js" defer></script>
+        <script src="tercero/basic.js" defer></script>
+        <script src="tercero/question.js" defer></script>
+        <script src="tercero/main.js" defer></script>
+        <script src="tercero/drag_and_drop.js" defer></script>
     </head>
     <body>
         <div class="nav">
@@ -42,118 +43,84 @@
             <hr>
             <div class="tema">
                 <h3>Sumas</h3>
-                <div class="seccion" id="seccion1">
-                    <!-- <p class="pregunta-texto">
-                        Ayuda a Juan a ordenar y resolver las siguientes sumas. Arrastra los circulitos para indicar el mayor con 1 y el menor con 5.
-                    </p>
-                    <div class="pregunta-cont">
-                        <div class="sort">
-                            <div class="parte">
-                                <label class="sumas" for="q1.1">543 <br> + 2395 <br> 32 <br></label>
-                                <input type="number" id="q1.1" style="text-align: right; width: 5em;">
-                            </div>
-                            <div draggable="true" class="mover drag-content" id="no1">1</div>
-                        </div>
-                        <div>
-                            <div class="parte">
-                                <label class="sumas" for="q1.2">8 <br> + 762 <br> 3456 <br></label>
-                                <input type="number" id="q1.2" style="text-align: right; width: 5em;">
-                            </div>
-                            <div draggable="true" class="mover" id="no2">2</div>
-                        </div>
-                        <div>
-                            <div class="parte">
-                                <label class="sumas" for="q1.3">1567 <br> + 3459 <br> 237 <br></label>
-                                <input type="number" id="q1.3" style="text-align: right; width: 5em;">
-                            </div>
-                            <div draggable="true" class="mover" id="no3">3</div>
-                        </div>
-                        <div>
-                            <div class="parte">
-                                <label class="sumas" for="q1.4">48 <br> + 874 <br> 2865 <br></label>
-                                <input type="number" id="q1.4" style="text-align: right; width: 5em;">
-                            </div>
-                            <div draggable="true" class="mover" id="no4">4</div>
-                        </div>
-                        <div>
-                            <div class="parte">
-                                <label class="sumas" for="q1.5">23 <br> + 582 <br> 7692 <br></label>
-                                <input type="number" id="q1.5" style="text-align: right; width: 5em;">
-                            </div>
-                            <div draggable="true" class="mover" id="no5">5</div>
-                        </div>
-                    </div> -->
-
-                    <div id="auto1"></div>
-                </div> 
-                <!-- <div class="report">Puntuación...</div> -->
+                <details>
+                    <summary>Ver preguntas</summary>
+                </details>
+                <div class="center score" style="display: none;"></div>
             </div>
-            <!-- <button onclick="checkAnswers('#seccion1')">Check!</button> -->
             
             <hr>
-            <div class="tema">
-                <h3>Restas</h3>
-                <button onclick="addQuestions('1', 'seccion2')">Empezar</button>
-                <div class="seccion" id="seccion2">
-                </div>
-                <div class="report">Puntuación...</div>
+            <div class="tema" >
+                <!-- <h3>Restas</h3> -->
+                <details>
+                    <summary>
+                        <b>Restas</b>
+                    </summary>
+                </details>
+                <div class="center score" style="display: none;"></div>
             </div>
-            <!-- <button onclick="checkAnswers('#seccion2')">Check!</button> -->
             
             <hr>
             <div class="tema">
                 <h3>Sumas y restas</h3>
             </div>
+
             <hr>
             <div class="tema">
                 <h3>Multiplicación 1</h3>
             </div>
+
             <hr>
             <div class="tema">
                 <h3>Multiplicación 2</h3>
             </div>
+
             <hr>
             <div class="tema">
                 <h3>División 1</h3>
-                <button onclick="addQuestions('5', 'seccion6')">Empezar</button>
-                <div class="seccion" id="seccion6">
-                </div>
-                <div class="report">Puntuación...</div>
             </div>
-            <button onclick="checkAnswers('#seccion2')">Check!</button>
+            <!-- <button onclick="checkAnswers('#seccion2')">Check!</button> -->
 
             <hr>
              <div class="tema">
                 <h3>División 2</h3>
             </div>
+
             <hr>
             <div class="tema">
                 <h3>División 3</h3>
             </div>
+
             <hr>
              <div class="tema">
                 <h3>Multiplicación 3</h3>
             </div>
+
             <hr>
             <div class="tema">
                 <h3>Multiplicación y división</h3>
             </div>
+
             <hr>
             <div class="tema">
                 <h3>Órdenes de magnitud</h3>
             </div>
+
             <hr>
             <div class="tema">
                 <h3>Redondeo</h3>
             </div>
+
             <hr>
             <div class="tema">
                 <h3>Fracciones</h3>
             </div>
+
             <hr>
             <div class="tema">
                 <h3>Decimales</h3>
             </div>
+
             <hr>
             <div class="tema">
                 <h3>Unidades de medida</h3>

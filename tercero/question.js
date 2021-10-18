@@ -8,13 +8,17 @@ let colors = [
     '#FF007688'
 ]
 
-// info, section, question
+// Construct all questions with their three parts:
+// - text-content
+// - question-content
+// - button
 class Question {
     constructor(info, section, question) {
         const id = `q${section}.${question}`;
         this.finalCont = document.createElement('div');
         this.finalCont.className = 'question';
         this.finalCont.id = id;
+        this.score = 0;
 
         let tries = 2;
 
@@ -49,19 +53,20 @@ class Question {
             break;
         }
         txtDiv.insertAdjacentHTML("beforeend", `<p>${text}</p>`);
+
+        this.total = opr.total;
         
         // Button
         const button = document.createElement('div');
         button.className = 'verify';
-        button.style.width = '5.5em';
         button.innerText = 'Verificar';
         button.addEventListener('click', () => {
             // Add symbol depending on amount of correct answers
             const icon = this.finalCont.querySelector('.tries').children[2-tries];
 
             // All are correct
-            const a = opr.isCorrect();
-            if (a >= 1) {
+            this.score = opr.isCorrect();
+            if (this.score == this.total) {
                 icon.className = 'fa fa-check';
                 icon.style.backgroundColor = '#25AC8A';
                 this.finalCont.style.backgroundColor = '#9fff9f77';
@@ -77,6 +82,8 @@ class Question {
             } 
             // No more tries left
             else {
+                alert('Se han acabado tus intentos. Se van a enseñar las respuestas correctas.');
+                
                 // Disable check button
                 this.finalCont.children[2].style.display = "none";
                 opr.gameOver();
@@ -87,38 +94,9 @@ class Question {
             }
         });
 
+
         this.finalCont.append(txtDiv);
         this.finalCont.append(questionCont);
         this.finalCont.append(button);
     }
 }
-
-
-let p = new Question([
-    "basic",
-    "Un cartero debe entregar int1 cartas por semana. Si el lunes repartió int2 y el martes int3, <br> ¿Cuántas cartas le faltan por repartir?",
-    ["int1", "int2", "int3"], 
-    [1000, 8000],
-    "-",
-    [["fas fa-mail-bulk", ""], ["fas fa-envelope", ""], ["far fa-envelope", ""]]
-], 2, 2);
-// let pp = new Question([
-//     "basic-drag",
-//     "Un cartero debe entregar int1 cartas por semana. Si el lunes repartió int2 y el martes int3, <br> ¿Cuántas cartas le faltan por repartir?",
-//     ["int1", "int2", "int3"], 
-//     [1000, 8000],
-//     "-",
-//     [["fas fa-mail-bulk", ""], ["fas fa-envelope", ""], ["far fa-envelope", ""]]
-// ], 2, 2);
-// let op = new Question([
-//     "basic",
-//     "Una pareja de hipopótamos tuvieron un hipopótamo bebé. Si la mamá hipopótamo pesa int1 kilos, el papá hipopótamo int2 kilos y el bebé int3 kilos, <br><br> ¿Cuántos kilos pesan entre los tres?",
-//     ["int1", "int2", "int3"],
-//     [[6800, 8000], [7500, 8000], [100, 150]],
-//     "+",
-//     [["fas fa-hippo", "font-size: 18vh;"], ["fas fa-hippo", ""], ["fas fa-hippo", "font-size: 10vh;"]]
-// ], 1, 1)
-
-// document.body.append(pp.this.finalCont)
-// document.body.append(op.this.finalCont)
-// document.body.append(p.this.finalCont)

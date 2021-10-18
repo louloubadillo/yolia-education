@@ -60,6 +60,7 @@ function makeRandom(amt, sign, range) {
     return n;
 }
 
+// Constructs question-content block sorter type question
 class Sort {
     constructor(range, totalAmt, amt, sign, id) {
         this.block = document.createElement('div');
@@ -67,6 +68,7 @@ class Sort {
         this.block.style.flexDirection = 'row';
         this.block.style.paddingTop = 0;
         this.block.style.marginTop = 0;
+        this.total = totalAmt*2;
 
         let idCount = 1;
 
@@ -84,7 +86,6 @@ class Sort {
         answers.forEach((el, i) => {
             moverAnswers[`${el[1]-1}`] = i+1;
         });
-        console.log(answers, moverAnswers);
 
         let movers = [];
         for (let i = 0; i < totalAmt; i++, idCount++) {
@@ -114,7 +115,7 @@ class Sort {
                     check += this.markWrong(movers[i]);
                 }
             }
-            return check / (totalAmt*2);
+            return check;
         }
 
         // Makes all incorrect answer stiff so they can't be changed
@@ -151,14 +152,3 @@ class Sort {
         return 0;
     }
 }
-
-let o = new Sort(
-    [100, 500],
-    2,
-    2,
-    '+',
-    ["q1.1", "q1.2"],
-    ["no1", "no2"]
-);
-
-// document.body.prepend(o.block);

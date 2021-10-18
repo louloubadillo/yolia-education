@@ -1,4 +1,5 @@
-let questionTemplates = [[
+// Stores all information on questions to be built
+const questionTemplates = [[
     [
         "sort",
         "Ayuda a Juan a resolver las siguientes sumas. Cuando acabes, arrastra los circulitos para indicar el menor con 1 y el mayor con 5.",
@@ -51,7 +52,7 @@ let questionTemplates = [[
     ],
     [
         "basic",
-        "El Pico Bolívar en el estado Mérida tiene una altura de int1 metros y el Pico Espejo de int2. <br><br> ¿En cuántos metros supera el Pico Bolívar al Pico Espejo?",
+        "El Pico Bolívar en el estado Mérida tiene una altura de int1 metros y el Pico Espejo de int2 metros. <br><br> ¿En cuántos metros supera el Pico Bolívar al Pico Espejo?",
         ["int1", "int2"],
         [[5005, 5010], [4878, 4881]],
         "-",
@@ -70,13 +71,46 @@ let questionTemplates = [[
 
 ]]
 
-const sections = document.querySelectorAll('.tema');
+// Adds question of questionTemplates to HTML
+const sections = document.querySelectorAll('details');
+
+let scores = [];
 
 sections.forEach((section, i) => {
+    scores.push([]);
     // Add all questions for this section
     questionTemplates[i].forEach((questionInfo, j) => {
-        section.append(new Question(questionInfo, i, j).finalCont);
+        const question = new Question(questionInfo, i, j);
+        section.append(question.finalCont);
+        scores[i].push(question);
     });
 
-    // Add button to 
+    // Add score button at the end of each section
+    const button = `<div class="center"><button onclick="showScore(${i})" class="verify check-score">Calcular puntuación</button></div>`;
+    section.insertAdjacentHTML('beforeend', button);
 });
+
+function showScore(i) {
+    // Calculate score
+    let total = 0;
+    let correct = 0;
+    scores[i].forEach(el => {
+        correct += el.score;
+        total += el.total;
+    });
+    const score = Math.floor((correct / total) * 100);
+
+    // Close section
+    sections[i].removeAttribute('open');
+
+    const scoreText = sections[i].nextElementSibling;
+    scoreText.style.removeProperty('display');
+
+    // Display score
+    if(score >= 90) {
+        scoreText.style.color = '#25AC8A';
+    } else if (score < 60) {
+        scoreText.style.color = '#FF0076'
+    }
+    scoreText.innerHTML = `${score}%`;
+}

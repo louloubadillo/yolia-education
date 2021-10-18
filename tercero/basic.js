@@ -1,3 +1,5 @@
+// Add basic question-content block, with images and operation
+
 class Basic {
     constructor(info, id) {
         let img = document.createElement('div');

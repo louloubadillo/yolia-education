@@ -1,7 +1,14 @@
+// Forms the block (with numbers or droppable areas) for basic operations: 
+// - addition
+// - subtraction
+// - multiplication
+// - division
+
 class Operation {
     constructor(nums, sign, id, answer) {
         this.block = document.createElement('div');
         this.block.className = 'part';
+        this.total = 1;
 
         let length = answer.toString().length*0.6 + 0.6;
 
@@ -85,44 +92,3 @@ class Operation {
         this.block.style.border = '0.3em #FF0076 solid';
     }
 }
-/*
-// For dropper
-let a = new Operation(
-    [2],    // amount of droppers
-    '+',    // sign
-    'p1',   // element id
-    69      // answer
-);
-let c = new Operation(
-    [2],    // amount of droppers
-    '/',    // sign
-    'p1',   // element id
-    2      // answer
-);
-
-// For standard
-let b = new Operation(
-    [4, 8], // array of nums
-    '/',    // sign
-    'p2',   // element id
-    2       // answer
-);
-
-// let d = document.createElement('div');
-// d.className = 'pregunta-cont';
-// d.append(a.block)
-// d.append(c.block)
-// document.body.append(d);
-
-// document.body.insertAdjacentHTML('beforeend', 
-// `<div draggable="true" class="draggable" style="display: flex;justify-content:center;margin:1em;">
-//     <i class="fas fa-lemon" style="color: orange; font-size: 3em;"display:flex;flex-direction: column;></i>
-//     23
-// </div>`);
-
-// document.body.insertAdjacentHTML('beforeend', 
-// `<div draggable="true" class="draggable" style="display: flex;justify-content:center;margin:1em;">
-//     <i class="far fa-lemon" style="color: #4f7bca; font-size: 3em;display:flex;flex-direction: column;"></i>
-//     46
-// </div>`);
-*/
