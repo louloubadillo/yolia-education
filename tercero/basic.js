@@ -39,7 +39,7 @@ class Basic {
         });
 
         this.text = text;
-        this.opr = new Operation(firstArg, info[4], id, randoms[1]);
+        this.opr = new Operation(firstArg, info[4], id+'-0', randoms[1]);
         
         this.block = document.createElement('div');
         this.block.className = 'question-content';

@@ -88,16 +88,14 @@ const questionTemplates = [
             [["fas fa-apple-alt", ""], ["fas fa-weight", ""]]
         ]
     ],
-    [ // sección 5
+    [ // √ sección 5
         [
-            "basic-drag",
-            "Para celebrar el Día del Árbol los alumnos de tercer grado sembraron int1 semillas cada uno. Si en tercer grado hay int2 alumnos, <br><br> arrastra las imágenes para armar la multiplicación y encontrar cuántas semillas se sembraron.",
-            ["int1", "int2"],
-            [[2, 10], [100, 130]],
+            "per-parts",
+            "¿Qué números debo multiplicar para que me dé el resultado? <br> (No puedes poner al resultado multiplicado por 1.)",
+            4,
+            [[5,10]],
             "×",
-            [["fas fa-spa", ""], ["fas fa-users", ""]]
-        ],
-
+        ]
     ],
     [ // √ sección 6
         [
@@ -133,22 +131,13 @@ const questionTemplates = [
             [["far fa-clock", ""], ["fas fa-bicycle", ""]]
         ]
     ],
-    [ // sección 7
+    [ // √ sección 7
         [
-            "basic-drag",
-            "José fue al mercado y pagó $int1 por int2 licuados. <br><br> Arrastra las imágenes para saber cuánto costó cada licuado.",
-            ["int2", "int1"],
-            [20, 30, 0],
+            "per-parts",
+            "¿Qué números debo dividir para que me dé el resultado? <br> (No puedes poner al resultado dividido entre 1.)",
+            4,
+            [5,10],
             "/",
-            [["fas fa-coins", "font-size: 17vh;"], ["fas fa-blender", ""]]
-        ],
-        [
-            "basic-drag",
-            "Se desea construir un puente de int1 metros de largo. Los obreros tardan una hora por cada int2 metros. <br><br> Arrastra los dibujos para saber en cuántas horas van a acabar el puente.",
-            ["int2", "int1"],
-            [100, 200, 0],
-            "/",
-            [["fas fa-people-carry", ""], ["fas fa-stream", ""]]
         ]
     ],
     [ // √ sección 8
@@ -186,9 +175,31 @@ const questionTemplates = [
         ]
     ],
     [ // sección 9
-
+        [
+            "basic-drag",
+            "Para celebrar el Día del Árbol los alumnos de tercer grado sembraron int1 semillas cada uno. Si en tercer grado hay int2 alumnos, <br><br> arrastra las imágenes para armar la multiplicación y encontrar cuántas semillas se sembraron.",
+            ["int1", "int2"],
+            [[2, 10], [80, 100]],
+            "×",
+            [["fas fa-spa", ""], ["fas fa-users", ""]]
+        ],
     ],
     [ // sección 10
-
+        [
+            "basic",
+            "José fue al mercado y pagó $int1 por int2 licuados. <br><br> Arrastra las imágenes para saber cuánto costó cada licuado.",
+            ["int2", "int1"],
+            [20, 30, 0],
+            "/",
+            [["fas fa-coins", "font-size: 17vh;"], ["fas fa-blender", ""]]
+        ],
+        [
+            "basic-drag",
+            "Se desea construir un puente de int1 metros de largo. Los obreros tardan una hora por cada int2 metros. <br><br> Arrastra los dibujos para saber en cuántas horas van a acabar el puente.",
+            ["int2", "int1"],
+            [100, 200, 0],
+            "/",
+            [["fas fa-people-carry", ""], ["fas fa-stream", ""]]
+        ]
     ],
 ]

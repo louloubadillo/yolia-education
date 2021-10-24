@@ -43,6 +43,12 @@ class Question {
                 questionCont = opr.block;
             break;
 
+            case "per-parts":
+                text = info[1];
+                opr = new PerParts(info[2], info[3], info[4], id);
+                questionCont = opr.block;
+            break;
+
             // For basic and basic-drag
             default:
                 let b = new Basic(info, id);
