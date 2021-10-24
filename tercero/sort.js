@@ -1,5 +1,10 @@
-function getRandom(min, max) {
-    return Math.floor(Math.random() * (max - min) + min);
+// Return random number, only use third parameter if you want decimals
+function getRandom(min, max, d=0) {
+    const num = Math.random() * (max - min) + min;
+    // Returns decimal with two places
+    if(d) { return num.toFixed(d); }
+    // Returns int
+    else { return Math.floor(num); }
 }
 
 // Return array in which [0] is array of random numbers and [1] is answer
@@ -8,14 +13,13 @@ function makeRandom(amt, sign, range) {
 
     if(sign == '/') {
         // Random numbers
-        const a = getRandom(1, 10);
-        const b = a * getRandom(range[0], range[1]);
-
+        const a = getRandom(2, 10);
+        const b = a * getRandom(range[0], range[1], range[2]);
         // Calculate answer
         const ans = b / a; 
         n[0].push(a);
         n[0].push(b);
-        n[1].push(ans);
+        n[1].push(ans.toFixed(range[2]));
     } else {
         // Random numbers
         let a = [];
@@ -23,11 +27,11 @@ function makeRandom(amt, sign, range) {
         // If each number must be within a range
         if(range.length == amt) {
             range.forEach(el => {
-                a.push(getRandom(el[0], el[1]));
+                a.push(Number.parseFloat(getRandom(el[0], el[1], el[2])));
             });
         } else {
             for (let i = 0; i < amt; i++) {
-                a.push(getRandom(range[0][0], range[0][1]));
+                a.push(Number.parseFloat(getRandom(range[0][0], range[0][1], range[0][2])));
             }
         }
 
@@ -54,7 +58,7 @@ function makeRandom(amt, sign, range) {
                 break;
         }
         n[0] = a;
-        n[1] = ans;
+        n[1] = ans.toFixed(range[0][2]);
     }
     
     return n;
