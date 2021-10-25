@@ -23,15 +23,6 @@ class PerParts{
             </div>`);
         }
 
-        // To save some time later on :)
-        function operation(a, b, sign) {
-            if(sign == '×') {
-                return a*b;
-            } else {
-                return a/b;
-            }
-        }
-
         this.makeStiff = (color, div, ans=false) => {
             div.style.backgroundColor = color;
             div.querySelectorAll('input').forEach((el, i) => {
@@ -56,7 +47,7 @@ class PerParts{
                 // Select all inputs
                 const inputs = this.block.children[i].querySelectorAll('input');
                 // Check if numbers check out and they didn't answer 1xn
-                if(operation(inputs[0].value > 1 && inputs[1].value > 1 && inputs[0].value, inputs[1].value, sign) == randoms[i][1]) {
+                if(inputs[0].value > 1 && inputs[1].value > 1 && calcOperation([inputs[1].value, inputs[0].value], sign) == randoms[i][1]) {
                     this.makeStiff('#9fff9f77', this.block.children[i]);
                     this.block.children[i].classList.remove('incorrect');
                     check++;

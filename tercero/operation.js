@@ -1,9 +1,78 @@
+// Return random number, only use third parameter if you want decimals
+function getRandom(min, max, d=0) {
+    const num = Math.random() * (max - min) + min;
+    // Returns decimal with two places
+    if(d) { return num.toFixed(d); }
+    // Returns int
+    else { return Math.floor(num); }
+}
+
+function calcOperation(nums, sign) {
+    // Calculate answer
+    let ans = 0;
+    switch (sign) {
+        case "+":
+            nums.forEach(el => { ans += Number.parseFloat(el); });
+            break;
+        case "-":
+            ans = nums[0];
+            for (let i=1; i < nums.length; i++) { ans -= Number.parseFloat(nums[i]); }
+            break;
+        case '×':
+            ans = 1;
+            nums.forEach(el => { ans *= Number.parseFloat(el); });
+            break;
+        default:
+            ans = Number.parseFloat(nums[1]) / Number.parseFloat(nums[0]);
+            break;
+    }
+    return ans;
+}
+
+// Return array in which [0] is array of random numbers and [1] is answer
+function makeRandom(amt, sign, range) {
+    let n = [[],[]];
+
+    if(sign == '/') {
+        // Random numbers
+        const a = getRandom(2, 10);
+        const b = a * getRandom(range[0], range[1], range[2]);
+        // Calculate answer
+        n[0].push(a);
+        n[0].push(b);
+        n[1].push(calcOperation(n[0], sign, range[2]));
+    } else {
+        // Random numbers
+        let a = [];
+
+        // If each number must be within a different range
+        if(range.length == amt) {
+            range.forEach(el => {
+                a.push(getRandom(el[0], el[1], el[2]));
+            });
+        } else {
+            for (let i = 0; i < amt; i++) {
+                a.push(getRandom(range[0][0], range[0][1], range[0][2]));
+            }
+        }
+
+        if(sign == '-') {
+            a.sort((a, b) => {return a-b});
+            a.reverse();
+        }
+
+        n[0] = a;
+        n[1] = calcOperation(a, sign).toFixed(range[0][2]);
+    }
+    
+    return n;
+}
+
 // Forms the block (with numbers or droppable areas) for basic operations: 
 // - addition
 // - subtraction
 // - multiplication
 // - division
-
 class Operation {
     constructor(nums, sign, id, answer) {
         this.block = document.createElement('div');

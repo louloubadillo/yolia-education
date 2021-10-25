@@ -75,7 +75,7 @@ const questionTemplates = [
             "basic-drag",
             "Pedro decidió ahorrar para comprarse un juego de Nintendo. Si todos los meses ahorra $int1, <br><br> ¿Cuánto llevará ahorrado al cabo de int2 meses? Arrastra las imágenes para armar la multiplicación.",
             ["int1", "int2"],
-            [[100, 200], [6, 12]],
+            [[100, 200], [6, 11]],
             "×",
             [["fas fa-coins", ""], ["far fa-calendar-alt", ""]]
         ],
@@ -91,10 +91,26 @@ const questionTemplates = [
     [ // √ sección 5
         [
             "per-parts",
-            "¿Qué números debo multiplicar para que me dé el resultado? <br> (No puedes poner al resultado multiplicado por 1.)",
-            4,
+            "¿Qué números debo multiplicar para que me dé el resultado? <br><br> (No puedes poner al resultado multiplicado por 1.)",
+            2,
             [[5,10]],
             "×",
+        ],
+        [
+            "basic",
+            "En una cartuchera hay int1 colores. <br><br> ¿Cuántos colores hay en int2 cartucheras?",
+            ["int1", "int2"],
+            [[20, 30], [2, 5]],
+            "×",
+            [["fas fa-pencil-alt", ""], ["fas fa-toolbox", ""]]
+        ],
+        [
+            "basic-drag",
+            "En mi zapatera tengo int1 pares de zapatos. <br><br> Arrastra los dibujos para descubrir cuántos zapatos tengo en total.",
+            ["int1", "zzz"],
+            [[20, 30, 0], [2, 3, 0]],
+            "×",
+            [["fas fa-shoe-prints", ""], ["fas fa-shoe-prints", "font-size: 12vh;"]]
         ]
     ],
     [ // √ sección 6
@@ -135,9 +151,25 @@ const questionTemplates = [
         [
             "per-parts",
             "¿Qué números debo dividir para que me dé el resultado? <br> (No puedes poner al resultado dividido entre 1.)",
-            4,
+            2,
             [5,10],
             "/",
+        ],
+        [
+            "basic-drag",
+            "José fue al mercado y pagó $int1 por int2 licuados. <br><br> Arrastra las imágenes para saber cuánto costó cada licuado.",
+            ["int2", "int1"],
+            [20, 30, 0],
+            "/",
+            [["fas fa-blender", ""], ["fas fa-coins", "font-size: 17vh;"]]
+        ],
+        [
+            "basic-drag",
+            "Se desea construir un puente de int1 metros de largo. Los obreros tardan una hora por cada int2 metros. <br><br> Arrastra los dibujos para saber en cuántas horas van a acabar el puente.",
+            ["int2", "int1"],
+            [100, 200, 0],
+            "/",
+            [["fas fa-people-carry", ""], ["fas fa-stream", ""]]
         ]
     ],
     [ // √ sección 8
@@ -184,22 +216,26 @@ const questionTemplates = [
             [["fas fa-spa", ""], ["fas fa-users", ""]]
         ],
     ],
-    [ // sección 10
+    [ // √ sección 10
         [
-            "basic",
-            "José fue al mercado y pagó $int1 por int2 licuados. <br><br> Arrastra las imágenes para saber cuánto costó cada licuado.",
-            ["int2", "int1"],
-            [20, 30, 0],
-            "/",
-            [["fas fa-coins", "font-size: 17vh;"], ["fas fa-blender", ""]]
+            "grouped",
+            "En tercer grado hay int1 alumnos.",
+            "Si se desea distribuirlos en int2 secciones <br> ¿Cuántos alumnos habrá en cada sección?",
+            "Si se le quiere dar a cada alumno int3 lápices, <br> ¿Cuántos lápices se necesitan?",
+            ["int1", "int2", "int3"],
+            [[30, 40], [2, 10]],
+            ["/", "×"],
+            [["fas fa-users", ""], ["fas fa-object-group", ""], ["fas fa-pencil-alt", ""]]
         ],
         [
-            "basic-drag",
-            "Se desea construir un puente de int1 metros de largo. Los obreros tardan una hora por cada int2 metros. <br><br> Arrastra los dibujos para saber en cuántas horas van a acabar el puente.",
-            ["int2", "int1"],
-            [100, 200, 0],
-            "/",
-            [["fas fa-people-carry", ""], ["fas fa-stream", ""]]
+            "grouped",
+            "Se tienen int1 kg de chiles para distribuir en cajas de int2 kg.",
+            "¿Cuántas cajas se pueden llenar?",
+            "Si un kilo de chiles cuesta $int3, ¿cuánto costarán los int1 kilos?",
+            ["int1", "int2", "int3"],
+            [[150, 180], [2, 5]],
+            ["/", "×"],
+            [["fas fa-pepper-hot", ""], ["fas fa-box-open", ""], ["fas fa-coins", ""]]
         ]
     ],
 ]

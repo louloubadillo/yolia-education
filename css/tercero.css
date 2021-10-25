@@ -257,3 +257,8 @@ summary {
     width: 2em;
     text-align: center;
 }
+
+.cont-group {
+    align-items: center;
+    padding: 1em;
+}
