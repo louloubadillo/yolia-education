@@ -1,16 +1,16 @@
 /**
- * Números Ordinales
+ * Sumas
  */
 
 
- function createNumbersOrd(str){
+ function createSumas(str){
     let figureIcon = document.createElement('p');
-    let figures = [{"num":"60°", "escrito":"sexagésimo"},{"num":"14°", "escrito":"decimo cuarto"},{"num":"10°", "escrito":"décimo"},{"num":"37°", "escrito":"trigésimo séptimo"},{"num":"56°", "escrito":"quincuagésimo sexto"},{"num":"72°", "escrito":"septuagésimo segundo"},
-    {"num":"28°", "escrito":"vigésimo octavo"},{"num":"13°", "escrito":"decimo tercero"},{"num":"45°", "escrito":"cuadragésimo quinto"},{"num":"41°", "escrito":"cuadragésimo primero"},{"num":"8°", "escrito":"octavo"},{"num":"18°", "escrito":"decimo octavo"},{"num":"23°", "escrito":"vigésimo tercero"},{"num":"39°", "escrito":"trigésimo noveno"}];
+    let figures = [{"suma":"80 + 3", "res":"83"}, {"suma":"70 + 7", "res":"77"}, {"suma":"64 + 2", "res":"66"}, {"suma":"56 + 22", "res":"78"}, {"suma":"44 + 23", "res":"67"}, {"suma":"65 + 33", "res":"98"}, {"suma":"94 + 15", "res":"109"}, {"suma":"34 + 17", "res":"51"}, 
+    {"suma":"71 + 4", "res":"75"}, {"suma":"29 + 7", "res":"36"}, {"suma":"48 + 4", "res":"52"} ];
     let limit = figures.length-1; 
     let rand = Math.round(Math.random() * limit);
-    str[0] = figures[rand].escrito;
-    figureIcon.innerText = figures[rand].num;
+    str[0] = figures[rand].res;
+    figureIcon.innerText = figures[rand].suma;
     figureIcon.ariaHidden = true;
     figureIcon.style.margin = "0px 3px";
     figureIcon.style.fontSize = "40px";
@@ -18,12 +18,12 @@
     return figureIcon
 }
 
-let NumerosOrdTemplate = document.createElement('template');
-NumerosOrdTemplate.innerHTML = `
+let SumasTemplate = document.createElement('template');
+SumasTemplate.innerHTML = `
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <div>
         <p class= 'tries'></p>
-        <p>Escribe en letra el número ordinal</p>
+        <p>Resuelve la suma</p>
         <div class='items' style=" margin: 1vh 1vw;"></div> 
         <input type='text' class='count' style=" margin: 1vh 1vw; color:#000;">
         <button class='verify'>Revisar</button>
@@ -31,7 +31,7 @@ NumerosOrdTemplate.innerHTML = `
     </div>
 `;
 
-class NumerosOrd extends HTMLElement {
+class Sumas extends HTMLElement {
     items = []
     str = [""];
     tries = 3;  
@@ -44,10 +44,10 @@ class NumerosOrd extends HTMLElement {
     }
     // connected
     connectedCallback(){
-        this.shadowRoot.append(NumerosOrdTemplate.content.cloneNode(true))
+        this.shadowRoot.append(SumasTemplate.content.cloneNode(true))
         console.log(this.items)
         this.items.forEach(item => {
-            this.shadowRoot.querySelector('.items').append( createNumbersOrd(this.str) );
+            this.shadowRoot.querySelector('.items').append( createSumas(this.str) );
         })
         this.shadowRoot.querySelector('.tries').innerHTML = "Intentos Restantes: " + this.tries;
         // Agregar un event listener a .verify que llame a verificar con el valor del input
@@ -85,4 +85,4 @@ class NumerosOrd extends HTMLElement {
 
 }
 
-customElements.define('ejercicio-numeros-ord', NumerosOrd);
+customElements.define('ejercicio-sumas', Sumas);

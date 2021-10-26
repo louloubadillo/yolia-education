@@ -1,29 +1,30 @@
-/**
- * Números Ordinales
- */
+/*
+ Centenas
+*/
 
-
- function createNumbersOrd(str){
+function createNumbersCen(str){
     let figureIcon = document.createElement('p');
-    let figures = [{"num":"60°", "escrito":"sexagésimo"},{"num":"14°", "escrito":"decimo cuarto"},{"num":"10°", "escrito":"décimo"},{"num":"37°", "escrito":"trigésimo séptimo"},{"num":"56°", "escrito":"quincuagésimo sexto"},{"num":"72°", "escrito":"septuagésimo segundo"},
-    {"num":"28°", "escrito":"vigésimo octavo"},{"num":"13°", "escrito":"decimo tercero"},{"num":"45°", "escrito":"cuadragésimo quinto"},{"num":"41°", "escrito":"cuadragésimo primero"},{"num":"8°", "escrito":"octavo"},{"num":"18°", "escrito":"decimo octavo"},{"num":"23°", "escrito":"vigésimo tercero"},{"num":"39°", "escrito":"trigésimo noveno"}];
-    let limit = figures.length-1; 
+    let figures = [{"num":"345", "res":"3"}, {"num":"102", "res":"1"}, {"num":"856", "res":"8"}, {"num":"234", "res":"2"}, {"num":"599", "res":"5"}, {"num":"954", "res":"9"}, {"num":"318", "res":"3"}, {"num":"471", "res":"4"},
+    {"num":"780", "res":"7"}, {"num":"569", "res":"5"}, {"num":"999","res":"9"}, {"num":"319", "res":"3"}, {"num":"882", "res":"8"}, {"num":"566", "res":"5"}, {"num":"691", "res":"6"}, {"num":"745", "res":"7"}];
+    
+    let limit = figures.length-1;
     let rand = Math.round(Math.random() * limit);
-    str[0] = figures[rand].escrito;
+    str[0] = figures[rand].res;
     figureIcon.innerText = figures[rand].num;
     figureIcon.ariaHidden = true;
     figureIcon.style.margin = "0px 3px";
     figureIcon.style.fontSize = "40px";
     figureIcon.style.display = "inline";
-    return figureIcon
+    return figureIcon;
+
 }
 
-let NumerosOrdTemplate = document.createElement('template');
-NumerosOrdTemplate.innerHTML = `
+let CentenasTemplate = document.createElement('template');
+CentenasTemplate.innerHTML = `
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <div>
         <p class= 'tries'></p>
-        <p>Escribe en letra el número ordinal</p>
+        <p>Escribe cúal es la centena del siguiente número</p>
         <div class='items' style=" margin: 1vh 1vw;"></div> 
         <input type='text' class='count' style=" margin: 1vh 1vw; color:#000;">
         <button class='verify'>Revisar</button>
@@ -31,23 +32,23 @@ NumerosOrdTemplate.innerHTML = `
     </div>
 `;
 
-class NumerosOrd extends HTMLElement {
+class Decenas extends HTMLElement {
     items = []
     str = [""];
-    tries = 3;  
+    tries = 3;
+
     constructor(){
         super();
-        // Crear arreglo de longitud aleatoria (y llenar con 0's)
         let randomNumber = 1;
         this.items = new Array(randomNumber).fill(0);
         this.attachShadow({mode: 'open'});
     }
-    // connected
+    //connected
     connectedCallback(){
-        this.shadowRoot.append(NumerosOrdTemplate.content.cloneNode(true))
+        this.shadowRoot.append(CentenasTemplate.content.cloneNode(true))
         console.log(this.items)
         this.items.forEach(item => {
-            this.shadowRoot.querySelector('.items').append( createNumbersOrd(this.str) );
+            this.shadowRoot.querySelector('.items').append( createNumbersCen(this.str) );
         })
         this.shadowRoot.querySelector('.tries').innerHTML = "Intentos Restantes: " + this.tries;
         // Agregar un event listener a .verify que llame a verificar con el valor del input
@@ -58,7 +59,6 @@ class NumerosOrd extends HTMLElement {
                 this.shadowRoot.querySelector('.tries').innerHTML = "Intentos Restantes: " + this.tries;
                 window.alert("Se han acabado tus intentos");
             }
-            
             else{
                 if (this.verifyInput(value)){
                     this.shadowRoot.querySelector('.count').style.color = "#25ac8a"; 
@@ -76,7 +76,6 @@ class NumerosOrd extends HTMLElement {
                 }
             } 
         })
-
     }
     verifyInput(str){
         let strMod = str.toLowerCase();
@@ -85,4 +84,4 @@ class NumerosOrd extends HTMLElement {
 
 }
 
-customElements.define('ejercicio-numeros-ord', NumerosOrd);
+customElements.define('ejercicio-centenas', Decenas);
