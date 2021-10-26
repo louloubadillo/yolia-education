@@ -13,6 +13,10 @@
         <script src="cuarto-js/cuarto-2.js" defer></script>
         <script src="cuarto-js/cuarto-3.js" defer></script>
         <script src="cuarto-js/cuarto-4.js" defer></script>
+        <script src="cuarto-js/cuarto-5.js" defer></script>
+        <script src="cuarto-js/cuarto-6.js" defer></script>
+        <script src="cuarto-js/cuarto-7.js" defer></script>
+        <script src="cuarto-js/cuarto-8.js" defer></script>
     </head>
     <body>
         <div class="nav">
@@ -109,16 +113,18 @@
             </div>
             <hr>
             <div class="tema">
-                <h3>Cuadro de figuras</h3>
-            </div>
-            <hr>
-            <div class="tema">
                 <h3>Clasificando triángulos</h3>
                 <p style="margin-top: 10px;">Clasifica los triángulos según sus lados</p>
                 <p style="margin-top: 10px; color: red; font-weight: bold;" id=tries_cuarto3>Intentos restantes: 3</p>
                 <div class="ejercicios">
-                    <ejercicio-figuras style = "position:relative; right:2em;" id="cuarto3_1">
-                        <img src="images/equilatero.png" style = "position:relative; right:2em;"/>
+                    <ejercicio-figuras id="cuarto3_4">
+                        <img src="images/escaleno-2.png" style="width:90%"/>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers3('c34.2')">Equilatero</button>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers3('c34.3')">Isósceles</button>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers3('c34.1')">Escaleno</button>
+                    </ejercicio-figuras>
+                    <ejercicio-figuras style = "position:relative;" id="cuarto3_1">
+                        <img src="images/equilatero.png" style = "position:relative; width:100%;"/>
                         <button type="button" class="boton-ejercicio" onclick="checkAnswers3('c31.1')">Equilatero</button>
                         <button type="button" class="boton-ejercicio" onclick="checkAnswers3('c31.2')">Isósceles</button>
                         <button type="button" class="boton-ejercicio" onclick="checkAnswers3('c31.3')">Escaleno</button>
@@ -130,7 +136,7 @@
                         <button type="button" class="boton-ejercicio" onclick="checkAnswers3('c32.3')">Escaleno</button>
                     </ejercicio-figuras>
                     <ejercicio-figuras id="cuarto3_3">
-                        <img src="images/escaleno.png" style="width:160%; padding-top:15%"/>
+                        <img src="images/escaleno.png" style="width:110%; padding-top:15%"/>
                         <button type="button" class="boton-ejercicio" onclick="checkAnswers3('c33.2')">Equilatero</button>
                         <button type="button" class="boton-ejercicio" onclick="checkAnswers3('c33.3')">Isósceles</button>
                         <button type="button" class="boton-ejercicio" onclick="checkAnswers3('c33.1')">Escaleno</button>
@@ -143,39 +149,222 @@
                 <p style="margin-top: 10px;">Determina el punto medio de los siguientes segmentos</p>
                 <p style="margin-top: 10px; color: red; font-weight: bold;" id=tries_cuarto4>Intentos restantes: 3</p>
                 <div class="ejercicios">
-                    <ejercicio-figuras style="position:relative; right:8em;" id="cuarto4_1">
-                        <div style="padding-bottom: 10px;">
-                            <img src="images/linea-small.png" style="width:150%; position:relative; right:2em;"/>
-                            <p>Punto medio:</p><input type="text" id=textbox4_1>
+                    <ejercicio-figuras id="cuarto4_1">
+                        <div>
+                            <img src="images/linea-small.png" style="width:110%; padding-bottom: 10px;"/>
+                            <div style="position:relative; bottom: 1em;">
+                                <p>Punto medio:</p><input type="text" id=textbox4_1>
+                            </div>
                         </div>
                         <button type="button" class="boton-ejercicio" onclick="checkAnswers4('p4_1')">Revisar</button>
                     </ejercicio-figuras>
                     <ejercicio-figuras id="cuarto4_2">
                         <div>
-                            <img src="images/linea-large.png" style="width:220%"/>
-                            <div style="position:relative; left:7em; bottom: 1em;">
+                            <img src="images/linea-large.png" style="width:110%; padding-bottom: 10px;"/>
+                            <div style="position:relative; bottom: 1em;">
                                 <p>Punto medio:</p><input type="text" id=textbox4_2>
                             </div>
                         </div>
-                        <button type="button" style="position: relative; left: 110px;" class="boton-ejercicio" onclick="checkAnswers4('p4_2')">Revisar</button>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers4('p4_2')">Revisar</button>
+                    </ejercicio-figuras>
+                    <ejercicio-figuras id="cuarto4_3">
+                        <div>
+                            <img src="images/linea-14.png" style="width:120%; padding-bottom: 10px;"/>
+                            <div style="position:relative; left:0em; bottom: 1em;">
+                                <p>Punto medio:</p><input type="text" id=textbox4_3>
+                            </div>
+                        </div>
+                        <button type="button" style="position: relative; left: 0px;" class="boton-ejercicio" onclick="checkAnswers4('p4_3')">Revisar</button>
+                    </ejercicio-figuras>
+                    <ejercicio-figuras id="cuarto4_4">
+                        <div>
+                            <img src="images/linea-56.png" style="width:120%; padding-bottom: 10px;"/>
+                            <div style="position:relative; left:0em; bottom: 1em;">
+                                <p>Punto medio:</p><input type="text" id=textbox4_4>
+                            </div>
+                        </div>
+                        <button type="button" style="position: relative; left: 0px;" class="boton-ejercicio" onclick="checkAnswers4('p4_4')">Revisar</button>
                     </ejercicio-figuras>
                 </div>  
             </div>
             <hr>
             <div class="tema">
                 <h3>Fracciones de figuras</h3>
-            </div>
-            <hr>
-             <div class="tema">
-                <h3>Colorea la porción</h3>
+                <p style="margin-top: 10px;">Determina la fracción coloreada de las regiones</p>
+                <div class="ejercicios">
+                    <ejercicio-figuras id="cuarto5_1">
+                        <div>
+                            <img src="images/fraccion-1.png" style="width:110%; padding-bottom: 10px;"/>
+                            <div style="position:relative; bottom: 1em;">
+                                <p>Fracción coloreada:</p><input type="text" id=textbox5_1>
+                            </div>
+                        </div>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers5('p5_1')">Revisar</button>
+                        <p style="margin-top: 10px; color: red; font-weight: bold;" id=tries5_1>Intentos restantes: 3</p>
+                    </ejercicio-figuras>
+                    <ejercicio-figuras id="cuarto5_2">
+                        <div>
+                            <img src="images/fraccion-2.png" style="width:110%; padding-bottom: 10px;"/>
+                            <div style="position:relative; bottom: 1em;">
+                                <p>Fracción coloreada:</p><input type="text" id=textbox5_2>
+                            </div>
+                        </div>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers5('p5_2')">Revisar</button>
+                        <p style="margin-top: 10px; color: red; font-weight: bold;" id=tries5_2>Intentos restantes: 3</p>
+                    </ejercicio-figuras>
+                    <ejercicio-figuras id="cuarto5_3">
+                        <div>
+                            <img src="images/fraccion-3.png" style="width:120%; padding-bottom: 10px;"/>
+                            <div style="position:relative; left:0em; bottom: 1em;">
+                                <p>Fracción coloreada:</p><input type="text" id=textbox5_3>
+                            </div>
+                        </div>
+                        <button type="button" style="position: relative; left: 0px;" class="boton-ejercicio" onclick="checkAnswers5('p5_3')">Revisar</button>
+                        <p style="margin-top: 10px; color: red; font-weight: bold;" id=tries5_3>Intentos restantes: 3</p>
+                    </ejercicio-figuras>
+                    <ejercicio-figuras id="cuarto5_4">
+                        <div>
+                            <img src="images/fraccion-4.png" style="width:120%; padding-bottom: 10px;"/>
+                            <div style="position:relative; left:0em; bottom: 1em;">
+                                <p>Fracción coloreada:</p><input type="text" id=textbox5_4>
+                            </div>
+                        </div>
+                        <button type="button" style="position: relative; left: 0px;" class="boton-ejercicio" onclick="checkAnswers5('p5_4')">Revisar</button>
+                        <p style="margin-top: 10px; color: red; font-weight: bold;" id=tries5_4>Intentos restantes: 3</p>
+                    </ejercicio-figuras>
+                </div>  
             </div>
             <hr>
             <div class="tema">
                 <h3>Mayor, menor o igual</h3>
+                <p style="margin-top: 10px;">Coloca dentro del cuadro de texto el signo &lt,&gt ó = que corresponda</p>
+                <p style="margin-top: 10px; color: red; font-weight: bold; margin-bottom: 20px;" id=tries_cuarto6>Intentos restantes: 3</p>
+                <div class="ejercicios">
+                    <ejercicio-figuras id="cuarto6_1">
+                        <div>
+                            <div class="ejercicios" style="position:relative; bottom: 1em;">
+                                <p style="padding-right: 0.5em;">3/5</p>
+                                <input type="text" id=textbox6_1 style="width:20%;">
+                                <p style="padding-left: 0.5em;">1/5</p>
+                            </div>
+                        </div>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers6('p6_1')">Revisar</button>
+                    </ejercicio-figuras>
+                    <ejercicio-figuras id="cuarto6_2">
+                        <div>
+                            <div class="ejercicios" style="position:relative; bottom: 1em;">
+                                <p style="padding-right: 0.5em;">3/3</p>
+                                <input type="text" id=textbox6_2 style="width:20%;">
+                                <p style="padding-left: 0.5em;">1</p>
+                            </div>
+                        </div>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers6('p6_2')">Revisar</button>
+                    </ejercicio-figuras>
+                    <ejercicio-figuras id="cuarto6_3">
+                        <div>
+                            <div class="ejercicios" style="position:relative; bottom: 1em;">
+                                <p style="padding-right: 0.5em;">8/3</p>
+                                <input type="text" id=textbox6_3 style="width:20%;">
+                                <p style="padding-left: 0.5em;">7/3</p>
+                            </div>
+                        </div>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers6('p6_3')">Revisar</button>
+                    </ejercicio-figuras>
+                    <ejercicio-figuras id="cuarto6_4">
+                        <div>
+                            <div class="ejercicios" style="position:relative; bottom: 1em;">
+                                <p style="padding-right: 0.5em;">2/7</p>
+                                <input type="text" id=textbox6_4 style="width:20%;">
+                                <p style="padding-left: 0.5em;">3/7</p>
+                            </div>
+                        </div>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers6('p6_4')">Revisar</button>
+                    </ejercicio-figuras>
+                </div> 
+            </div>
+            <hr>
+            <div class="tema">
+                <h3>Mayor menor o igual #2</h3>
+                <p style="margin-top: 10px;">Coloca dentro del cuadro de texto el signo &lt,&gt ó = que corresponda</p>
+                <p style="margin-top: 10px; color: red; font-weight: bold; margin-bottom: 20px;" id=tries_cuarto7>Intentos restantes: 3</p>
+                <div class="ejercicios">
+                    <ejercicio-figuras id="cuarto7_1">
+                        <div>
+                            <div class="ejercicios" style="position:relative; bottom: 1em;">
+                                <p style="padding-right: 0.5em;">3/4</p>
+                                <input type="text" id=textbox7_1 style="width:20%;">
+                                <p style="padding-left: 0.5em;">3/5</p>
+                            </div>
+                        </div>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers7('p7_1')">Revisar</button>
+                    </ejercicio-figuras>
+                    <ejercicio-figuras id="cuarto7_2">
+                        <div>
+                            <div class="ejercicios" style="position:relative; bottom: 1em;">
+                                <p style="padding-right: 0.5em;">5/7</p>
+                                <input type="text" id=textbox7_2 style="width:20%;">
+                                <p style="padding-left: 0.5em;">5/2</p>
+                            </div>
+                        </div>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers7('p7_2')">Revisar</button>
+                    </ejercicio-figuras>
+                    <ejercicio-figuras id="cuarto7_3">
+                        <div>
+                            <div class="ejercicios" style="position:relative; bottom: 1em;">
+                                <p style="padding-right: 0.5em;">10/9</p>
+                                <input type="text" id=textbox7_3 style="width:20%;">
+                                <p style="padding-left: 0.5em;">10/8</p>
+                            </div>
+                        </div>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers7('p7_3')">Revisar</button>
+                    </ejercicio-figuras>
+                    <ejercicio-figuras id="cuarto7_4">
+                        <div>
+                            <div class="ejercicios" style="position:relative; bottom: 1em;">
+                                <p style="padding-right: 0.5em;">9/3</p>
+                                <input type="text" id=textbox7_4 style="width:20%;">
+                                <p style="padding-left: 0.5em;">9/3</p>
+                            </div>
+                        </div>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers7('p7_4')">Revisar</button>
+                    </ejercicio-figuras>
+                </div> 
             </div>
             <hr>
              <div class="tema">
                 <h3>Quién comió más torta</h3>
+                <p style="margin-top: 10px;">Coloca el nombre de la persona que comió más torta</p>
+                <p style="margin-top: 10px; color: red; font-weight: bold; margin-bottom: 20px;" id=tries_cuarto8>Intentos restantes: 3</p>
+                <div class="ejercicios">
+                    <ejercicio-figuras id="cuarto8_1">
+                        <div>
+                            <p>Fernanda se comió 2/5 de torta y Juan 3/5 de torta ¿Quién comió más torta?</p>
+                            <input type="text" id=textbox8_1 style="margin-bottom:10px; margin-top:10px;">
+                        </div>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers8('p8_1')">Revisar</button>
+                    </ejercicio-figuras>
+                    <ejercicio-figuras id="cuarto8_2">
+                        <div>
+                            <p>Pablo se comió 3/9 de torta e Isabel 4/6 de torta ¿Quién comió más torta?</p>
+                            <input type="text" id=textbox8_2 style="margin-bottom:10px; margin-top:10px;">
+                        </div>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers8('p8_2')">Revisar</button>
+                    </ejercicio-figuras>
+                    <ejercicio-figuras id="cuarto8_3">
+                        <div>
+                            <p>Regina se comió 4/4 de torta y Rodrigo 2/4 de torta ¿Quién comió más torta?</p>
+                            <input type="text" id=textbox8_3 style="margin-bottom:10px; margin-top:10px;">
+                        </div>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers8('p8_3')">Revisar</button>
+                    </ejercicio-figuras>
+                    <ejercicio-figuras id="cuarto8_4">
+                        <div>
+                            <p>Ana se comió 1/3 de torta y Pedro 3/8 de torta ¿Quién comió más torta?</p>
+                            <input type="text" id=textbox8_4 style="margin-bottom:10px; margin-top:10px;">
+                        </div>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers8('p8_4')">Revisar</button>
+                    </ejercicio-figuras>
+                </div> 
             </div>
             <hr>
             <div class="tema">
@@ -201,6 +390,10 @@
             <div class="tema">
                 <h3>Calcula los productos</h3>
             </div>
+            <div class="tema">
+                <h3>Colorea la porción</h3>
+            </div>
+            <hr>
         </div>
     </body>
 

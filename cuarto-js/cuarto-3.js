@@ -18,6 +18,12 @@ tag3_3.appendChild(text1);
 let element3_3 = document.getElementById("cuarto3_3");
 element3_3.appendChild(tag3_3);
 
+let tag3_4 = document.createElement("p");
+let text3_4 = document.createTextNode("");
+tag3_4.appendChild(text1);
+let element3_4 = document.getElementById("cuarto3_4");
+element3_4.appendChild(tag3_4);
+
 function checkAnswers3(id){
     if (counter31==0){
         return;
@@ -32,6 +38,9 @@ function checkAnswers3(id){
     }
     else if (id[2]=="3"){
         tag=tag3_3;
+    }
+    else if (id[2]=="4"){
+        tag=tag3_4;
     }
     if (newID=="1"){
         tag.textContent= "Correcto!";
