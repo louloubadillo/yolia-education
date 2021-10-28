@@ -183,6 +183,17 @@ ejercicio-sumas{
     margin: 2vh 4vw; 
     max-width: 250px;
 }
+
+ejercicio-restas{
+    margin: 2vh 4vw; 
+    max-width: 250px;
+}
+
+ejercicio-multi{
+    margin: 2vh 4vw; 
+    max-width: 250px;
+}
+
 .grade-title{
     width: 100%;
     padding:10px;
