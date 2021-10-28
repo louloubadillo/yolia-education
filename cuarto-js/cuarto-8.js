@@ -58,8 +58,12 @@ function checkAnswers8(id){
             isRight=true;
         }
     }
+    if (tag.textContent== "Correcto!"){
+        return;
+    }
     if (isRight){
         tag.textContent= "Correcto!";
+        globalCounter++;
     }
     else{
         counter81--;

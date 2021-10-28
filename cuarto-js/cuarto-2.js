@@ -105,9 +105,12 @@ function checkAnswers2(id){
         }
         num=8;
     }
-    
+    if (tag.textContent== "Correcto!"){
+        return;
+    }
     if (oneCor&&twoCor){
         tag.textContent= "Correcto!";
+        globalCounter++;
     }
     else{
         tag.textContent= "Incorrecto!";

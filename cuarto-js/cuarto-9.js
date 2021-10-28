@@ -42,8 +42,12 @@ function checkAnswers9(id){
     else if (id[2]=="4"){
         tag=tag9_4;
     }
+    if (tag.textContent== "Correcto!"){
+        return;
+    }
     if (newID=="1"){
         tag.textContent= "Correcto!";
+        globalCounter++;
     }
     else if (newID=="2"){
         counter91--;

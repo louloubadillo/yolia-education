@@ -1,4 +1,6 @@
-let counter1=3
+let globalCounter=0;
+
+let counter1=3;
 
 let tag1 = document.createElement("p");
 let text1 = document.createTextNode("");
@@ -42,8 +44,12 @@ function checkAnswers1(id){
     else if (id[1]=="4"){
         tag=tag4;
     }
+    if (tag.textContent== "Correcto!"){
+        return;
+    }
     if (newID=="1"){
         tag.textContent= "Correcto!";
+        globalCounter++;
     }
     else if (newID=="2"){
         counter1--;

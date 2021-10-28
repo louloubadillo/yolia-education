@@ -79,9 +79,12 @@ function checkAnswers15(id){
         }
         num=4;
     }
-    
+    if (tag.textContent== "Correcto!"){
+        return;
+    }
     if (oneCor){
         tag.textContent= "Correcto!";
+        globalCounter++;
     }
     else{
         tag.textContent= "Incorrecto!";
