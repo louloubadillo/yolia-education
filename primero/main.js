@@ -71,7 +71,7 @@ const questionTemplates = [[
     [
         "seleccionar",
         "¿Qué forma tiene?",
-        ["triángulo"],
+        ["Triángulo"],
         [[1,12]],
         "s",
         [["fas fa-pizza-slice ", ""]]
@@ -79,7 +79,7 @@ const questionTemplates = [[
     [
         "seleccionar",
         "¿Qué forma tiene?",
-        ["círculo"],
+        ["Círculo"],
         [[1,12]],
         "s",
         [["fas fa-basketball-ball ", ""]]
@@ -87,7 +87,7 @@ const questionTemplates = [[
     [
         "seleccionar",
         "¿Qué forma tiene?",
-        ["cuadrado"],
+        ["Cuadrado"],
         [[1,12]],
         "s",
         [["fas fa-dice-six ", ""]]
@@ -95,7 +95,7 @@ const questionTemplates = [[
     [
         "seleccionar",
         "¿Qué forma tiene?",
-        ["rectángulo"],
+        ["Rectángulo"],
         [[1,12]],
         "s",
         [["fas fa-ruler-horizontal ", ""]]
@@ -105,7 +105,7 @@ const questionTemplates = [[
     [
         "seleccionar",
         "¿Qué significa este símbolo?",
-        ["paz"],
+        ["Paz"],
         [[1,12]],
         "s",
         [["fas fa-peace ", ""]]
@@ -113,7 +113,7 @@ const questionTemplates = [[
     [
         "seleccionar",
         "¿Qué significa este símbolo?",
-        ["amor"],
+        ["Amor"],
         [[1,12]],
         "s",
         [["fas fa-heart ", ""]]
@@ -121,7 +121,7 @@ const questionTemplates = [[
     [
         "seleccionar",
         "¿Qué significa este símbolo?",
-        ["no fumar"],
+        ["No fumar"],
         [[1,12]],
         "s",
         [["fas fa-smoking-ban ", ""]]
@@ -129,14 +129,66 @@ const questionTemplates = [[
     [
         "seleccionar",
         "¿Qué significa este símbolo?",
-        ["dinero"],
+        ["Dinero"],
         [[1,12]],
         "s",
         [["fas fa-money-bill-wave ", ""]]
     ],
     
 ],
-
+[
+    [
+        "escribir",
+        "Escribe en letra el número",
+        ["Quince"],
+        [[1,5]],
+        "e",
+        [["15 ", ""]]
+    ],
+    [
+        "escribir",
+        "Escribe en letra el número",
+        ["Veintitrés"],
+        [[1,5]],
+        "e",
+        [["23 ", ""]]
+    ],
+    [
+        "escribir",
+        "Escribe en letra el número",
+        ["Trece"],
+        [[1,5]],
+        "e",
+        [["13 ", ""]]
+    ],
+    [
+        "escribir",
+        "Escribe en letra el número",
+        ["Veintiocho"],
+        [[1,5]],
+        "e",
+        [["28 ", ""]]
+    ],
+    
+],
+[
+    [
+        "sort",
+        "Ayuda a Juan a resolver las siguientes sumas. Cuando acabes, arrastra los circulitos para indicar el menor con 1 y el mayor con 2.",
+        [[1, 10, 0]],
+        2,
+        2,
+        "+"
+    ],
+    [
+        "sort",
+        "Ayuda a Fernanda a resolver las siguientes sumas. Cuando acabes, arrastra los circulitos para indicar el menor con 1 y el mayor con 2.",
+        [[1, 10, 0]],
+        2,
+        2,
+        "+"
+    ],
+],
 [
     [
         "basic",
@@ -208,6 +260,40 @@ const questionTemplates = [[
 ],
 [
     [
+        "decenas",
+        "¿Cuántos decenas completas de carros hay?",
+        ["int1"],
+        [[10,20]],
+        "c",
+        [["fas fa-car", "font-size: 5vw;"]]
+    ],
+    [
+        "decenas",
+        "¿Cuántas decenas completas de perros hay?",
+        ["int1"],
+        [[7,15]],
+        "c",
+        [["fas fa-dog", "font-size: 5vw;"]]
+    ],
+    [
+        "decenas",
+        "¿Cuántas decenas completas de manzanas hay?",
+        ["int1"],
+        [[15,20]],
+        "c",
+        [["fas fa-apple-alt", "font-size: 5vw;"]]
+    ],
+    [
+        "decenas",
+        "¿Cuántas decenas completas de libros hay?",
+        ["int1"],
+        [[12,25]],
+        "c",
+        [["fas fa-book", "font-size: 5vw;"]]
+    ],
+],
+[
+    [
         "basic",
         "Raúl está armando un rompecabezas de int1 piezas, de las cuales ya usó int2. <br><br>¿Cuántas piezas le faltan por usar? ",
         ["int1", "int2"],
@@ -244,11 +330,11 @@ const questionTemplates = [[
 [
     [
         "basic-drag",
-        "En un panal viven int1 abejas. Un día, int2 salen a buscar alimento. <br><br> Arrastra las abejas para llenar la resta y saber cuántas abejas quedan en el panal.",
-        ["int1","int2"],
-        [[1, 40], [1, 30]],
-        "-",
-        [["fab fa-forumbee", ""], ["fab fa-forumbee", "font-size: 17vh;"]]
+        "Pedro decidió ahorrar para comprarse un juego de Nintendo. Si todos los meses ahorra $int1, <br><br> ¿Cuánto llevará ahorrado al cabo de int2 meses? Arrastra las imágenes para armar la multiplicación.",
+        ["int1", "int2"],
+        [[100, 200], [6, 11]],
+        "×",
+        [["fas fa-coins", ""], ["far fa-calendar-alt", ""]]
     ],
     [
         "basic",

@@ -1,3 +1,5 @@
+// Manage behaviour of movers, draggable objects and droppable objects
+
 const moverElements = document.querySelectorAll('.mover');
 const draggableElements = document.querySelectorAll(".draggable");
 const droppableElements = document.querySelectorAll(".droppable");
@@ -76,10 +78,10 @@ function moverDrop(event) {
             const draggableElement = document.getElementById(draggableElementId);
             const droppableElementTextContent = event.target.textContent;
 
+            // Change text displayed by mover and colour
             event.target.classList.add('mover-dropped');
             event.target.style.removeProperty('background-color');
             event.target.textContent = draggableElement.textContent;
-            // draggableElement.classList.add('mover-dropped');
             draggableElement.style.removeProperty('background-color');
             draggableElement.textContent = droppableElementTextContent;
         }

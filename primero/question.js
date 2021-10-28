@@ -50,6 +50,13 @@ class Question {
                 questionCont = c.block;
             break; 
 
+            case "decenas":
+                let d = new Decenas(info, id);
+                text = d.text;
+                opr = d.opr;
+                questionCont = d.block;
+            break; 
+
             case "agrupar":
                 let a = new Agrupar(info, id);
                 text = a.text;
@@ -63,6 +70,14 @@ class Question {
                 opr = s.opr;
                 questionCont = s.block;
             break; 
+
+            case "escribir":
+                let e = new Escribir(info, id);
+                text = e.text;
+                opr = e.opr;
+                questionCont = e.block;
+            break; 
+
             // For basic and basic-drag
             default:
                 let b = new Basic(info, id);

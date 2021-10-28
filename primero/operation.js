@@ -47,6 +47,13 @@ class Operation {
                     <input type="text" id="${id}" style="width: 8em;text-align: center;">
                 </div>`);
             }
+            else if(sign == 'e'){
+                this.block.style ="flex-direction: row;";
+                this.block.insertAdjacentHTML("afterbegin", `  
+                <div style="display: flex;flex-direction: column; padding: unset; margin: unset;">
+                    <input type="text" id="${id}" style="width: 8em;text-align: center;">
+                </div>`);
+            }
             else {
                 let q = '';
                 for(let i = 0; i < nums[0]; i++){
