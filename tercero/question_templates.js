@@ -47,7 +47,7 @@ const questionTemplates = [
         ],
         [
             "basic-drag",
-            "En una carrera los participantes deben correr int1 metros. José lleva int2 metros. Arrastra los dibujos para encontrar cuántos metros necesita correr para llegar a la meta.",
+            "En una carrera los participantes deben correr int1 metros. José lleva int2 metros. <br><br> Arrastra los dibujos para encontrar cuántos metros necesita correr para llegar a la meta.",
             ["int1", "int2"],
             [[800, 900, 2], [700, 800, 2]],
             "-",
@@ -57,7 +57,7 @@ const questionTemplates = [
     [ // √ sección 4
         [
             "basic-drag",
-            "¿Cuántas patas tienen int1 perros? Arrastra los dibujos para responder la multiplicación.",
+            "¿Cuántas patas tienen int1 perros? <br> Arrastra los dibujos para responder la multiplicación.",
             ["zzz", "int1"],
             [[4, 5, 0], [5, 10, 0]],
             "×",
@@ -206,15 +206,39 @@ const questionTemplates = [
             [["fas fa-boxes", ""], ["fas fa-apple-alt", ""]]
         ]
     ],
-    [ // sección 9
+    [ // √ sección 9
         [
             "basic-drag",
-            "Para celebrar el Día del Árbol los alumnos de tercer grado sembraron int1 semillas cada uno. Si en tercer grado hay int2 alumnos, <br><br> arrastra las imágenes para armar la multiplicación y encontrar cuántas semillas se sembraron.",
+            "Para celebrar el Día del Árbol los alumnos de tercer grado sembraron int1 semillas cada uno. En tercer grado hay int2 alumnos. <br><br> Arrastra las imágenes para armar la multiplicación y encontrar cuántas semillas se sembraron.",
             ["int1", "int2"],
-            [[2, 10], [80, 100]],
+            [[10, 15], [80, 100]],
             "×",
             [["fas fa-spa", ""], ["fas fa-users", ""]]
         ],
+        [
+            "basic",
+            "Un nadador hace int1 piscinas diarias. Cada piscina tiene int2 metros. <br><br> ¿Cuántos metros nadará en total?",
+            ["int1", "int2"],
+            [[25, 30], [20, 25]],
+            "×",
+            [["fas fa-swimmer", ""], ["fas fa-swimming-pool", ""]]
+        ],
+        [
+            "basic-drag",
+            "De un aeropuerto salen int1 vuelos diarios. En cada vuelo van int2 pasajeros. <br><br> Arrastra los dibujos para saber cuántos pasajeros parten en un día. ",
+            ["int1", "int2"],
+            [[100, 150], [50, 100]],
+            "×",
+            [["fas fa-plane-departure", ""], ["fas fa-user-friends", ""]]
+        ],
+        [
+            "basic",
+            "En el cine se venden int1 entradas por hora. <br><br> Arrastra los dibujos para averiguar cuántas entradas se venderán en int2 horas.",
+            ["int1", "int2"],
+            [[150, 200], [20, 24]],
+            "×",
+            [["fas fa-ticket-alt", ""], ["far fa-clock", ""]]
+        ]
     ],
     [ // √ sección 10
         [
@@ -231,7 +255,7 @@ const questionTemplates = [
             "grouped",
             "Se tienen int1 kg de chiles para distribuir en cajas de int2 kg.",
             "¿Cuántas cajas se pueden llenar?",
-            "Si un kilo de chiles cuesta $int3, ¿cuánto costarán los int1 kilos?",
+            "Si un kilo de chiles cuesta $int3, <br>¿cuánto costarán los int1 kilos?",
             ["int1", "int2", "int3"],
             [[150, 180], [2, 5]],
             ["/", "×"],

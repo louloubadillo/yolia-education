@@ -94,7 +94,7 @@ summary {
     justify-content: center;
     flex-wrap: wrap;
 }
-/*.question-content*/ input {
+input {
     background-color: #ffffffdd;
     border-radius: 0.3em;
     border: solid grey 0.09em;
@@ -261,4 +261,5 @@ summary {
 .cont-group {
     align-items: center;
     padding: 1em;
+    width: 25em;
 }

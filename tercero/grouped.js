@@ -36,8 +36,6 @@ class Grouped {
         const ans1 = calcOperation([nums[1], nums[0]], info[6][0]);
         const ans2 = calcOperation([nums[2], nums[0]], info[6][1]);
 
-        console.log(nums, ans1, ans2);
-
         // Generate operations
         const op1 = new Operation([2], info[6][0], id+'-a', ans1);
         const op2 = new Operation([2], info[6][1], id+'-b', ans2);
