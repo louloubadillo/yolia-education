@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;600&display=swap');
+* {
+    text-align: center;
+}
+
 em, .sign {
     font-style: unset;
     font-weight: bold;
@@ -17,7 +21,7 @@ summary {
 
 .question {
     padding-bottom: 1em;
-    margin-bottom: 1em;
+    margin-top: 1em;
     display: flex;
     flex-direction: column;
 }
@@ -25,7 +29,7 @@ summary {
     background-color: #f8f8f8;
 }
 .question:last-child {
-    margin-bottom: 0;
+    margin-bottom: 1em;
 }
 
 .tries {
@@ -64,7 +68,7 @@ summary {
     align-items: center;
 }
 .question-text:first-child {
-    margin-top: 2vh;
+    margin-top: 1.5vh;
 }
 
 .question-content{
@@ -106,7 +110,6 @@ input {
     align-self: flex-end;
 }
 .question-content p {
-    text-align: center;
     margin-top: 1em;
 }
 .question-content i {
@@ -130,6 +133,7 @@ input {
     margin-bottom: 0.23em;
     padding-right: 0.29em;
     padding-bottom: 0.1em;
+    align-self: flex-end;
 }
 
 .divisions {
@@ -145,6 +149,18 @@ input {
 .sign {
     align-self: flex-end;
     padding: 0.3em;
+}
+
+.second {
+    margin-top: 0.23em;
+    align-self: flex-end;
+    margin-right: 0.6em;
+    width: 3.4em;
+}
+
+.addition {
+    padding-bottom: 0.23em;
+    margin-bottom: 2.3em;
 }
 
 .mover {
@@ -262,4 +278,22 @@ input {
     align-items: center;
     padding: 1em;
     width: 25em;
+}
+
+.decomp-text {
+    margin: 0.15em;
+    margin-left: 0.85em;
+    width: 8em;
+    text-align: left;
+}
+.decomp-input {
+    width: 3em;
+    text-align: center;
+}
+
+.round {
+    border-radius: 10px;
+    padding: 0.8em;
+    padding-top: 0;
+    margin: 0.5em 1em;
 }

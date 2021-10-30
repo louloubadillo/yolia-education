@@ -262,4 +262,18 @@ const questionTemplates = [
             [["fas fa-pepper-hot", ""], ["fas fa-box-open", ""], ["fas fa-coins", ""]]
         ]
     ],
+    [ // sección 11
+        [
+            "decomp",
+            "Completa descomponiendo el siguiente número: <br><br> int1",
+            [100, 999000]
+        ],
+        [],
+        [
+            "decomp",
+            "Completa descomponiendo el siguiente número: <br><br> int1",
+            [100, 999000]
+        ],
+        []
+    ]
 ]

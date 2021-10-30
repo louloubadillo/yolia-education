@@ -55,6 +55,12 @@ class Question {
                 questionCont = opr.block;
             break;
 
+            case "decomp":
+                opr = new Decomp(info[1], info[2]);
+                text = opr.text;
+                questionCont = opr.block;
+            break;
+
             // For basic and basic-drag
             default:
                 let b = new Basic(info, id);
