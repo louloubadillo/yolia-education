@@ -10,17 +10,22 @@ function getParts(num) {
     return parts;
 }
 
-// Given a number, you must break down the number into powers of 10
+// Given a number, you must break it down into powers of 10
 class Decomp{
     constructor(text, range) {
         const num = getRandom(range[0], range[1]);
         const parts = getParts(num);
-        const str = num.toString();
-
+        
         this.block = document.createElement('div');
         this.block.className = 'question-content';
         this.total = 6;
-        this.text = text.replace("int1", str.slice(0, str.length-3) + ',' + str.slice(-3));
+
+        if(num >= 1000) {
+            const str = num.toString();
+            this.text = text.replace("int1", str.slice(0, str.length-3) + ',' + str.slice(-3));
+        } else {
+            this.text = text.replace("int1", num);
+        }
 
         // Add all inputs and labels for them
         this.block.insertAdjacentHTML('beforeend', 

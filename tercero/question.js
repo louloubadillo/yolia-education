@@ -61,6 +61,12 @@ class Question {
                 questionCont = opr.block;
             break;
 
+            case "round":
+                opr = new Round(info, id);
+                text = opr.text;
+                questionCont = opr.block;
+            break;
+
             // For basic and basic-drag
             default:
                 let b = new Basic(info, id);

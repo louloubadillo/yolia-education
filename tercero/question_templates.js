@@ -262,18 +262,52 @@ const questionTemplates = [
             [["fas fa-pepper-hot", ""], ["fas fa-box-open", ""], ["fas fa-coins", ""]]
         ]
     ],
-    [ // sección 11
+    [ // √? sección 11
         [
             "decomp",
             "Completa descomponiendo el siguiente número: <br><br> int1",
-            [100, 999000]
+            [50, 2000]
         ],
-        [],
         [
             "decomp",
             "Completa descomponiendo el siguiente número: <br><br> int1",
-            [100, 999000]
+            [50, 50000]
         ],
-        []
+        [
+            "decomp",
+            "Completa descomponiendo el siguiente número: <br><br> int1",
+            [1000, 99000]
+        ],
+        [
+            "decomp",
+            "Completa descomponiendo el siguiente número: <br><br> int1",
+            [80000, 999000]
+        ]
+    ],
+    [ // √ sección 12
+        [
+            "round",
+            "¿Cuántos hipopótamos hay si redondeamos a la power1 más cercana?",
+            [100, 300],
+            "fas fa-hippo",
+        ],
+        [
+            "round",
+            "¿Cuántos peces hay si redondeamos a la power1 más cercana?",
+            [100, 300],
+            "fas fa-fish"
+        ],
+        [
+            "round",
+            "¿Cuántos pájaros hay si redondeamos a la power1 más cercana?",
+            [100, 300],
+            "fas fa-dove"
+        ],
+        [
+            "round",
+            "¿Cuántos kiwis hay si redondeamos a la power1 más cercana?",
+            [100, 300],
+            "fas fa-kiwi-bird"
+        ]
     ]
 ]
