@@ -309,5 +309,12 @@ const questionTemplates = [
             [100, 300],
             "fas fa-kiwi-bird"
         ]
+    ],
+    [ // sección 13
+        [
+            "fraction-table",
+            "Completa el siguiente cuadro",
+            4
+        ]
     ]
 ]

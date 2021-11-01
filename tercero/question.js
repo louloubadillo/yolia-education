@@ -67,6 +67,12 @@ class Question {
                 questionCont = opr.block;
             break;
 
+            case "fraction-table":
+                text = info[1];
+                opr = new FractionTable(info[2]);
+                questionCont = opr.block;
+            break;
+
             // For basic and basic-drag
             default:
                 let b = new Basic(info, id);

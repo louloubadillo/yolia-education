@@ -80,13 +80,13 @@ summary {
     margin-bottom: 0.5em;
 }
 /* Chrome, Safari, Edge, Opera */
-/*.question-content*/ input::-webkit-outer-spin-button,
-/*.question-content*/ input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 /* Firefox */
-/*.question-content*/ input[type=number] {
+input[type=number] {
     -moz-appearance: textfield;
 }
 .question-content div{
@@ -104,10 +104,7 @@ input {
     padding-right: 0.2em;
     text-align: right; 
     width: 5em;
-    align-self: flex-end;
-}
-.question-content p {
-    margin-top: 1em;
+    align-self: center;
 }
 .question-content i {
     font-size: 20vh;
@@ -292,7 +289,7 @@ input {
 .round {
     border-radius: 10px;
     padding: 0.8em;
-    padding-top: 0;
+    /* padding-top: 0; */
     margin: 0.5em 1em;
     align-items: center;
 }
@@ -302,4 +299,12 @@ input {
     text-align: center;
     width: 5em;
     align-self: unset;
+}
+
+table {
+    width: 100%;
+}
+
+td, th {
+    border: solid 1px;
 }

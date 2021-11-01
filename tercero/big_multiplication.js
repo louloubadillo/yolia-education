@@ -9,6 +9,7 @@ class BigMultiplication {
         inpt.className = 'focus';
         inpt.id = `${id}-c`;
         inpt.style.width = '4em';
+        inpt.style.alignSelf = 'flex-end';
 
         // Fill with droppable objects
         if(nums.length == 1) {
