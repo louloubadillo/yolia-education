@@ -31,29 +31,29 @@ class Decomp{
         this.block.insertAdjacentHTML('beforeend', 
         `<div style="flex-direction: row;">
             <div>
-                <div style="flex-direction: row;" class="round">
+                <div style="flex-direction: row;padding-top: 0.8em;" class="round">
                     <input type="number" class="decomp-input">
                     <p class="decomp-text">centenas de mil</p>
                 </div>
-                <div style="flex-direction: row;" class="round">
+                <div style="flex-direction: row;padding-top: 0.8em;" class="round">
                     <input type="number" class="decomp-input">
                     <p class="decomp-text">decenas de mil</p>
                 </div>
-                <div style="flex-direction: row;" class="round">
+                <div style="flex-direction: row;padding-top: 0.8em;" class="round">
                     <input type="number" class="decomp-input">
                     <p class="decomp-text">unidades de mil</p>
                 </div>
             </div>
             <div>
-                <div style="flex-direction: row;" class="round">
+                <div style="flex-direction: row;padding-top: 0.8em;" class="round">
                     <input type="number" class="decomp-input">
                     <p class="decomp-text">centenas</p>
                 </div>
-                <div style="flex-direction: row;" class="round">
+                <div style="flex-direction: row;padding-top: 0.8em;" class="round">
                     <input type="number" class="decomp-input">
                     <p class="decomp-text">decenas</p>
                 </div>
-                <div style="flex-direction: row;" class="round">
+                <div style="flex-direction: row;padding-top: 0.8em;" class="round">
                     <input type="number" class="decomp-input">
                     <p class="decomp-text">unidades</p>
                 </div>

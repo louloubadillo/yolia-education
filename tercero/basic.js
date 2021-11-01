@@ -41,7 +41,7 @@ class Basic {
         this.text = text;
 
         
-        if(info[4] == '×' && randoms[0][0] >= 10 && randoms[0][1] >= 20) {
+        if(info[4] == '×' && randoms[0][0] >= 10 && randoms[0][1] >= 10) {
             this.opr = new BigMultiplication(firstArg, id+'-0', randoms[1]);
         } else {
             this.opr = new Operation(firstArg, info[4], id+'-0', randoms[1]);
