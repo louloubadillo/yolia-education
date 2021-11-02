@@ -324,11 +324,37 @@ const questionTemplates = [
             "fas fa-kiwi-bird"
         ]
     ],
-    [ // sección 13
+    [ // √ sección 13
         [
             "fraction-table",
             "Completa el siguiente cuadro",
             4
+        ]
+    ],
+    [ // √ sección 14
+        [
+            "decimals",
+            "Transforma la siguiente fracción a una expresión decimal.",
+            [1,5],
+            10
+        ],
+        [
+            "decimals",
+            "Transforma la siguiente fracción a una expresión decimal.",
+            [5,10],
+            10
+        ],
+        [
+            "decimals",
+            "Transforma la siguiente fracción a una expresión decimal.",
+            [1,50],
+            100
+        ],
+        [
+            "decimals",
+            "Transforma la siguiente fracción a una expresión decimal.",
+            [50,100],
+            100
         ]
     ]
 ]

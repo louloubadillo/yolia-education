@@ -34,7 +34,7 @@ class Round{
                 ${num}
             </div>
             <div class="round">
-                <input id="${id}-0" class="round-input">
+                <input id="${id}-0" class="round-input" type="number">
             </div>
         </div>`);
 

@@ -73,6 +73,12 @@ class Question {
                 questionCont = opr.block;
             break;
 
+            case "decimals":
+                text = info[1];
+                opr = new Decimals(info[2], info[3]);
+                questionCont = opr.block;
+            break;
+
             // For basic and basic-drag
             default:
                 let b = new Basic(info, id);

@@ -43,9 +43,6 @@ function calcSectionScore(i) {
     }
     scoreText.innerHTML = `${score}%`;
 
-    // Close current section
-    sections[i].removeAttribute('open');
-
     if(i < 14) {
         // Open next section
         sections[i+1].setAttribute('open','');

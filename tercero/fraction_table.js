@@ -90,26 +90,15 @@ class FractionTable{
                 fractionTD.classList.add('check-me');
                 fractionTD.appendChild(fraction);
                 row.appendChild(fractionTD);
-                
-                const num = document.createElement('td');
-                num.innerText = currQuestion[0];
-                row.appendChild(num);
-                
-                const denom = document.createElement('td');
-                denom.innerText = currQuestion[1];
-                row.appendChild(denom);
-                
-                const inptTD = document.createElement('td');
-                const inpt = document.createElement('input');
-                const inptD = document.createElement('div');
-                inptD.className = 'round';
-                inptD.appendChild(inpt);
-                inpt.style.textAlign = 'center';
-                inpt.style.width = '11em';
-                inpt.style.height = '1.9em';
-                inptTD.classList.add('check-me');
-                inptTD.appendChild(inptD);
-                row.appendChild(inptTD);
+
+                row.insertAdjacentHTML('beforeend', 
+                `<td>${currQuestion[0]}</td>
+                <td>${currQuestion[1]}</td>
+                <td class="check-me">
+                    <div class="round">
+                        <input style="text-align: center;width: 11em; height: 1.9em;">
+                    </div>
+                </td>`);
                 this.total += 3;
             }
             // Only fraction
@@ -118,40 +107,23 @@ class FractionTable{
                 const fractionTD = document.createElement('td');
                 fractionTD.appendChild(fraction);
                 row.appendChild(fractionTD);
-                
-                const numTD = document.createElement('td');
-                const num = document.createElement('input');
-                const numD = document.createElement('div');
-                numD.className = 'round';
-                num.style.width = '3em';
-                num.style.textAlign = 'center';
-                numTD.classList.add('check-me');
-                numD.appendChild(num);
-                numTD.appendChild(numD);
-                row.appendChild(numTD);
-                
-                const denomTD = document.createElement('td');
-                const denom = document.createElement('input');
-                const denomD = document.createElement('div');
-                denomD.className = 'round';
-                denom.style.width = '3em';
-                denom.style.textAlign = 'center';
-                denomTD.classList.add('check-me');
-                denomD.appendChild(denom);
-                denomTD.appendChild(denomD);
-                row.appendChild(denomTD);
-                
-                const inptTD = document.createElement('td');
-                const inpt = document.createElement('input');
-                const inptD = document.createElement('div');
-                inptD.className = 'round';
-                inpt.style.textAlign = 'center';
-                inpt.style.width = '11em';
-                inpt.style.height = '1.9em';
-                inptTD.classList.add('check-me');
-                inptD.appendChild(inpt);
-                inptTD.appendChild(inptD);
-                row.appendChild(inptTD);
+
+                row.insertAdjacentHTML('beforeend',
+                `<td class="check-me">
+                    <div class="round">
+                        <input type="number" style="width: 3em;text-align: center;">
+                    </div>
+                </td>
+                <td class="check-me">
+                    <div class="round">
+                        <input type="number" style="width: 3em;text-align: center;">
+                    </div>
+                </td>
+                <td class="check-me">
+                    <div class="round">
+                        <input style="text-align: center;width: 11em; height: 1.9em;">
+                    </div>
+                </td>`);
 
                 this.total += 3
             }
@@ -163,31 +135,18 @@ class FractionTable{
                 fractionTD.appendChild(fraction);
                 row.appendChild(fractionTD);
 
-                const numTD = document.createElement('td');
-                const num = document.createElement('input');
-                const numD = document.createElement('div');
-                numD.className = 'round';
-                num.style.width = '3em';
-                num.style.textAlign = 'center';
-                numTD.classList.add('check-me');
-                numD.appendChild(num);
-                numTD.appendChild(numD);
-                row.appendChild(numTD);
-                
-                const denomTD = document.createElement('td');
-                const denom = document.createElement('input');
-                const denomD = document.createElement('div');
-                denomD.className = 'round';
-                denom.style.width = '3em';
-                denom.style.textAlign = 'center';
-                denomTD.classList.add('check-me');
-                denomD.appendChild(denom);
-                denomTD.appendChild(denomD);
-                row.appendChild(denomTD);
-
-                const name = document.createElement('td');
-                name.innerText = currQuestion[2];
-                row.appendChild(name);
+                row.insertAdjacentHTML('beforeend', 
+                `<td class="check-me">
+                    <div class="round">
+                        <input type="number" style="width: 3em;text-align: center;">
+                    </div>
+                </td>
+                <td class="check-me">
+                    <div class="round">
+                        <input type="number" style="width: 3em;text-align: center;">
+                    </div>
+                </td>
+                <td>${currQuestion[2]}</td>`);
 
                 this.total += 4;
             }
@@ -204,12 +163,12 @@ class FractionTable{
 
                 for (let j = 0; j < currRow.children.length; j++) {
                     if(currRow.children[j].classList.contains('check-me')) {
-                        const element = currRow.children[j].firstChild;
                         if(!j) {
                             // Fraction
-                            check += element.isCorrect();
-                        } else {                        
-                            const ele = element.firstChild;
+                            check += currRow.children[j].firstChild.isCorrect();
+                        } else {
+                            // Inputs
+                            const ele = currRow.children[j].children[0].children[0];
                             if(ele.value == answers[i-2][j-1]) {
                                 ele.setAttribute('disabled', 'true');
                                 ele.style.border = 'none';

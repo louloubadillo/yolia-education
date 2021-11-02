@@ -19,7 +19,7 @@ class Fraction extends HTMLElement{
         lower.setAttribute('type', 'number');
         lower.style.textAlign = 'center';
         
-        // Disable button if a value was passed
+        // Disable inputs if a value was passed
         if(display) {
             upper.value = numerator;
             upper.setAttribute('disabled', 'true');
