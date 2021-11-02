@@ -242,7 +242,7 @@ input {
 
 .check-score {
     background-color: #25ac8a;
-    width: 11em;
+    width: 10em;
     margin-top: 1em;
 }
 .check-score:hover {
@@ -302,7 +302,7 @@ input {
 }
 
 table {
-    width: 100%;
+    width: 80%;
 }
 
 td, th {
@@ -312,4 +312,20 @@ td, th {
 table input {
     align-self: center;
     margin-top: 0.8em;
+}
+
+.check-grade {
+    width: 10em;
+    margin-bottom: 1.5vh;
+    background-color: darkcyan;
+}
+.check-grade:hover {
+    background-color: rgb(0, 124, 124);
+    /* background-color: #0C366B; */
+}
+
+#total-score {
+    margin-bottom: 2vh;
+    font-size: 1.2em;
+    font-weight: bold;
 }
