@@ -1,5 +1,5 @@
 // Stores all information on questions to be built
-const questionTemplates = [[
+const questionTemplates = [[ //A contar
     [
         "contar",
         "¿Cuántos carros hay?",
@@ -33,7 +33,7 @@ const questionTemplates = [[
         [["fas fa-book", "font-size: 5vw;"]]
     ],
 ],
-[
+[ //Agrupemos
     [
         "agrupar",
         "¿Cuántos círculos hay?",
@@ -67,7 +67,7 @@ const questionTemplates = [[
         [["fas fa-star", "font-size: 5vw;"],["fas fa-circle", "font-size: 5vw;"], ["fas fa-square", "font-size: 5vw;"], ["fas fa-play fa-rotate-270", "font-size: 5vw;"]]
     ],
 ],
-[
+[ //Figuras
     [
         "seleccionar",
         "¿Qué forma tiene?",
@@ -101,7 +101,41 @@ const questionTemplates = [[
         [["fas fa-ruler-horizontal ", ""]]
     ],
 ],
-[
+[ //Clasificación 
+    [
+        "identificar",
+        "¿Cuántos animales hay?",
+        ["int1"],
+        [[1,12]],
+        "a",
+        [["fas fa-hippo", "font-size: 5vw;"], ["fas fa-dog", "font-size: 5vw;"], ["fas fa-cat", "font-size: 5vw;"], ["fas fa-fish", "font-size: 5vw;"], ["fas fa-feather", "font-size: 5vw;"], ["fas fa-moon", "font-size: 5vw;"]]
+    ],
+    [
+        "identificar",
+        "¿Cuántos vehículos hay?",
+        ["int1"],
+        [[1,12]],
+        "a",
+        [["fas fa-truck", "font-size: 5vw;"],  ["fas fa-motorcycle", "font-size: 5vw;"], ["fas fa-bus", "font-size: 5vw;"], ["fas fa-car", "font-size: 5vw;"], ["fas fa-leaf", "font-size: 5vw;"], ["fas fa-dog", "font-size: 5vw;"],]
+    ], 
+    [
+        "identificar",
+        "¿Cuántos animales hay?",
+        ["int1"],
+        [[1,12]],
+        "a",
+        [["fas fa-hippo", "font-size: 5vw;"], ["fas fa-dog", "font-size: 5vw;"], ["fas fa-cat", "font-size: 5vw;"], ["fas fa-fish", "font-size: 5vw;"], ["fas fa-feather", "font-size: 5vw;"], ["fas fa-moon", "font-size: 5vw;"]]
+    ],
+    [
+        "identificar",
+        "¿Cuántos vehículos hay?",
+        ["int1"],
+        [[1,12]],
+        "a",
+        [["fas fa-truck", "font-size: 5vw;"],  ["fas fa-motorcycle", "font-size: 5vw;"], ["fas fa-bus", "font-size: 5vw;"], ["fas fa-car", "font-size: 5vw;"], ["fas fa-leaf", "font-size: 5vw;"], ["fas fa-dog", "font-size: 5vw;"],]
+    ], 
+],
+[ //Símbolos
     [
         "seleccionar",
         "¿Qué significa este símbolo?",
@@ -136,7 +170,7 @@ const questionTemplates = [[
     ],
     
 ],
-[
+[ //Escribir Números
     [
         "escribir",
         "Escribe en letra el número",
@@ -171,7 +205,7 @@ const questionTemplates = [[
     ],
     
 ],
-[
+[ //Relación de Orden
     [
         "sort",
         "Ayuda a Juan a resolver las siguientes sumas. Cuando acabes, arrastra los circulitos para indicar el menor con 1 y el mayor con 2.",
@@ -189,7 +223,7 @@ const questionTemplates = [[
         "+"
     ],
 ],
-[
+[ //Sumemos hasta el 20
     [
         "basic",
         "María tiene int1 manzanas y Juan tiene int2 limones<br><br>¿Cuántas frutas tienen en total?",
@@ -224,7 +258,7 @@ const questionTemplates = [[
     ]
 
 ],
-[
+[ //Sumemos hasta el 40
     [
         "basic",
         "Una moto pesa int1 kg y una bicicleta pesa int2 kg<br><br>¿Cuántos kg pesan en total?",
@@ -258,7 +292,7 @@ const questionTemplates = [[
         [["fas fa-ice-cream", "font-size: 12vw;"], ["fas fa-ice-cream", "font-size: 12vw;"]]
     ]
 ],
-[
+[ //Sumemos Decenas
     [
         "decenas",
         "¿Cuántos decenas completas de carros hay?",
@@ -292,7 +326,7 @@ const questionTemplates = [[
         [["fas fa-book", "font-size: 5vw;"]]
     ],
 ],
-[
+[ //Restemos hasta el 20
     [
         "basic",
         "Raúl está armando un rompecabezas de int1 piezas, de las cuales ya usó int2. <br><br>¿Cuántas piezas le faltan por usar? ",
@@ -327,40 +361,143 @@ const questionTemplates = [[
     ]
 
 ],
-[
+[ //Restemos hasta el 40
+    [
+        "basic",
+        "Javier sacó int1 fotografías el lunes, pero el martes su prima Isabela sin querer le borró int2. ¿Cuántas fotografías le quedaron a Javier? ",
+        ["int1", "int2"],
+        [[2, 40]],
+        "-",
+        [["fas fa-camera", "font-size: 12vw;"], ["fas fa-images", "font-size: 12vw;"]]
+    ],
     [
         "basic-drag",
-        "Pedro decidió ahorrar para comprarse un juego de Nintendo. Si todos los meses ahorra $int1, <br><br> ¿Cuánto llevará ahorrado al cabo de int2 meses? Arrastra las imágenes para armar la multiplicación.",
+        "Pedro vendió su juguete a int2 pesos, si le pagaron int1 ¿Cuánto dinero debe dar de vuelta Pedro?",
         ["int1", "int2"],
-        [[100, 200], [6, 11]],
-        "×",
-        [["fas fa-coins", ""], ["far fa-calendar-alt", ""]]
+        [[2, 40]],
+        "-",
+        [["fas fa-money-bill-wave", "font-size: 12vw;"], ["fas fa-car", "font-size: 12vw;"]]
     ],
     [
         "basic",
-        "Un gato pesa int1 kg y un caballo pesa int2 kg <br><br>¿Cuántos kg pesan en total ambos animales?",
+        "Andrea fue a la bodega a comprar un helado. Le dieron de vuelta int2 pesos ¿Cuánto le costó el helado si ella llevaba int1 pesos?",
         ["int1", "int2"],
-        [[2, 20]],
-        "+",
-        [["fas fa-cat", "font-size: 12vw;"], ["fas fa-horse", "font-size: 12vw;"]]
+        [[2, 40]],
+        "-",
+        [["fas fa-ice-cream", "font-size: 12vw;"], ["fas fa-money-bill-wave", "font-size: 12vw;"]]
     ],
     [
         "basic",
-        "Enfrente a la casa de Regina hay int1 coches y int2 taxis  <br><br>¿Cuántos vehículos hay en total?",
+        "Camila gastó int2 pesos en una galleta. Si la vendió en int1 ¿Cuánto dinero se ganó Camila?",
         ["int1", "int2"],
-        [[2, 20]],
-        "+",
-        [["fas fa-car", "font-size: 12vw;"], ["fas fa-taxi", "font-size: 12vw;"]]
-    ],
-    [
-        "basic",
-        "Martha compró para su fiesta de cumpleaños int1 helados de chocolate y int2 helados de menta<br><br>¿Cuántos helados compró Martha en total? ",
-        ["int1", "int2"],
-        [[2, 20]],
-        "+",
-        [["fas fa-ice-cream", "font-size: 12vw;"], ["fas fa-ice-cream", "font-size: 12vw;"]]
+        [[2, 40]],
+        "-",
+        [["fas fa-cookie", "font-size: 12vw;"], ["fas fa-ice-cream", "font-size: 12vw;"]]
     ]
-]
+],
+[ //Números Odinales
+    [
+        "escribir",
+        "Escribe en letra el número ordinal",
+        ["Tercero"],
+        [[1,5]],
+        "e",
+        [["3°", ""]]
+    ],
+    [
+        "escribir",
+        "Escribe en letra el número ordinal",
+        ["Vigésimo séptimo"],
+        [[1,5]],
+        "e",
+        [["27°", ""]]
+    ],
+    [
+        "escribir",
+        "Escribe en letra el número ordinal",
+        ["Décimo quinto"],
+        [[1,5]],
+        "e",
+        [["15° ", ""]]
+    ],
+    [
+        "escribir",
+        "Escribe en letra el número ordinal",
+        ["Trigésimo"],
+        [[1,5]],
+        "e",
+        [["30° ", ""]]
+    ],
+],
+[ //Medidas
+    [
+        "basic",
+        "Andrea va a preparar una comida en su casa. Si compró int1 kilos de tocino y int2 kilos de pollo ¿Cuántos kilos compró en total?",
+        ["int1", "int2"],
+        [[2, 10]],
+        "+",
+        [["fas fa-bacon", "font-size: 12vw;"], ["fas fa-drumstick-bite","font-size: 12vw;"]]
+    ],
+    [
+        "basic",
+        "Daniel quiere llenar un envase de agua con int1 litros. Si el envase ya tiene int2 litros ¿Cuántos litros le faltan?",
+        ["int1", "int2"],
+        [[2, 20]],
+        "-",
+        [ ["fas fa-glass-whiskey","font-size: 12vw;"], ["fas fa-tint", "font-size: 12vw;"]]
+    ],
+    [
+        "basic-drag",
+        "Verónica se fue de viaje. Cuando se fue, su maleta pesaba int2 kilos, pero compró muchísimas cosas y ahora pesa int1 kilos en total. ¿Cuánto pesan las cosas que compró Verónica en su viaje?",
+        ["int1", "int2"],
+        [[2, 20]],
+        "-",
+        [["fas fa-plane", "font-size: 12vw;"], ["fas fa-suitcase-rolling","font-size: 12vw;"]]
+    ],
+    [
+        "basic",
+        "Carlos tiene una botella con int1 litros y Jimena tiene un termo con int2 litros de agua. ¿Cuántos litros de agua tienen en total? ",
+        ["int1", "int2"],
+        [[2, 10]],
+        "+",
+        [["fas fa-glass-whiskey","font-size: 12vw;"], ["fas fa-tint", "font-size: 12vw;"]]
+    ],
+],
+[ //Tiempo
+    [
+        "tiempo",
+        "Escribe la hora",
+        ["06:14"],
+        [[1,5]],
+        "t",
+        [["Seis y catorce de la mañana", ""]]
+    ],
+    [
+        "tiempo",
+        "Escribe la hora",
+        ["14:10"],
+        [[1,5]],
+        "t",
+        [["Dos y diez de la tarde", ""]]
+    ],
+    [
+        "tiempo",
+        "Escribe la hora",
+        ["07:32"],
+        [[1,5]],
+        "t",
+        [["Siete y treinta y dos de la mañana", ""]]
+    ],
+    [
+        "tiempo",
+        "Escribe la hora",
+        ["20:01"],
+        [[1,5]],
+        "t",
+        [["Ocho y uno de la tarde", ""]]
+    ],
+    
+],
 ]
 
 // Adds question of questionTemplates to HTML

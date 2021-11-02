@@ -1,4 +1,4 @@
-class Agrupar {
+class Identificar {
     constructor(info, id) {
         let img = document.createElement('div');
         img.style.flexDirection = "row";
@@ -7,13 +7,13 @@ class Agrupar {
         const randoms = makeRandom(info[2].length, info[4], info[3]);
         let counters = [0,0,0,0];
         let myrng = new Math.seedrandom('hello.');
-        let colorOptions = ["#fca546", "#4f7bca", "#25ac8a", "#f5c331", "#25ac8a", "#f5c331"]; 
+        let colorOptions = ["#fca546", "#4f7bca", "#25ac8a", "#f5c331"]; 
         let min = info[3][0][0];
         let max = info[3][0][1];
         let randomN = Math.round(Math.random() * (max- min) + min);
         let imgCntt = '';
         let firstArg = 0;
-        if(info[0] == "agrupar") {
+        if(info[0] == "identificar") {
             firstArg = randoms[0];
         } else {
             firstArg = [info[2].length];
@@ -23,16 +23,14 @@ class Agrupar {
         let text = info[1];
         info[2].forEach((el, index) => {
             
-            
-
-            if(info[0] == "agrupar") {
+            if(info[0] == "identificar") {
                 imgCntt = `<div style="display:inline;">`;
                 for(let i = 0; i < randomN; i++){
-                    let randomIndex = Math.round(Math.random() * (3- 0) + 0);
+                    let randomIndex = Math.round(Math.random() * (5- 0) + 0);
                     let sty = ``;
                     sty += info[5][index][1];
                     counters[randomIndex]++; 
-                    sty += `color: ${colorOptions[randomIndex]};`;
+                    sty += `color: ${colors[getRandom(0,colors.length)]};`;
                     imgCntt += `<i class="${info[5][randomIndex][0]}" style="${sty}"></i>`;
                     imgCntt+= `</div>`;
                     
@@ -49,10 +47,11 @@ class Agrupar {
             img.insertAdjacentHTML('beforeend', imgCntt);
         });
 
-        
+
+        let ans = counters[0] + counters[1] + counters[2] + counters[3];
 
         this.text = text;
-        this.opr = new Operation(firstArg, info[4], id, counters[0]);
+        this.opr = new Operation(firstArg, info[4], id, ans);
         
         this.block = document.createElement('div');
         this.block.className = 'question-content';

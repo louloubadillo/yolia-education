@@ -78,6 +78,20 @@ class Question {
                 questionCont = e.block;
             break; 
 
+            case "identificar":
+                let i = new Identificar(info, id);
+                text = i.text;
+                opr = i.opr;
+                questionCont = i.block;
+            break; 
+
+            case "tiempo":
+                let t = new Tiempo(info, id);
+                text = t.text;
+                opr = t.opr;
+                questionCont = t.block;
+            break; 
+
             // For basic and basic-drag
             default:
                 let b = new Basic(info, id);

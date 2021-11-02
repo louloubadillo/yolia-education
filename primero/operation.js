@@ -54,6 +54,14 @@ class Operation {
                     <input type="text" id="${id}" style="width: 8em;text-align: center;">
                 </div>`);
             }
+            else if(sign == 't'){
+                this.block.style ="flex-direction: row;";
+                this.block.insertAdjacentHTML("afterbegin", `  
+                <div style="display: flex;flex-direction: row; padding: unset; margin: unset;">
+                    <input type="text" id="${id}" style="width: 5em;text-align: center;">
+
+                </div>`);
+            }
             else {
                 let q = '';
                 for(let i = 0; i < nums[0]; i++){

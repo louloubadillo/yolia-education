@@ -1,3 +1,5 @@
+// Add basic question-content block, with images and operation
+
 class Basic {
     constructor(info, id) {
         let img = document.createElement('div');
@@ -37,7 +39,13 @@ class Basic {
         });
 
         this.text = text;
-        this.opr = new Operation(firstArg, info[4], id, randoms[1]);
+
+        
+        if(info[4] == '×' && randoms[0][0] >= 10 && randoms[0][1] >= 20) {
+            this.opr = new BigMultiplication(firstArg, id+'-0', randoms[1]);
+        } else {
+            this.opr = new Operation(firstArg, info[4], id+'-0', randoms[1]);
+        }
         
         this.block = document.createElement('div');
         this.block.className = 'question-content';
