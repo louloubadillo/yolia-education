@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;600&display=swap');
+* {
+    text-align: center;
+}
+
 em, .sign {
     font-style: unset;
     font-weight: bold;
@@ -17,15 +21,12 @@ summary {
 
 .question {
     padding-bottom: 1em;
-    margin-bottom: 1em;
+    margin-top: 1em;
     display: flex;
     flex-direction: column;
 }
 .question:nth-child(odd){
     background-color: #f8f8f8;
-}
-.question:last-child {
-    margin-bottom: 0;
 }
 
 .tries {
@@ -64,7 +65,7 @@ summary {
     align-items: center;
 }
 .question-text:first-child {
-    margin-top: 2vh;
+    margin-top: 1.5vh;
 }
 
 .question-content{
@@ -79,13 +80,13 @@ summary {
     margin-bottom: 0.5em;
 }
 /* Chrome, Safari, Edge, Opera */
-/*.question-content*/ input::-webkit-outer-spin-button,
-/*.question-content*/ input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 /* Firefox */
-/*.question-content*/ input[type=number] {
+input[type=number] {
     -moz-appearance: textfield;
 }
 .question-content div{
@@ -94,7 +95,7 @@ summary {
     justify-content: center;
     flex-wrap: wrap;
 }
-/*.question-content*/ input {
+input {
     background-color: #ffffffdd;
     border-radius: 0.3em;
     border: solid grey 0.09em;
@@ -105,13 +106,9 @@ summary {
     width: 5em;
     align-self: flex-end;
 }
-.question-content p {
-    text-align: center;
-    margin-top: 1em;
-}
 .question-content i {
     font-size: 20vh;
-    padding: 2vh 2vh;
+    padding: 2vh 4vh;
 }
 
 .part {
@@ -130,6 +127,7 @@ summary {
     margin-bottom: 0.23em;
     padding-right: 0.29em;
     padding-bottom: 0.1em;
+    align-self: flex-end;
 }
 
 .divisions {
@@ -145,6 +143,18 @@ summary {
 .sign {
     align-self: flex-end;
     padding: 0.3em;
+}
+
+.second {
+    margin-top: 0.23em;
+    align-self: flex-end;
+    margin-right: 0.6em;
+    width: 3.4em;
+}
+
+.addition {
+    padding-bottom: 0.23em;
+    margin-bottom: 2.3em;
 }
 
 .mover {
@@ -232,7 +242,8 @@ summary {
 
 .check-score {
     background-color: #25ac8a;
-    width: 11em;
+    width: 10em;
+    margin-top: 1em;
 }
 .check-score:hover {
     background-color: #219477;
@@ -250,4 +261,71 @@ summary {
 .score {
     font-weight: bold;
     padding-top: 0.4em;
+}
+
+.per-parts-input {
+    margin: 0.2em;
+    width: 2em;
+    text-align: center;
+}
+
+.cont-group {
+    align-items: center;
+    padding: 1em;
+    width: 25em;
+}
+
+.decomp-text {
+    margin: 0.15em;
+    margin-left: 0.85em;
+    width: 8em;
+    text-align: left;
+}
+.decomp-input {
+    width: 3em;
+    text-align: center;
+}
+
+.round {
+    border-radius: 10px;
+    padding: 0.8em;
+    padding-top: 0;
+    margin: 0.5em 1em;
+    align-items: center;
+}
+
+.round-input {
+    margin-top: 0.8em;
+    text-align: center;
+    width: 5em;
+    align-self: unset;
+}
+
+table {
+    width: 80%;
+}
+
+td, th {
+    border: solid 1px;
+}
+
+table input {
+    align-self: center;
+    margin-top: 0.8em;
+}
+
+.check-grade {
+    width: 10em;
+    margin-bottom: 1.5vh;
+    background-color: darkcyan;
+}
+.check-grade:hover {
+    background-color: rgb(0, 124, 124);
+    /* background-color: #0C366B; */
+}
+
+#total-score {
+    margin-bottom: 2vh;
+    font-size: 1.2em;
+    font-weight: bold;
 }

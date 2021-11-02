@@ -5,7 +5,12 @@ let colors = [
     '#4f7bca',
     '#d0b8ed',
     '#ff8ca7',
-    '#FF007688'
+    '#FF007688',
+    '#4C4C9D',
+    '#F9CB40',
+    '#66D7D1',
+    '#6AB547',
+    '#32965D'
 ]
 
 // Construct all questions with their three parts:
