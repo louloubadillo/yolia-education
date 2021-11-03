@@ -11,7 +11,7 @@ function getParts(num) {
 }
 
 // Given a number, you must break it down into powers of 10
-class Decomp{
+class Decomp {
     constructor(text, range) {
         const num = getRandom(range[0], range[1]);
         const parts = getParts(num);
@@ -20,6 +20,7 @@ class Decomp{
         this.block.className = 'question-content';
         this.total = 6;
 
+        // Adds comma: 1,238 or 23,001
         if(num >= 1000) {
             const str = num.toString();
             this.text = text.replace("int1", str.slice(0, str.length-3) + ',' + str.slice(-3));

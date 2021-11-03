@@ -276,7 +276,7 @@ const questionTemplates = [
             [["fas fa-pepper-hot", ""], ["fas fa-box-open", ""], ["fas fa-coins", ""]]
         ]
     ],
-    [ // √? sección 11
+    [ // √ sección 11
         [
             "decomp",
             "Completa descomponiendo el siguiente número: <br><br> int1",

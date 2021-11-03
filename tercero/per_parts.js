@@ -2,7 +2,7 @@
 // - divisions
 // - multiplications
 
-class PerParts{
+class PerParts {
     constructor(amt, range, sign, id) {
         this.block = document.createElement('div');
         this.block.className = 'question-content';

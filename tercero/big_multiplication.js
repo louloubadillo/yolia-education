@@ -1,3 +1,5 @@
+// Block for multiplication of two numbers greater than 10
+
 class BigMultiplication {
     constructor(nums, id, answer) {
         this.block = document.createElement('div');
@@ -89,7 +91,3 @@ class BigMultiplication {
         this.block.style.border = '0.3em #FF0076 solid';
     }
 }
-
-// const a = new BigMultiplication([2], '1.1', 800);
-
-// document.body.children[0].appendChild(a.block);

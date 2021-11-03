@@ -20,6 +20,7 @@ class Sort {
             answers.push([randoms[1], i+1]);
         }
 
+        // Get answers for movers
         answers.sort((a, b) => { return a[0] - b[0]; });
         let moverAnswers = {}
         answers.forEach((el, i) => {

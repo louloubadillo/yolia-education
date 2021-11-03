@@ -1,7 +1,7 @@
 // Transform between units of weight, volume, and distance
 // Power refers to power of 10 to multiply to get the answer
 
-class Units{
+class Units {
     constructor(text, range, power, img) {
         this.block = document.createElement('div');
         this.block.className = 'question-content';

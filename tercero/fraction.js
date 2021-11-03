@@ -1,6 +1,6 @@
 // Builds a fraction (very pretty)
 
-class Fraction extends HTMLElement{
+class Fraction extends HTMLElement {
     constructor(numerator, denominator, display=false) {
         super();
 
@@ -19,7 +19,7 @@ class Fraction extends HTMLElement{
         lower.setAttribute('type', 'number');
         lower.style.textAlign = 'center';
         
-        // Disable inputs if a value was passed
+        // Disable inputs so fraction is only to look at, not interact
         if(display) {
             upper.value = numerator;
             upper.setAttribute('disabled', 'true');
@@ -103,12 +103,14 @@ class Fraction extends HTMLElement{
         }
         
         this.isCorrect = () => {
+            // Both are correct
             if(upper.value == numerator && lower.value == denominator) {
                 this.makeStiff('#9fff9f77');
                 block.classList.remove('incorrect');
                 return 2;
             }
             let check = 0;
+            // Only numerator is correct
             if(upper.value == numerator) {
                 upper.setAttribute('disabled', 'true');
                 upper.style.border = 'none';
@@ -116,14 +118,18 @@ class Fraction extends HTMLElement{
                 upper.style.fontWeight = 'bold';
                 upper.style.color = 'black';
                 check = 1;
-            } else if(lower.value == denominator) {
+            } 
+            // Only denominator is correct
+            else if(lower.value == denominator) {
                 lower.setAttribute('disabled', 'true');
                 lower.style.border = 'none';
                 lower.style.backgroundColor = '#fff0';
                 lower.style.fontWeight = 'bold';
                 lower.style.color = 'black';
                 check = 1;
-            } else {
+            } 
+            // Both are incorrect
+            else {
                 upper.style.border = '#fff0';
                 lower.style.border = 'none';
             }

@@ -1,3 +1,4 @@
+// Name of numerators
 const nums = {
     2: "Dos",
     3: "Tres",
@@ -20,6 +21,7 @@ const nums = {
     20: "Viente",
 };
 
+// Name of denominators
 const denoms = {
     2: "medios",
     3: "tercios",
@@ -32,7 +34,12 @@ const denoms = {
     10: "décimos"
 };
 
-class FractionTable{
+// Fill up information of fraction:
+// - fraction
+// - numerator
+// - denominator
+// - name of fraction
+class FractionTable {
     constructor(amt) {
         const tCont = document.createElement('table');
         const table = document.createElement('tbody');

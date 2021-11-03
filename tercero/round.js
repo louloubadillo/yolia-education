@@ -6,7 +6,7 @@ function roundToPower(num, power) {
 const powers = ['decena', 'centena', 'unidad de mil'];
 
 // Rounds to a random power of 10, ranging from 10^1 to 10^3
-class Round{
+class Round {
     constructor(info, id) {
         this.block = document.createElement('div');
         this.block.className = 'question-content';

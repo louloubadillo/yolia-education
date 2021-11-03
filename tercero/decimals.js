@@ -1,9 +1,13 @@
-class Decimals{
+// Transform a fraction into a decimal number
+// Range refers to range of numerator, denom is the denominator
+
+class Decimals {
     constructor(range, denom) {
         this.block = document.createElement('div');
         this.block.className = 'question-content';
         this.total = 1;
 
+        // Container of question (what changes colour)
         const cont = document.createElement('div');
         cont.style.flexDirection = 'row';
         cont.style.alignItems = 'center';
@@ -25,6 +29,7 @@ class Decimals{
 
         const answer = numer/denom;
 
+        // Add circle that represents fraction :D
         this.block.insertAdjacentHTML('afterbegin',
         `<div style="width: 7em;height: 7em;margin-top: 1em;">
             <svg viewBox="0 0 32 32">

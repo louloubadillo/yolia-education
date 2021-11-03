@@ -36,11 +36,3 @@ function moveCursor(e) {
         range.select();
     }
 }
-
-// function del(event) {
-//     if(event.key=='Backspace') { 
-//         event.preventDefault(); 
-//         inpt.value = inpt.value.substring(1, inpt.value.length);
-//     }
-//     moveCursor(event);
-// }
