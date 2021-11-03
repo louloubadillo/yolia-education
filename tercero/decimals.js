@@ -25,6 +25,13 @@ class Decimals{
 
         const answer = numer/denom;
 
+        this.block.insertAdjacentHTML('afterbegin',
+        `<div style="width: 7em;height: 7em;margin-top: 1em;">
+            <svg viewBox="0 0 32 32">
+                <circle r="16" cx="16" cy="16"/ style="stroke: ${colors[getRandom(0,colors.length)]};stroke-dasharray: ${answer*100 == 100 ? 101 : answer*100} 100;">
+            </svg>            
+        </div>`);
+
         function makeStiff(color) {
             cont.style.backgroundColor = color;
             inpt.setAttribute('disabled', 'true');

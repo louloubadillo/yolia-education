@@ -1,7 +1,7 @@
 // Return random number, only use third parameter if you want decimals
 function getRandom(min, max, d=0) {
     const num = Math.random() * (max - min) + min;
-    // Returns decimal with two places
+    // Returns decimal with d places
     if(d) { return num.toFixed(d); }
     // Returns int
     else { return Math.floor(num); }

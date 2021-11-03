@@ -302,32 +302,32 @@ const questionTemplates = [
         [
             "round",
             "¿Cuántos hipopótamos hay si redondeamos a la power1 más cercana?",
-            [100, 300],
+            [100, 1100],
             "fas fa-hippo",
         ],
         [
             "round",
             "¿Cuántos peces hay si redondeamos a la power1 más cercana?",
-            [100, 300],
+            [100, 1100],
             "fas fa-fish"
         ],
         [
             "round",
             "¿Cuántos pájaros hay si redondeamos a la power1 más cercana?",
-            [100, 300],
+            [100, 1100],
             "fas fa-dove"
         ],
         [
             "round",
             "¿Cuántos kiwis hay si redondeamos a la power1 más cercana?",
-            [100, 300],
+            [100, 1100],
             "fas fa-kiwi-bird"
         ]
     ],
     [ // √ sección 13
         [
             "fraction-table",
-            "Completa el siguiente cuadro",
+            "Completa el siguiente cuadro.",
             4
         ]
     ],
@@ -355,6 +355,36 @@ const questionTemplates = [
             "Transforma la siguiente fracción a una expresión decimal.",
             [50,100],
             100
+        ]
+    ],
+    [ // √ sección 15
+        [
+            "units",
+            "Un río tiene int1 <em>kilómetros</em> de longitud. <br> ¿Cuántos <em>metros</em> de longitud tiene el río?",
+            [3, 8, 1],
+            3,
+            "fas fa-water"
+        ],
+        [
+            "units",
+            "Una cama mide int1 <em>centímetros</em> de largo. <br> ¿Cuántos <em>metros</em> mide de largo?",
+            [150, 200, 0],
+            -2,
+            "fas fa-bed"
+        ],
+        [
+            "units",
+            "Para hacer pollo hervido se necesita llenar una olla con int1 <em>litros</em> de agua. <br> ¿Cuántos <em>mililitros</em> de agua se necesitan para llenar la olla?",
+            [6, 10, 2],
+            3,
+            "fas fa-drumstick-bite"
+        ],
+        [
+            "units",
+            "El equipaje de Fernando pesa int1 <em>gramos</em>.  <br> ¿Cuántos <em>kilogramos</em> pesa?",
+            [2000, 3000, 0],
+            -3,
+            "fas fa-suitcase-rolling"
         ]
     ]
 ]

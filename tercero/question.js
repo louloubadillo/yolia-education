@@ -79,13 +79,18 @@ class Question {
                 questionCont = opr.block;
             break;
 
+            case "units":
+                opr = new Units(info[1], info[2], info[3], info[4]);
+                text = opr.text;
+                questionCont = opr.block;
+            break;
+
             // For basic and basic-drag
             default:
                 let b = new Basic(info, id);
                 text = b.text;
                 opr = b.opr;
                 questionCont = b.block;
-
             break;
         }
         txtDiv.insertAdjacentHTML("beforeend", `<p>${text}</p>`);
