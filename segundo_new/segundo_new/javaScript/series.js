@@ -5,8 +5,8 @@
 
  function createSeries(str){
     let figureIcon = document.createElement('p');
-    let figures = [{"serie":"258 , 283 , 308 ,  _ , _ , _ ", "res":"333,358,383"}, {"serie":"478 , 528 , 578 ,  _ , _ , _ ", "res":"628,678,728"}, {"serie":"599 , 641 , 683 ,  _ , _ , _ ", "res":"725,767,809"}, {"serie":"601 , 551 , 501 ,  _ , _ , _ ", "res":"451,401,351"}, {"serie":"755 , 666 , 577 ,  _ , _ , _ ", "res":"488,399,310"}, {"serie":"84 , 96 , 108 ,  _ , _ , _ ", "res":"120,132,144"}, {"serie":"58 , 65 , 72 ,  _ , _ , _ ", "res":"79,86,93"},
-    {"serie":"124 , 177 , 230 ,  _ , _ , _ ", "res":"283,336,389"}, {"serie":"420 , 400 , 380 ,  _ , _ , _ ", "res":"360,340,320"}, {"serie":"69 , 78 , 87 ,  _ , _ , _ ", "res":"96,105,114"}, {"serie":"528 , 577 , 626 ,  _ , _ , _ ", "res":"675,724,773"}, {"serie":"612 , 647 , 682 ,  _ , _ , _ ", "res":"717,752,787"}, {"serie":"373 , 340 , 307 ,  _ , _ , _ ", "res":"274,241,208"}];
+    let figures = [{"serie":"258 , 283 , 308 ,  _ ", "res":"333"}, {"serie":"478 , 528 , 578 ,  _  ", "res":"628"}, {"serie":"599 , 641 , 683 ,  _ ", "res":"725"}, {"serie":"601 , 551 , 501 ,  _ ", "res":"451"}, {"serie":"755 , 666 , 577 ,  _ ", "res":"488"}, {"serie":"84 , 96 , 108 ,  _", "res":"120"}, {"serie":"58 , 65 , 72 ,  _", "res":"79"},
+    {"serie":"124 , 177 , 230 ,  _ ", "res":"283"}, {"serie":"420 , 400 , 380 ,  _", "res":"360"}, {"serie":"69 , 78 , 87 ,  _", "res":"96"}, {"serie":"528 , 577 , 626 ,  _", "res":"675"}, {"serie":"612 , 647 , 682 ,  _", "res":"717"}, {"serie":"373 , 340 , 307 ,  _", "res":"274"}];
     let limit = figures.length-1; 
     let rand = Math.round(Math.random() * limit);
     str[0] = figures[rand].res;
@@ -24,14 +24,13 @@ SeriesTemplate.innerHTML = `
     <div>
         <p class= 'tries'></p>
         <h4>Descubre el patrón y continua la serie</h4>
-        <p>Escribe tu resultado separado por comas y sin espacios</p>
+        <p>Escribe únicamente el número que sige en la serie</p>
         <div class='items' style=" margin: 1vh 1vw;"></div> 
         <input type='text' class='count' style=" margin: 1vh 1vw; color:#000;">
         <button class='verify'>Revisar</button>
         <p class="verify-icon"></p>
     </div>
 `;
-
 class Series extends HTMLElement {
     items = []
     str = [""];

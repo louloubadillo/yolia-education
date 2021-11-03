@@ -7,12 +7,7 @@
 
  function createFigEsp(str){
     let figureIcon = document.createElement('img');
-    let figures = [{"icon":"./images/minecraft.png", "forma":"cubo"},{"icon":"./images/rubiks.png", "forma":"cubo"},
-    {"icon":"./images/giza.png", "forma":"pirámide"},{"icon":"./images/can.png", "forma":"cilindro"},{"icon":"./images/candle.png", "forma":"cilindro"},
-    {"icon":"./images/earth.png", "forma":"esfera"}, {"icon":"./images/giza.png", "forma":"pirámide"}, {"icon":"./images/earth.png", "forma":"esfera"},
-    {"icon":"./images/football.png", "forma":"esfera"},{"icon":"./images/dado.png", "forma":"cubo"},{"icon":"./images/volcan.png", "forma":"pirámide"},
-    {"icon":"./images/box.png", "forma":"cubo"},{"icon":"./images/traffic-cone.png", "forma":"cono"},{"icon":"./images/icecream.png", "forma":"cono"},
-    {"icon":"./images/globo.png", "forma":"esfera"},];
+    let figures = [{"icon":"./images/756.png", "forma":"cubo"}];
     let limit = figures.length-1; 
     let rand = Math.round(Math.random() * limit);
     str[0] = figures[rand].forma;

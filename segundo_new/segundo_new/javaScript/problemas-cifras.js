@@ -1,11 +1,11 @@
 /**
- * Problemas Suma
+ * Problemas Cifras
  */
 
 
- function createFigSuma(str){
+ function createFigCifra(str){
     let figureIcon = document.createElement('img');
-    let figures = [{"icon":"./images/prob-suma/756.png", "num":"1234"}];
+    let figures = [{"icon":"./images/prob-cifras/543.png", "num":"3"}];
     let limit = figures.length-1; 
     let rand = Math.round(Math.random() * limit);
     str[0] = figures[rand].num;
@@ -19,12 +19,12 @@
     return figureIcon
 }
 
-let ProbSumaTemplate = document.createElement('template');
-ProbSumaTemplate.innerHTML = `
+let ProbCifraTemplate = document.createElement('template');
+ProbCifraTemplate.innerHTML = `
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <div>
         <p class= 'tries'></p>
-        <p>Javier se fue de viaje en carro. Si recorrió 478 kilómetros hizo una parada para comer y luego recorrió los kilómetros que indica el cuentakilometros más. ¿Cuántos kilómetros recorrió en total?</p>
+        <p>José Ángel cumplió 7 años, su tío Gregorio le regaló los carritos que se indica abajo, ¿Cuantas unidades tiene?</p>
         <div class='items' style=" margin: 1vh 1vw;"></div>
         <input type='text' class='count' style=" margin: 1vh 1vw; color:#000;">
         <button class='verify'>Revisar</button>
@@ -32,7 +32,7 @@ ProbSumaTemplate.innerHTML = `
     </div>
 `;
 
-class ProbSuma extends HTMLElement {
+class ProbCifra extends HTMLElement {
     items = [];
     str = [""];
     tries = 3;  
@@ -45,10 +45,10 @@ class ProbSuma extends HTMLElement {
     }
     // connected
     connectedCallback(){
-        this.shadowRoot.append(ProbSumaTemplate.content.cloneNode(true))
+        this.shadowRoot.append(ProbCifraTemplate.content.cloneNode(true))
         console.log(this.items)
         this.items.forEach(item => {
-            this.shadowRoot.querySelector('.items').append( createFigSuma(this.str) );
+            this.shadowRoot.querySelector('.items').append( createFigCifra(this.str) );
         })
         this.shadowRoot.querySelector('.tries').innerHTML = "Intentos Restantes: " + this.tries;
         // Agregar un event listener a .verify que llame a verificar con el valor del input
@@ -85,4 +85,4 @@ class ProbSuma extends HTMLElement {
 
 }
 
-customElements.define('ejercicio-prob-suma', ProbSuma);
+customElements.define('ejercicio-prob-cifra', ProbCifra);
