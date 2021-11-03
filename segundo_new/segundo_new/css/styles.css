@@ -199,6 +199,16 @@ ejercicio-prob-suma{
     max-width: 1000px;
 }
 
+ejercicio-meses{
+    margin: 2vh 4vw; 
+    max-width: 250px;
+}
+
+/* ejercicio-medidas{
+    margin: 2vh 4vw; 
+    max-width: 250px;
+} */
+
 /* ejercicio-series{
     margin: 4vh 8vw; 
     max-width: 500px;

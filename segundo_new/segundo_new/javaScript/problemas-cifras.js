@@ -5,7 +5,7 @@
 
  function createFigCifra(str){
     let figureIcon = document.createElement('img');
-    let figures = [{"icon":"./images/prob-cifras/543.png", "num":"3"}];
+    let figures = [{"icon":"./images/prob-cifras/543.png", "num":"3"}, {"icon":"./images/prob-cifras/199.png", "num":"9"}, {"icon":"./images/prob-cifras/237.png", "num":"7"}, {"icon":"./images/prob-cifras/351.png", "num":"1"}, {"icon":"./images/prob-cifras/428.png", "num":"8"}, {"icon":"./images/prob-cifras/612.png", "num":"2"}, {"icon":"./images/prob-cifras/765.png", "num":"5"}];
     let limit = figures.length-1; 
     let rand = Math.round(Math.random() * limit);
     str[0] = figures[rand].num;

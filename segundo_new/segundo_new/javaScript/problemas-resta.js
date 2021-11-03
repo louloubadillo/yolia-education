@@ -5,7 +5,7 @@
 
  function createFigResta(str){
     let figureIcon = document.createElement('img');
-    let figures = [{"icon":"./images/prob-resta/4785.png", "num":"2863"}];
+    let figures = [{"icon":"./images/prob-resta/4785.png", "num":"2863"}, {"icon":"./images/prob-resta/539.png", "num":"7109"}, {"icon":"./images/prob-resta/1841.png", "num":"5807"}, {"icon":"./images/prob-resta/2183.png", "num":"5465"}, {"icon":"./images/prob-resta/3307.png", "num":"4341"}];
     let limit = figures.length-1; 
     let rand = Math.round(Math.random() * limit);
     str[0] = figures[rand].num;
