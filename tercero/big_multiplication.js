@@ -8,7 +8,6 @@ class BigMultiplication {
 
         const inpt = document.createElement('input');
         inpt.type = 'text';
-        inpt.className = 'focus';
         inpt.id = `${id}-c`;
         inpt.style.width = '4em';
         inpt.style.alignSelf = 'flex-end';
@@ -28,8 +27,8 @@ class BigMultiplication {
             <div class="regular" style="flex-direction: row;padding-bottom: 0.23em;padding-right: unset;">
                 <p class="sign">+</p>
                 <div>
-                    <input type="text" class="focus" id="${id}-a" style="width: 4em;margin-right: 0.38em;">
-                    <input type="text" class="focus second" id="${id}-b" style="margin-right: 0.98em;">
+                    <input type="text" id="${id}-a" style="width: 4em;margin-right: 0.38em;">
+                    <input type="text" class="second" id="${id}-b" style="margin-right: 0.98em;">
                 </div>
             </div>`);
 
@@ -49,8 +48,8 @@ class BigMultiplication {
             <div class="regular" style="flex-direction: row;padding-bottom: 0.23em;padding-right: unset;">
                 <p class="sign">+</p>
                 <div>
-                    <input type="text" class="focus" id="${id}-a" style="width: 4em;">
-                    <input type="text" class="focus second" id="${id}-b">
+                    <input type="text" id="${id}-a" style="width: 4em;">
+                    <input type="text" class="second" id="${id}-b">
                 </div>
             </div>`);
         }

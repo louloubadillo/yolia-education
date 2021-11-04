@@ -73,5 +73,5 @@ function showTotalScore() {
         totalText.style.color = '#ff9a00';
     }
 
-    totalText.innerHTML = `<em>Calificación: </em>${totalScore.toFixed(2)}`;
+    totalText.innerHTML = `<em>Calificación final: </em>${totalScore.toFixed(2)}`;
 }
