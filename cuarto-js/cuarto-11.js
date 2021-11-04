@@ -31,12 +31,15 @@ let counter11_4=3
 let p11_4done=false;
 
 
+let percent11=0;
 function checkAnswers11(id){
+    let percent = document.getElementById("percentage11");
     let num=0;
     let tag;
     let oneCor;
     if (id[4]=="1"){
         if (p11_1done){
+            percent.textContent="Porcentaje: " + percent11+"%";
             return;
         }
         tag=tag11_1;
@@ -48,6 +51,7 @@ function checkAnswers11(id){
     }
     else if (id[4]=="2"){
         if (p11_2done){
+            percent.textContent="Porcentaje: " + percent11+"%";
             return;
         }
         tag=tag11_2;
@@ -59,6 +63,7 @@ function checkAnswers11(id){
     }
     else if (id[4]=="3"){
         if (p11_3done){
+            percent.textContent="Porcentaje: " + percent11+"%";
             return;
         }
         tag=tag11_3;
@@ -70,6 +75,7 @@ function checkAnswers11(id){
     }
     else if (id[4]=="4"){
         if (p11_4done){
+            percent.textContent="Porcentaje: " + percent11+"%";
             return;
         }
         tag=tag11_4;
@@ -85,6 +91,8 @@ function checkAnswers11(id){
     if (oneCor){
         tag.textContent= "Correcto!";
         globalCounter++;
+        percent11+=25;
+        percent.textContent="Porcentaje: " + percent11+"%";
     }
     else{
         tag.textContent= "Incorrecto!";
