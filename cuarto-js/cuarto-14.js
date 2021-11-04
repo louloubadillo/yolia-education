@@ -30,13 +30,15 @@ element14_4.appendChild(tag14_4);
 let counter14_4=3
 let p14_4done=false;
 
-
+let percent14=0;
 function checkAnswers14(id){
+    let percent = document.getElementById("percentage14");
     let num=0;
     let tag;
     let oneCor;
     if (id[4]=="1"){
         if (p14_1done){
+            percent.textContent="Porcentaje: " + percent14+"%";
             return;
         }
         tag=tag14_1;
@@ -48,6 +50,7 @@ function checkAnswers14(id){
     }
     else if (id[4]=="2"){
         if (p14_2done){
+            percent.textContent="Porcentaje: " + percent14+"%";
             return;
         }
         tag=tag14_2;
@@ -59,6 +62,7 @@ function checkAnswers14(id){
     }
     else if (id[4]=="3"){
         if (p14_3done){
+            percent.textContent="Porcentaje: " + percent14+"%";
             return;
         }
         tag=tag14_3;
@@ -70,6 +74,7 @@ function checkAnswers14(id){
     }
     else if (id[4]=="4"){
         if (p14_4done){
+            percent.textContent="Porcentaje: " + percent14+"%";
             return;
         }
         tag=tag14_4;
@@ -85,6 +90,8 @@ function checkAnswers14(id){
     if (oneCor){
         tag.textContent= "Correcto!";
         globalCounter++;
+        percent14+=25;
+        percent.textContent="Porcentaje: " + percent14+"%";
     }
     else{
         tag.textContent= "Incorrecto!";

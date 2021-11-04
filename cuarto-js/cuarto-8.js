@@ -24,8 +24,11 @@ tag8_4.appendChild(text1);
 let element8_4 = document.getElementById("cuarto8_4");
 element8_4.appendChild(tag8_4);
 
+let percent8=0;
 function checkAnswers8(id){
+    let percent = document.getElementById("percentage8");
     if (counter81==0){
+        percent.textContent="Porcentaje: " + percent8+"%";
         return;
     }
     let tag;
@@ -64,6 +67,8 @@ function checkAnswers8(id){
     if (isRight){
         tag.textContent= "Correcto!";
         globalCounter++;
+        percent8+=25;
+        percent.textContent="Porcentaje: " + percent8+"%";
     }
     else{
         counter81--;

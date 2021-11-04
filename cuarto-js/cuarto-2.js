@@ -32,8 +32,10 @@ element8.appendChild(tag8);
 let counter8=3
 let p8done=false;
 
+let percent2=0;
 
 function checkAnswers2(id){
+    let percent = document.getElementById("percentage2");
     let tag1 = document.createElement("p");
     let text1 = document.createTextNode("");
     tag1.appendChild(text1);
@@ -46,6 +48,7 @@ function checkAnswers2(id){
     let twoCor;
     if (id[1]=="5"){
         if (p5done){
+            percent.textContent="Porcentaje: " + percent2+"%";
             return;
         }
         tag=tag5;
@@ -61,6 +64,7 @@ function checkAnswers2(id){
     }
     else if (id[1]=="6"){
         if (p6done){
+            percent.textContent="Porcentaje: " + percent2+"%";
             return;
         }
         tag=tag6;
@@ -76,6 +80,7 @@ function checkAnswers2(id){
     }
     else if (id[1]=="7"){
         if (p7done){
+            percent.textContent="Porcentaje: " + percent2+"%";
             return;
         }
         tag=tag7;
@@ -92,6 +97,7 @@ function checkAnswers2(id){
     }
     else if (id[1]=="8"){
         if (p8done){
+            percent.textContent="Porcentaje: " + percent2+"%";
             return;
         }
         tag=tag8
@@ -111,6 +117,8 @@ function checkAnswers2(id){
     if (oneCor&&twoCor){
         tag.textContent= "Correcto!";
         globalCounter++;
+        percent2+=25;
+        percent.textContent="Porcentaje: " + percent2+"%";
     }
     else{
         tag.textContent= "Incorrecto!";

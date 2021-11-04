@@ -1,5 +1,7 @@
 let globalCounter=0;
 
+let percent1=0;
+
 let counter1=3;
 
 let tag1 = document.createElement("p");
@@ -27,7 +29,9 @@ let element4 = document.getElementById("p4");
 element4.appendChild(tag4);
 
 function checkAnswers1(id){
+    let percent = document.getElementById("percentage1");
     if (counter1==0){
+        percent.textContent="Porcentaje: " + percent1+"%";
         return;
     }
     newID=id[3]
@@ -50,6 +54,8 @@ function checkAnswers1(id){
     if (newID=="1"){
         tag.textContent= "Correcto!";
         globalCounter++;
+        percent1+=25;
+        percent.textContent="Porcentaje: " + percent1+"%";
     }
     else if (newID=="2"){
         counter1--;
