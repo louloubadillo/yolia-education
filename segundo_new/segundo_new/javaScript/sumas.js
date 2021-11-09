@@ -2,6 +2,7 @@
  * Sumas
  */
 
+// Aumentar preguntas a 25
 
  function createSumas(str){
     let figureIcon = document.createElement('p');

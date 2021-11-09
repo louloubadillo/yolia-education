@@ -1,11 +1,11 @@
 /*
- Centenas
+ Unidades
 */
 
-function createNumbersCen(str){
+function createNumbersUni(str){
     let figureIcon = document.createElement('p');
-    let figures = [{"num":"345", "res":"3"}, {"num":"102", "res":"1"}, {"num":"856", "res":"8"}, {"num":"234", "res":"2"}, {"num":"599", "res":"5"}, {"num":"954", "res":"9"}, {"num":"318", "res":"3"}, {"num":"471", "res":"4"},
-    {"num":"780", "res":"7"}, {"num":"569", "res":"5"}, {"num":"999","res":"9"}, {"num":"319", "res":"3"}, {"num":"882", "res":"8"}, {"num":"566", "res":"5"}, {"num":"691", "res":"6"}, {"num":"745", "res":"7"}];
+    let figures = [{"num":"345", "res":"5"}, {"num":"102", "res":"2"}, {"num":"856", "res":"6"}, {"num":"234", "res":"4"}, {"num":"599", "res":"9"}, {"num":"954", "res":"4"}, {"num":"318", "res":"8"}, {"num":"471", "res":"1"},
+    {"num":"780", "res":"0"}, {"num":"569", "res":"9"}, {"num":"999","res":"9"}, {"num":"319", "res":"9"}, {"num":"882", "res":"2"}, {"num":"566", "res":"6"}, {"num":"691", "res":"1"}, {"num":"745", "res":"5"}];
     
     let limit = figures.length-1;
     let rand = Math.round(Math.random() * limit);
@@ -19,12 +19,12 @@ function createNumbersCen(str){
 
 }
 
-let CentenasTemplate = document.createElement('template');
-CentenasTemplate.innerHTML = `
+let UnidadesTemplate = document.createElement('template');
+UnidadesTemplate.innerHTML = `
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <div>
         <p class= 'tries'></p>
-        <p>Escribe cúal es la centena del siguiente número</p>
+        <p>Escribe cúal es la unidad del siguiente número</p>
         <div class='items' style=" margin: 1vh 1vw;"></div> 
         <input type='text' class='count' style=" margin: 1vh 1vw; color:#000;">
         <button class='verify'>Revisar</button>
@@ -32,7 +32,7 @@ CentenasTemplate.innerHTML = `
     </div>
 `;
 
-class Centenas extends HTMLElement {
+class Unidades extends HTMLElement {
     items = []
     str = [""];
     tries = 3;
@@ -45,10 +45,10 @@ class Centenas extends HTMLElement {
     }
     //connected
     connectedCallback(){
-        this.shadowRoot.append(CentenasTemplate.content.cloneNode(true))
+        this.shadowRoot.append(UnidadesTemplate.content.cloneNode(true))
         console.log(this.items)
         this.items.forEach(item => {
-            this.shadowRoot.querySelector('.items').append( createNumbersCen(this.str) );
+            this.shadowRoot.querySelector('.items').append( createNumbersUni(this.str) );
         })
         this.shadowRoot.querySelector('.tries').innerHTML = "Intentos Restantes: " + this.tries;
         // Agregar un event listener a .verify que llame a verificar con el valor del input
@@ -84,4 +84,4 @@ class Centenas extends HTMLElement {
 
 }
 
-customElements.define('ejercicio-centenas', Centenas);
+customElements.define('ejercicio-unidades', Unidades);

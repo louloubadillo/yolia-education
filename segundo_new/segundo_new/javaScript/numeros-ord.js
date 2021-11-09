@@ -2,6 +2,7 @@
  * Números Ordinales
  */
 
+//Mayusculas
 
  function createNumbersOrd(str){
     let figureIcon = document.createElement('p');
@@ -23,7 +24,7 @@ NumerosOrdTemplate.innerHTML = `
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <div>
         <p class= 'tries'></p>
-        <p>Escribe en letra el número ordinal</p>
+        <p>Escribe con letra el número ordinal</p>
         <div class='items' style=" margin: 1vh 1vw;"></div> 
         <input type='text' class='count' style=" margin: 1vh 1vw; color:#000;">
         <button class='verify'>Revisar</button>

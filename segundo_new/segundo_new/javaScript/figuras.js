@@ -4,6 +4,7 @@
  * Deben escoger cuál es
  */
 
+//Aumentar banco de preguntas
 
  function createFig(str){
     let figureIcon = document.createElement('p');

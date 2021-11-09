@@ -113,10 +113,23 @@ body{
     margin-bottom: 1vh;
 }
 
-/*Primero*/
+/*Segundo*/
+
+.verify-answers{
+    margin-top: 10px;
+    text-align: center;
+    position: absolute;
+    width: 25%;
+    top: 80%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+}
 .content{
     display: flex;
     flex-direction: column;
+    
 }
 
 .tema{
@@ -175,6 +188,16 @@ ejercicio-simbolos{
 }
 
 ejercicio-centenas{
+    margin: 2vh 4vw; 
+    max-width: 250px;
+}
+
+ejercicio-decenas{
+    margin: 2vh 4vw; 
+    max-width: 250px;
+}
+
+ejercicio-unidades{
     margin: 2vh 4vw; 
     max-width: 250px;
 }

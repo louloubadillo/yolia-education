@@ -2,11 +2,11 @@
  * Números
  */
 
-
+// Que las opciones empiecen en mayuscula
  function createNumbers(str){
     let figureIcon = document.createElement('p');
     let figures = [{"num":"578", "escrito":"quinientos setenta y ocho"},{"num":"495", "escrito":"cuatrocientos noventa y cinco"},{"num":"788", "escrito":"setecientos ochenta y ocho"},{"num":"204", "escrito":"doscientos cuatro"},{"num":"945", "escrito":"novecientos cuarenta y cinco"},{"num":"234", "escrito":"doscientos treinta y cuatro"},
-    {"num":"113", "escrito":"ciento trece"},{"num":"451", "escrito":"cuatrocientos cincuenta y uno"},{"num":"601", "escrito":"seiscientos uno"},{"num":"782", "escrito":"setecientos ochenta y dos"},{"num":"298", "escrito":"doscientos noventa y ocho"},{"num":"613", "escrito":"seiscientos trece"},{"num":"521", "escrito":"quinientos veintiuno"},{"num":"915", "escrito":"novecientos quince"}];
+    {"num":"113", "escrito":"ciento trece"},{"num":"451", "escrito":"cuatrocientos cincuenta y uno"},{"num":"601", "escrito":"seiscientos uno"},{"num":"782", "escrito":"setecientos ochenta y dos"},{"num":"298", "escrito":"doscientos noventa y ocho"},{"num":"613", "escrito":"seiscientos trece"},{"num":"521", "escrito":"quinientos veintiuno"},{"num":"915", "escrito":"novecientos quince"},  {"num":"373", "escrito":"trescientos setenta y tres"}, {"num":"129", "escrito":"ciento veintinueve"}, {"num":"550", "escrito":"quinientos cincuenta"}, {"num":"230", "escrito":"doscientos treinta"}, {"num":"908", "escrito":"novecientos ocho"}, {"num":"851", "escrito":"ochocientos cincuenta y uno"}];
     let limit = figures.length-1; 
     let rand = Math.round(Math.random() * limit);
     str[0] = figures[rand].escrito;
@@ -23,7 +23,7 @@ NumerosTemplate.innerHTML = `
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <div>
         <p class= 'tries'></p>
-        <p>Escribe el número en letra</p>
+        <p>Escribe el número con letra</p>
         <div class='items' style=" margin: 1vh 1vw;"></div> 
         <input type='text' class='count' style=" margin: 1vh 1vw; color:#000;">
         <button class='verify'>Revisar</button>

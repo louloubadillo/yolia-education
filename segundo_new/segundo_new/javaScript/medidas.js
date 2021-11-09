@@ -5,7 +5,7 @@
 
  function createMedidas(str){
     let figureIcon = document.createElement('p');
-    let figures = [{"medida":"2m + 70dm + 23cm", "res":"923cm"}];
+    let figures = [{"medida":"2m + 70dm + 23cm", "res":"923cm"}, {"medida":"1m + 8dm + 115cm", "res":"295cm"}, {"medida":"3m + 13dm + 58cm", "res":"488cm"}, {"medida":"4m + 37dm + 12cm", "res":"782cm"}, {"medida":"3m + 41dm + 36cm", "res":"746cm"}, {"medida":"2m + 70dm + 23cm", "res":"923cm"},  {"medida":"10m + 20dm + 11cm", "res":"1211cm"}, {"medida":"0m + 12dm + 1000cm", "res":"1120cm"}, {"medida":"7m + 1dm + 22cm", "res":"732cm"}, {"medida":"10m + 0dm + 26cm", "res":"1026cm"}, {"medida":"3m + 70dm + 23cm", "res":"1023cm"}, {"medida":"12m + 100dm +0cm", "res":"2200cm"}];
     let limit = figures.length-1; 
     let rand = Math.round(Math.random() * limit);
     str[0] = figures[rand].res;
@@ -22,7 +22,7 @@ MedidasTemplate.innerHTML = `
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <div>
         <p class= 'tries'></p>
-        <p>Transforma todas las cantidades a centímetros y efectúa la suma. Escribe tu resultado con la unidad correspondiente</p>
+        <p>Transforma todas las cantidades a centímetros y efectúa la suma. Escribe tu resultado con la unidad correspondiente.</p>
         <div class='items' style=" margin: 1vh 1vw;"></div> 
         <input type='text' class='count' style=" margin: 1vh 1vw; color:#000;">
         <button class='verify'>Revisar</button>

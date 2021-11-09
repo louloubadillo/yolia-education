@@ -2,6 +2,7 @@
  * Meses del Calendario
  */
 
+// Color de fondo
 
  function createMes(str){
     let figureIcon = document.createElement('p');

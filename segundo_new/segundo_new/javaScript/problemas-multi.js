@@ -24,7 +24,7 @@ ProbMultiTemplate.innerHTML = `
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <div>
         <p class= 'tries'></p>
-        <p>Betsy va a la panaderia y compra el número de panes que se indica abajo. Si cada pan cuesta 2 pesos. ¿Cuánto dinero gastó Betsy?</p>
+        <p>Betsy va a la panadería y compra el número de panes que se indica abajo. Si cada pan cuesta 2 pesos. ¿Cuánto dinero gastó Betsy?</p>
         <div class='items' style=" margin: 1vh 1vw;"></div>
         <input type='text' class='count' style=" margin: 1vh 1vw; color:#000;">
         <button class='verify'>Revisar</button>

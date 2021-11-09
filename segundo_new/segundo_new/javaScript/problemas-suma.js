@@ -24,7 +24,7 @@ ProbSumaTemplate.innerHTML = `
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <div>
         <p class= 'tries'></p>
-        <p>Javier se fue de viaje en carro. Si recorrió 478 kilómetros hizo una parada para comer y luego recorrió los kilómetros que indica el cuentakilometros más. ¿Cuántos kilómetros recorrió en total?</p>
+        <p>Javier se fue de viaje en carro. Si recorrió 478 kilómetros hizo una parada para comer y luego recorrió los kilómetros que indica el cuentakilómetros más. ¿Cuántos kilómetros recorrió en total?</p>
         <div class='items' style=" margin: 1vh 1vw;"></div>
         <input type='text' class='count' style=" margin: 1vh 1vw; color:#000;">
         <button class='verify'>Revisar</button>

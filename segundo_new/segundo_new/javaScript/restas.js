@@ -2,6 +2,7 @@
  * Restas
  */
 
+// Aumentar preguntas a 25
 
  function createRestas(str){
     let figureIcon = document.createElement('p');

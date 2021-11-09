@@ -6,7 +6,7 @@
  function createSeries(str){
     let figureIcon = document.createElement('p');
     let figures = [{"serie":"258 , 283 , 308 ,  _ ", "res":"333"}, {"serie":"478 , 528 , 578 ,  _  ", "res":"628"}, {"serie":"599 , 641 , 683 ,  _ ", "res":"725"}, {"serie":"601 , 551 , 501 ,  _ ", "res":"451"}, {"serie":"755 , 666 , 577 ,  _ ", "res":"488"}, {"serie":"84 , 96 , 108 ,  _", "res":"120"}, {"serie":"58 , 65 , 72 ,  _", "res":"79"},
-    {"serie":"124 , 177 , 230 ,  _ ", "res":"283"}, {"serie":"420 , 400 , 380 ,  _", "res":"360"}, {"serie":"69 , 78 , 87 ,  _", "res":"96"}, {"serie":"528 , 577 , 626 ,  _", "res":"675"}, {"serie":"612 , 647 , 682 ,  _", "res":"717"}, {"serie":"373 , 340 , 307 ,  _", "res":"274"}];
+    {"serie":"124 , 177 , 230 ,  _ ", "res":"283"}, {"serie":"420 , 400 , 380 ,  _", "res":"360"}, {"serie":"69 , 78 , 87 ,  _", "res":"96"}, {"serie":"528 , 577 , 626 ,  _", "res":"675"}, {"serie":"612 , 647 , 682 ,  _", "res":"717"}, {"serie":"373 , 340 , 307 ,  _", "res":"274"}, {"serie":"21,  28,  35,  _", "res":"42"}, {"serie":"82,  95, 108,  _", "res":"121"}, {"serie":" 57,   61,  65,  _", "res":"69"}, {"serie":"104,  120,  136,  _", "res":"152"}, {"serie":" 333,  321,  309,  _", "res":"297"}, {"serie":" 114,  165,  216,  _", "res":"267"}, {"serie":" 114,  165,  216,  _", "res":"267"}];
     let limit = figures.length-1; 
     let rand = Math.round(Math.random() * limit);
     str[0] = figures[rand].res;
@@ -24,7 +24,7 @@ SeriesTemplate.innerHTML = `
     <div>
         <p class= 'tries'></p>
         <h4>Descubre el patrón y continua la serie</h4>
-        <p>Escribe únicamente el número que sige en la serie</p>
+        <p>Escribe únicamente el número que sigue en la serie</p>
         <div class='items' style=" margin: 1vh 1vw;"></div> 
         <input type='text' class='count' style=" margin: 1vh 1vw; color:#000;">
         <button class='verify'>Revisar</button>
