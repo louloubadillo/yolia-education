@@ -4,18 +4,32 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Yolia Educación</title>
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="primero/css/styles.css">
+        <link rel="stylesheet" href="primero/css/questions.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet"> 
-        <script src="primero/a-contar.js"></script>
-        <script src="primero/agrupemos.js"></script>
-        <script src="primero/clasificar.js"></script>
-        <script src="primero/figuras.js"></script>
-        <script src="primero/figuras-esp.js"></script>
-        <script src="primero/simbolos.js"></script>
-        <script src="primero/numeros.js"></script>
+        <script src="https://kit.fontawesome.com/b300d4e394.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
+        <script src="primero/operation.js" defer></script>
+        <script src="primero/sort.js" defer></script>
+        <script src="primero/basic.js" defer></script>
+        <script src="primero/clasificar.js" defer></script>
+        <script src="primero/old/numeros.js" defer></script>
+        <script src="primero/contar.js" defer></script>
+        <script src="primero/agrupar.js" defer></script>
+        <script src="primero/identificar.js" defer></script>
+        <script src="primero/seleccionar.js" defer></script>
+        <script src="primero/escribir.js" defer></script>
+        <script src="primero/tiempo.js" defer></script>
+        <script src="primero/decenas.js" defer></script>
+        <script src="primero/question.js" defer></script>
+        <script src="primero/main.js" defer></script>
+        <script src="primero/drag-and-drop.js" defer></script>
+        
+        
     </head>
     <body>
         <div class="nav">
@@ -39,91 +53,133 @@
         </div>
 
         <div class="content">
-            <hr>
+            <hr id="section-0">
             <div class="tema">
                 <h3>A contar</h3>
-                <p style="margin-top: 10px;">¿Cuántos carros hay?</p>
-                <div class="ejercicios">
-                    <ejercicio-a-contar></ejercicio-a-contar>
-                    <ejercicio-a-contar></ejercicio-a-contar>
-                    <ejercicio-a-contar></ejercicio-a-contar>
-                </div>
+                <details>
+                    <summary>Ver preguntas</summary>
+                </details>
+                <div class="center score" style="display: none;"></div>
             </div>
-            <hr>
-        <div class="tema">
-                <h3>Agrupemos</h3>
-                <ejercicio-agrupemos></ejercicio-agrupemos>
-            </div>
-            <hr>
+            <hr id="section-1">
             <div class="tema">
-                <h3>Clasificación</h3>
-                <ejercicio-clasificar></ejercicio-clasificar>
+                <h3>Agrupemos</h3>
+                <details>
+                    <summary>Ver preguntas</summary>
+                </details>
+                <div class="center score" style="display: none;"></div>
             </div>
-            <hr>
+            <hr id="section-2">
             <div class="tema">
                 <h3>Figuras</h3>
-                <div class="ejercicios">
-                    <ejercicio-figuras></ejercicio-figuras>
-                    <ejercicio-figuras></ejercicio-figuras>
-                    <ejercicio-figuras></ejercicio-figuras>
-                </div>
+                <p style="padding: 2vh;">Opciones: Cuadrado, Triángulo, Hexágono, Círculo, Rombo </p>
+                <details>
+                    <summary>Ver preguntas</summary>
+                </details>
+                <div class="center score" style="display: none;"></div>
             </div>
+
+            <hr id="section-3">
             <div class="tema">
-                <h3>Figuras Espaciales</h3>
-                <div class="ejercicios">
-                    <ejercicio-figuras-esp></ejercicio-figuras-esp>
-                    <ejercicio-figuras-esp></ejercicio-figuras-esp>
-                    <ejercicio-figuras-esp></ejercicio-figuras-esp>
-                </div>
+                <h3>Clasificar</h3>
+                <details>
+                    <summary>Ver preguntas</summary>
+                </details>
+                <div class="center score" style="display: none;"></div>
             </div>
-            <hr>
+            <hr id="section-4">
             <div class="tema">
                 <h3>Símbolos</h3>
-                <ejercicio-simbolos></ejercicio-simbolos>
+                <details>
+                    <summary>Ver preguntas</summary>
+                </details>
+                <div class="center score" style="display: none;"></div>
             </div>
-            <hr>
+            <hr id="section-5">
             <div class="tema">
                 <h3>Escribir Números</h3>
-                <div class="ejercicios">
-                    <ejercicio-numeros></ejercicio-numeros>
-                    <ejercicio-numeros></ejercicio-numeros>
-                </div>
+                <details>
+                    <summary>Ver preguntas</summary>
+                </details>
+                <div class="center score" style="display: none;"></div>
             </div>
-            <hr>
+            <hr id="section-6">
              <div class="tema">
                 <h3>Relación de Orden</h3>
+                <details>
+                    <summary>Ver preguntas</summary>
+                </details>
+                <div class="center score" style="display: none;"></div>
             </div>
-            <hr>
+            <hr id="section-7">
             <div class="tema">
                 <h3>Sumemos hasta el 20</h3>
+                <details>
+                    <summary>Ver preguntas</summary>
+                </details>
+                <div class="center score" style="display: none;"></div>
             </div>
-            <hr>
+            <hr id="section-8">
              <div class="tema">
                 <h3>Sumemos hasta el 40</h3>
+                <details>
+                    <summary>Ver preguntas</summary>
+                </details>
+                <div class="center score" style="display: none;"></div>
             </div>
-            <hr>
+            <hr id="section-9">
             <div class="tema">
-            <h3>Decenas</h3>
+                <h3>Sumemos Decenas</h3>
+                <details>
+                    <summary>Ver preguntas</summary>
+                </details>
+                <div class="center score" style="display: none;"></div>
             </div>
-            <hr>
+            <hr id="section-10">
             <div class="tema">
                 <h3>Restemos hasta el 20</h3>
+                <details>
+                    <summary>Ver preguntas</summary>
+                </details>
+                <div class="center score" style="display: none;"></div>
             </div>
-            <hr>
+            <hr id="section-11">
             <div class="tema">
                 <h3>Restemos hasta el 40</h3>
+                <details>
+                    <summary>Ver preguntas</summary>
+                </details>
+                <div class="center score" style="display: none;"></div>
             </div>
-            <hr>
+            <hr id="section-12">
             <div class="tema">
-            <h3>Números Ordinales</h3>
+                <h3>Números Ordinales</h3>
+                <details>
+                    <summary>Ver preguntas</summary>
+                </details>
+                <div class="center score" style="display: none;"></div>
             </div>
-            <hr>
+            <hr id="section-13">
             <div class="tema">
                 <h3>Medidas</h3>
+                <details>
+                    <summary>Ver preguntas</summary>
+                </details>
+                <div class="center score" style="display: none;"></div>
             </div>
-            <hr>
+            <hr id="section-14">
             <div class="tema">
                 <h3>Tiempo</h3>
+                <details>
+                    <summary>Ver preguntas</summary>
+                </details>
+                <div class="center score" style="display: none;"></div>
+            </div>
+
+            <hr>
+            <div class="tema">
+                <button class="verify check-grade" onclick="showTotalScore()">Terminar prueba</button>
+                <p id="total-score">Calificación</p>
             </div>
         </div>
     </body>

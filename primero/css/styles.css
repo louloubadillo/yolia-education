@@ -57,9 +57,20 @@ body{
     background-color: rgb(218, 218, 218);
     color: #0C366B;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
     padding: 2vh;
+}
+
+.description p {
+    font-size: 2.5vh;
+    text-align: center;
+    padding: 2vh 8vw;
+}
+
+.description h3{
+    text-align: center;
 }
 
 .grades{
@@ -111,8 +122,8 @@ body{
 }
 
 .tema{
-    margin: 2vh 0;
     width: 100%;
+    padding: 2vh 0;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -270,6 +281,21 @@ hr{
 
 .incorrect {
     background-color: #f4c1c1;
+}
+
+ejercicio-agrupemos{
+    margin: 2vh 4vw; 
+    max-width: 250px;
+}
+
+ejercicio-clasificar{
+    margin: 2vh 4vw; 
+    max-width: 250px;
+}
+
+ejercicio-simbolos{
+    margin: 2vh 4vw; 
+    max-width: 250px;
 }
 
 .drag-start {
