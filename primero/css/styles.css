@@ -1,3 +1,13 @@
+/*
+Colores
+#fca546
+#ffbf01
+#25ac8a
+#4f7bca
+#d0b8ed
+#ff8ca7
+*/
+
 *{
     margin: 0;
     padding: 0; 
@@ -5,7 +15,7 @@
 }
 
 html{
-    background-color: rgb(248, 229, 232);
+    background-color: white;
     /* font-family: 'Poppins', sans-serif; */
     font-family: 'Merriweather Sans', sans-serif;
 }
@@ -20,7 +30,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color: hsl(195, 41%, 77%)
+    background-color: hsl(0, 0%, 98%)
 }
 
 .nav img {
@@ -111,7 +121,6 @@ body{
 
 .fa-stack { 
     font-size: 1.5em;
-    margin-top: 1vh;
     margin-bottom: 1vh;
 }
 
@@ -125,13 +134,50 @@ body{
     width: 100%;
     padding: 2vh 0;
     display: flex;
-    justify-content: center;
-    align-content: center;
     flex-direction: column;
+    color:#0C366B;
     text-align: center;
 }
-.tema h3 {
-    color:#0C366B;
+
+.ejercicios{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+ejercicio-a-contar{
+    margin: 2vh 4vw; 
+    max-width: 250px;
+}
+
+ejercicio-figuras{
+    margin: 2vh 4vw; 
+    max-width: 250px;
+}
+
+ejercicio-figuras-esp{
+    margin: 2vh 4vw; 
+    max-width: 250px;
+}
+
+ejercicio-numeros{
+    margin: 2vh 4vw; 
+    max-width: 250px;
+}
+
+ejercicio-agrupemos{
+    margin: 2vh 4vw; 
+    max-width: 250px;
+}
+
+ejercicio-clasificar{
+    margin: 2vh 4vw; 
+    max-width: 250px;
+}
+
+ejercicio-simbolos{
+    margin: 2vh 4vw; 
+    max-width: 250px;
 }
 
 .grade-title{
@@ -157,201 +203,4 @@ body{
 hr{
     border-color: #92C9DB;
     border-width: .1px;
-}
-
-.pregunta-texto {
-    padding-left: 10%;
-    padding-right: 10%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 1em;
-}
-.pregunta-texto i {
-    width: 2em;
-    height: 2em;
-    color: white;
-    border-radius: 100%;
-    justify-content: center;
-    align-items: center;
-    transform: scale(1.3);
-    display: flex;
-    margin-top: 1em;
-    /* margin-bottom: 1em; */
-}
-.pregunta-texto h4 {
-    margin-bottom: 1em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.pregunta-texto:first-child {
-    margin-top: 2vh;
-}
-
-.pregunta {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-left: 5%;
-    padding-right: 5%;
-    margin-bottom: 1em;
-}
-/* Chrome, Safari, Edge, Opera */
-.pregunta input::-webkit-outer-spin-button,
-.pregunta input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-/* Firefox */
-.pregunta input[type=number] {
-    -moz-appearance: textfield;
-}
-.pregunta div {
-    padding: 0.8em;
-    margin: 0.5em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.pregunta input {
-    background-color: #ffffffdd;
-    border-radius: 5px;
-    border: solid grey 2px;
-    font: inherit;
-    padding-left: 0.2em;
-    padding-right: 0.2em;
-    text-align: right; 
-    width: 5em;
-}
-.pregunta p {
-    text-align: center;
-    margin-top: 1em;
-}
-.pregunta i {
-    font-size: 20vh;
-    padding-right: 2vh;
-    padding-left: 2vh;
-}
-
-.parte {
-    border-radius: 10px;
-}
-
-.sumas {
-    text-align: right;
-    width: 5em;
-    padding-right: 0.2em;
-    border-bottom: solid 1px;
-    margin-bottom: 3px;
-    padding-bottom: 3px;
-}
-
-.figuras{
-    margin: 2vh 4vw; 
-    max-width: 250px;
-}
-
-.mover {
-    cursor: move;
-    width: 3em;
-    height: 3em;
-    align-self: center;
-    text-align: center;
-    user-select: none;
-    margin: 0;
-    background-color: #d5d7e4;
-    border-radius: 100%;
-}
-.mover:hover {
-    transform: scale(1.1);
-}
-
-.correct {
-    user-select: none;
-    pointer-events: none;
-}
-.correct:hover {
-    transform: none;
-    cursor: no-drop;
-}
-
-.incorrect {
-    background-color: #f4c1c1;
-}
-
-ejercicio-agrupemos{
-    margin: 2vh 4vw; 
-    max-width: 250px;
-}
-
-ejercicio-clasificar{
-    margin: 2vh 4vw; 
-    max-width: 250px;
-}
-
-ejercicio-simbolos{
-    margin: 2vh 4vw; 
-    max-width: 250px;
-}
-
-.drag-start {
-    opacity: 0.4;
-}
-
-.drag-enter {
-    background-color: #D0B8ED;
-    opacity: 0.8;
-}
-
-.dropped {
-    background-color: #D0B8ED;
-}
-
-button {
-    background-color: #9e1a96;
-    color: white;
-    font: inherit;
-    border: none;
-    border-radius: 1em;
-    cursor: pointer;
-    align-self: center;
-    margin-bottom: 1em;
-}
-
-button:hover{
-    background-color: #0C366B;
-}
-
-.ejercicios{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-ejercicio-figuras{
-    margin: 2vh 4vw; 
-    max-width: 250px;
-}
-
-.poligonales{
-    width: 100%;
-}
-
-.boton-ejercicio{
-    padding: .5em;
-    background-color: darkcyan;
-    font-size: 13px;
-    margin-right: 5px;
-    border-radius: 6px;
-    color: white;
-    border-color: #0C366B;
-}
-
-.boton-ejercicio:hover{
-    background-color: #0C366B;
-    border-color: darkcyan;
 }
