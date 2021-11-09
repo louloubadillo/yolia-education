@@ -155,18 +155,18 @@ const questionTemplates = [[ //A contar
     [
         "seleccionar",
         "¿Qué significa este símbolo?",
-        ["No fumar"],
+        ["Reciclaje"],
         [[1,12]],
         "s",
-        [["fas fa-smoking-ban ", ""]]
+        [["fas fa-recycle ", ""]]
     ],
     [
         "seleccionar",
         "¿Qué significa este símbolo?",
-        ["Dinero"],
+        ["Igual"],
         [[1,12]],
         "s",
-        [["fas fa-money-bill-wave ", ""]]
+        [["fas fa-equals ", ""]]
     ],
     
 ],
