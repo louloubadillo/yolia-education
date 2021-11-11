@@ -329,3 +329,7 @@ ejercicio-figuras{
     background-color: #0C366B;
     border-color: darkcyan;
 }
+
+.notas{
+    font-weight: bold;
+}
