@@ -5,7 +5,7 @@
 
  function createFigMulti(str){
     let figureIcon = document.createElement('img');
-    let figures = [{"icon":"./images/prob-multi/6.png", "num":"12"}, {"icon":"./images/prob-multi/2.png", "num":"4"}, {"icon":"./images/prob-multi/3.png", "num":"6"}, {"icon":"./images/prob-multi/5.png", "num":"10"}, {"icon":"./images/prob-multi/8.png", "num":"16"}];
+    let figures = [{"icon":"./images/prob-multi/prob1/6.png", "num":"12"}, {"icon":"./images/prob-multi/prob1/2.png", "num":"4"}, {"icon":"./images/prob-multi/prob1/3.png", "num":"6"}, {"icon":"./images/prob-multi/prob1/5.png", "num":"10"}, {"icon":"./images/prob-multi/prob1/8.png", "num":"16"}];
     let limit = figures.length-1; 
     let rand = Math.round(Math.random() * limit);
     str[0] = figures[rand].num;
@@ -21,7 +21,12 @@
 
 function createFigMulti2(str){
     let figureIcon = document.createElement('img');
-    let figures = [{"icon":"./images/prob-multi/6.png", "num":"12"}, {"icon":"./images/prob-multi/2.png", "num":"4"}, {"icon":"./images/prob-multi/3.png", "num":"6"}, {"icon":"./images/prob-multi/5.png", "num":"10"}, {"icon":"./images/prob-multi/8.png", "num":"16"}];
+    let figures = [{"icon":"./images/prob-multi/prob2/11.png", "num":"66"},
+                    {"icon":"./images/prob-multi/prob2/2.png", "num":"12"},
+                    {"icon":"./images/prob-multi/prob2/8.png", "num":"48"},
+                    {"icon":"./images/prob-multi/prob2/7.png", "num":"42"},
+                    {"icon":"./images/prob-multi/prob2/6.png", "num":"36"}
+                    ];
     let limit = figures.length-1; 
     let rand = Math.round(Math.random() * limit);
     str[0] = figures[rand].num;
@@ -37,7 +42,12 @@ function createFigMulti2(str){
 
 function createFigMulti3(str){
     let figureIcon = document.createElement('img');
-    let figures = [{"icon":"./images/prob-multi/6.png", "num":"12"}, {"icon":"./images/prob-multi/2.png", "num":"4"}, {"icon":"./images/prob-multi/3.png", "num":"6"}, {"icon":"./images/prob-multi/5.png", "num":"10"}, {"icon":"./images/prob-multi/8.png", "num":"16"}];
+    let figures = [{"icon":"./images/prob-multi/prob3/4.png", "num":"40"},
+                    {"icon":"./images/prob-multi/prob3/15.png", "num":"150"},
+                    {"icon":"./images/prob-multi/prob3/5.png", "num":"50"},
+                    {"icon":"./images/prob-multi/prob3/10.png", "num":"100"},
+                    {"icon":"./images/prob-multi/prob3/23.png", "num":"230"}
+                    ];
     let limit = figures.length-1; 
     let rand = Math.round(Math.random() * limit);
     str[0] = figures[rand].num;
@@ -53,7 +63,11 @@ function createFigMulti3(str){
 
 function createFigMulti4(str){
     let figureIcon = document.createElement('img');
-    let figures = [{"icon":"./images/prob-multi/6.png", "num":"12"}, {"icon":"./images/prob-multi/2.png", "num":"4"}, {"icon":"./images/prob-multi/3.png", "num":"6"}, {"icon":"./images/prob-multi/5.png", "num":"10"}, {"icon":"./images/prob-multi/8.png", "num":"16"}];
+    let figures = [{"icon":"./images/prob-multi/prob4/8.png", "num":"56"},
+                    {"icon":"./images/prob-multi/prob4/11.png", "num":"77"},
+                    {"icon":"./images/prob-multi/prob4/6.png", "num":"42"},
+                    {"icon":"./images/prob-multi/prob4/4.png", "num":"28"}
+                    ];
     let limit = figures.length-1; 
     let rand = Math.round(Math.random() * limit);
     str[0] = figures[rand].num;
@@ -75,6 +89,7 @@ ProbMultiTemplate.innerHTML = `
         <div>
             <p class= 'tries'></p>
             <p>Betsy va a la panadería y compra el número de panes que se indica abajo. Si cada pan cuesta 2 pesos. ¿Cuánto dinero gastó Betsy?</p>
+            <p>Escribe tu resultado sin el signo de pesos ($).</p>
             <div class='items' style=" margin: 1vh 1vw;"></div>
             <input type='text' class='count' style=" margin: 1vh 1vw; color:#000;">
             <button class='verify'>Revisar</button>
@@ -83,7 +98,8 @@ ProbMultiTemplate.innerHTML = `
 
         <div>
             <p class= 'tries2'></p>
-            <p>Problema 2</p>
+            <p>Hay 6 amigos en una habitación, si cada uno coopera para comprar una pizza con la cantidad de dinero mostrada debajo ¿Cuánto dinero tenemos en total?</p>
+            <p>Escribe tu resultado sin el signo de pesos ($).</p>
             <div class='items2' style=" margin: 1vh 1vw;"></div>
             <input type='text' class='count2' style=" margin: 1vh 1vw; color:#000;">
             <button class='verify2'>Revisar</button>
@@ -92,7 +108,7 @@ ProbMultiTemplate.innerHTML = `
 
         <div>
             <p class= 'tries3'></p>
-            <p>Problema 3</p>
+            <p>Por cada profesor hay 10 alumnos, si tenemos la cantidad de profesores mostrada en la imágen de abajo. ¿Cuántos alumnos hay?</p>
             <div class='items3' style=" margin: 1vh 1vw;"></div>
             <input type='text' class='count3' style=" margin: 1vh 1vw; color:#000;">
             <button class='verify3'>Revisar</button>
@@ -101,7 +117,7 @@ ProbMultiTemplate.innerHTML = `
 
         <div>
             <p class= 'tries4'></p>
-            <p>Problema 4</p>
+            <p>Por cada canasta hay 7 balones de fútbol soccer y tenemos el número de canastas mostradas debajo ¿Cuántos balones hay?</p>
             <div class='items4' style=" margin: 1vh 1vw;"></div>
             <input type='text' class='count4' style=" margin: 1vh 1vw; color:#000;">
             <button class='verify4'>Revisar</button>

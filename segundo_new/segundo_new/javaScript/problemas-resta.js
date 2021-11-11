@@ -5,7 +5,7 @@
 //Opciones pregunta 1
  function createFigResta(str){
     let figureIcon = document.createElement('img');
-    let figures = [{"icon":"./images/prob-resta/4785.png", "num":"2863"}, {"icon":"./images/prob-resta/539.png", "num":"7109"}, {"icon":"./images/prob-resta/1841.png", "num":"5807"}, {"icon":"./images/prob-resta/2183.png", "num":"5465"}, {"icon":"./images/prob-resta/3307.png", "num":"4341"}];
+    let figures = [{"icon":"./images/prob-resta/prob1/4785.png", "num":"2863"}, {"icon":"./images/prob-resta/prob1/539.png", "num":"7109"}, {"icon":"./images/prob-resta/prob1/1841.png", "num":"5807"}, {"icon":"./images/prob-resta/prob1/2183.png", "num":"5465"}, {"icon":"./images/prob-resta/prob1/3307.png", "num":"4341"}];
     let limit = figures.length-1; 
     let rand = Math.round(Math.random() * limit);
     str[0] = figures[rand].num;
@@ -22,7 +22,12 @@
 //Opciones pregunta 2
 function createFigResta2(str){
     let figureIcon = document.createElement('img');
-    let figures = [{"icon":"./images/prob-resta/4785.png", "num":"2863"}, {"icon":"./images/prob-resta/539.png", "num":"7109"}, {"icon":"./images/prob-resta/1841.png", "num":"5807"}, {"icon":"./images/prob-resta/2183.png", "num":"5465"}, {"icon":"./images/prob-resta/3307.png", "num":"4341"}];
+    let figures = [{"icon":"./images/prob-resta/prob2/134.png", "num":"1466"},
+                    {"icon":"./images/prob-resta/prob2/1356.png", "num":"244"},
+                    {"icon":"./images/prob-resta/prob2/250.png", "num":"1350"},
+                    {"icon":"./images/prob-resta/prob2/500.png", "num":"1100"},
+                    {"icon":"./images/prob-resta/prob2/900.png", "num":"700"},
+                    ];
     let limit = figures.length-1; 
     let rand = Math.round(Math.random() * limit);
     str[0] = figures[rand].num;
@@ -39,7 +44,12 @@ function createFigResta2(str){
 //Opciones pregunta 3
 function createFigResta3(str){
     let figureIcon = document.createElement('img');
-    let figures = [{"icon":"./images/prob-resta/4785.png", "num":"2863"}, {"icon":"./images/prob-resta/539.png", "num":"7109"}, {"icon":"./images/prob-resta/1841.png", "num":"5807"}, {"icon":"./images/prob-resta/2183.png", "num":"5465"}, {"icon":"./images/prob-resta/3307.png", "num":"4341"}];
+    let figures = [{"icon":"./images/prob-resta/prob3/1432.png", "num":"568"},
+                    {"icon":"./images/prob-resta/prob3/21.png", "num":"1979"},
+                    {"icon":"./images/prob-resta/prob3/300.png", "num":"1700"},
+                    {"icon":"./images/prob-resta/prob3/140.png", "num":"1860"},
+                    {"icon":"./images/prob-resta/prob3/1500.png", "num":"500"}
+                    ];
     let limit = figures.length-1; 
     let rand = Math.round(Math.random() * limit);
     str[0] = figures[rand].num;
@@ -56,7 +66,12 @@ function createFigResta3(str){
 //Opciones pregunta 4
 function createFigResta4(str){
     let figureIcon = document.createElement('img');
-    let figures = [{"icon":"./images/prob-resta/4785.png", "num":"2863"}, {"icon":"./images/prob-resta/539.png", "num":"7109"}, {"icon":"./images/prob-resta/1841.png", "num":"5807"}, {"icon":"./images/prob-resta/2183.png", "num":"5465"}, {"icon":"./images/prob-resta/3307.png", "num":"4341"}];
+    let figures = [{"icon":"./images/prob-resta/prob4/6.png", "num":"41"},
+                    {"icon":"./images/prob-resta/prob4/34.png", "num":"13"},
+                    {"icon":"./images/prob-resta/prob4/41.png", "num":"6"},
+                    {"icon":"./images/prob-resta/prob4/26.png", "num":"21"},
+                    {"icon":"./images/prob-resta/prob4/15.png", "num":"32"}
+                    ];
     let limit = figures.length-1; 
     let rand = Math.round(Math.random() * limit);
     str[0] = figures[rand].num;
@@ -86,7 +101,8 @@ ProbRestaTemplate.innerHTML = `
 
         <div>
             <p class= 'tries2'></p>
-            <p>Problema 2</p>
+            <p>Juan fue al mercado y compró 1600 pesos de Sandía pero le hicieron un descuento de la cantidad mostrada debajo ¿Cuánto dinero gastó?</p>
+            <p>Escribe tu resultado sin el signo de pesos ($).</p>
             <div class='items2' style=" margin: 1vh 1vw;"></div>
             <input type='text' class='count2' style=" margin: 1vh 1vw; color:#000;">
             <button class='verify2'>Revisar</button>
@@ -95,7 +111,7 @@ ProbRestaTemplate.innerHTML = `
 
         <div>
             <p class= 'tries3'></p>
-            <p>Problema 3</p>
+            <p>En el salón de clases había 2000 alumnos, se movieron a otro salón los alumnos mostrados en la imágen de abajo ¿Cuántos Alumnos quedan?</p>
             <div class='items3' style=" margin: 1vh 1vw;"></div>
             <input type='text' class='count3' style=" margin: 1vh 1vw; color:#000;">
             <button class='verify3'>Revisar</button>
@@ -104,7 +120,7 @@ ProbRestaTemplate.innerHTML = `
 
         <div>
             <p class= 'tries4'></p>
-            <p>Problema 4</p>
+            <p>Hay 47 patos en una laguna; se sale la cantidad de patos mostrada en la imagen de abajo ¿Cuántos patos quedan en la laguna?</p>
             <div class='items4' style=" margin: 1vh 1vw;"></div>
             <input type='text' class='count4' style=" margin: 1vh 1vw; color:#000;">
             <button class='verify4'>Revisar</button>

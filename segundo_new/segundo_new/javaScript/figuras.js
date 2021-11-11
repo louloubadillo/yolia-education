@@ -10,9 +10,12 @@
     let figureIcon = document.createElement('p');
     let figures = [{"icon":"🔵", "forma":"círculo"}, {"icon":"⚽", "forma":"círculo"}, {"icon":"🏀", "forma":"círculo"}, {"icon":"💿", "forma":"círculo"},  {"icon":"🌎", "forma":"círculo"}, 
     {"icon":"🟪", "forma":"cuadrado"}, {"icon":"🧇", "forma":"cuadrado"},{"icon":"🍱", "forma":"cuadrado"}, {"icon":"📅", "forma":"cuadrado"}, {"icon":"🚾", "forma":"cuadrado"}, 
-    {"icon":"🔺", "forma":"triángulo"}, {"icon":"🍙", "forma":"triángulo"}, {"icon":"💩", "forma":"triángulo"}, {"icon":"🌲", "forma":"triángulo"}, {"icon":"📐", "forma":"triángulo"},
+    {"icon":"🔺", "forma":"triángulo"}, {"icon":"🍙", "forma":"triángulo"},  {"icon":"🌲", "forma":"triángulo"}, {"icon":"📐", "forma":"triángulo"},
     {"icon":"🔶", "forma":"rombo"}, {"icon":"🪁", "forma":"rombo"}, {"icon":"💠", "forma":"rombo"}, {"icon":"♦", "forma":"rombo"}, 
     {"icon":"⬢", "forma":"hexágono"}, {"icon":"⬡", "forma":"hexágono"}, {"icon":"⬣", "forma":"hexágono"}, {"icon":"⬢", "forma":"hexágono"}];
+
+    //{"icon":"💩", "forma":"triángulo"},
+    
     let limit = figures.length-1; 
     let rand = Math.round(Math.random() * limit);
     str[0] = figures[rand].forma;

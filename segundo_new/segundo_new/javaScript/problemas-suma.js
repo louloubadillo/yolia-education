@@ -5,7 +5,7 @@
 //Opciones pregunta 1
  function createFigSuma(str){
     let figureIcon = document.createElement('img');
-    let figures = [{"icon":"./images/prob-suma/756.png", "num":"1234"}, {"icon":"./images/prob-suma/389.png", "num":"867"}, {"icon":"./images/prob-suma/564.png", "num":"1042"}, {"icon":"./images/prob-suma/631.png", "num":"1109"}, {"icon":"./images/prob-suma/705.png", "num":"1183"}];
+    let figures = [{"icon":"./images/prob-suma/prob1/756.png", "num":"1234"}, {"icon":"./images/prob-suma/prob1/389.png", "num":"867"}, {"icon":"./images/prob-suma/prob1/564.png", "num":"1042"}, {"icon":"./images/prob-suma/prob1/631.png", "num":"1109"}, {"icon":"./images/prob-suma/prob1/705.png", "num":"1183"}];
     let limit = figures.length-1; 
     let rand = Math.round(Math.random() * limit);
     str[0] = figures[rand].num;
@@ -22,7 +22,12 @@
 //Opciones pregunta 2
 function createFigSuma2(str){
     let figureIcon = document.createElement('img');
-    let figures = [{"icon":"./images/prob-suma/756.png", "num":"1234"}, {"icon":"./images/prob-suma/389.png", "num":"867"}, {"icon":"./images/prob-suma/564.png", "num":"1042"}, {"icon":"./images/prob-suma/631.png", "num":"1109"}, {"icon":"./images/prob-suma/705.png", "num":"1183"}];
+    let figures = [ {"icon":"./images/prob-suma/prob2/123.png", "num":"283"},
+                    {"icon":"./images/prob-suma/prob2/405.png", "num":"555"},
+                    {"icon":"./images/prob-suma/prob2/60.png", "num":"210"},
+                    {"icon":"./images/prob-suma/prob2/234.png", "num":"384"},
+                    {"icon":"./images/prob-suma/prob2/199.png", "num":"349"}
+                    ];
     let limit = figures.length-1; 
     let rand = Math.round(Math.random() * limit);
     str[0] = figures[rand].num;
@@ -39,7 +44,12 @@ function createFigSuma2(str){
 //Opciones Pregunta 3
 function createFigSuma3(str){
     let figureIcon = document.createElement('img');
-    let figures = [{"icon":"./images/prob-suma/756.png", "num":"1234"}, {"icon":"./images/prob-suma/389.png", "num":"867"}, {"icon":"./images/prob-suma/564.png", "num":"1042"}, {"icon":"./images/prob-suma/631.png", "num":"1109"}, {"icon":"./images/prob-suma/705.png", "num":"1183"}];
+    let figures = [{"icon":"./images/prob-suma/prob3/10.png", "num":"43"}, 
+                    {"icon":"./images/prob-suma/prob3/105.png", "num":"138"}, 
+                    {"icon":"./images/prob-suma/prob3/3.png", "num":"36"}, 
+                    {"icon":"./images/prob-suma/prob3/43.png", "num":"76"}, 
+                    {"icon":"./images/prob-suma/prob3/23.png", "num":"56"}, 
+                     ];
     let limit = figures.length-1; 
     let rand = Math.round(Math.random() * limit);
     str[0] = figures[rand].num;
@@ -56,7 +66,12 @@ function createFigSuma3(str){
 //Opciones Pregunta 4
 function createFigSuma4(str){
     let figureIcon = document.createElement('img');
-    let figures = [{"icon":"./images/prob-suma/756.png", "num":"1234"}, {"icon":"./images/prob-suma/389.png", "num":"867"}, {"icon":"./images/prob-suma/564.png", "num":"1042"}, {"icon":"./images/prob-suma/631.png", "num":"1109"}, {"icon":"./images/prob-suma/705.png", "num":"1183"}];
+    let figures = [{"icon":"./images/prob-suma/prob4/21.png", "num":"61"},
+                    {"icon":"./images/prob-suma/prob4/100.png", "num":"150"},
+                    {"icon":"./images/prob-suma/prob4/17.png", "num":"67"},
+                    {"icon":"./images/prob-suma/prob4/7.png", "num":"57"},
+                    {"icon":"./images/prob-suma/prob4/33.png", "num":"83"}
+                    ];
     let limit = figures.length-1; 
     let rand = Math.round(Math.random() * limit);
     str[0] = figures[rand].num;
@@ -86,7 +101,7 @@ ProbSumaTemplate.innerHTML = `
 
         <div>
             <p class= 'tries2'></p>
-            <p>Problema 2</p>
+            <p>Juan fue al mercado a comprar 150 Sandías pero por siempre pagar a tiempo le regalan el número de sandías mostrado en la imagen debajo. ¿Cuántas sandías tiene Juan?</p>
             <div class='items2' style=" margin: 1vh 1vw;"></div>
             <input type='text' class='count2' style=" margin: 1vh 1vw; color:#000;">
             <button class='verify2'>Revisar</button>
@@ -95,7 +110,7 @@ ProbSumaTemplate.innerHTML = `
 
         <div>
             <p class= 'tries3'></p>
-            <p>Problema 3</p>
+            <p>En el salón hay 33 sillas pero el profesor acaba de traer las que se muestran en la imagen debajo. ¿Cuántas sillas hay?</p>
             <div class='items3' style=" margin: 1vh 1vw;"></div>
             <input type='text' class='count3' style=" margin: 1vh 1vw; color:#000;">
             <button class='verify3'>Revisar</button>
@@ -104,7 +119,7 @@ ProbSumaTemplate.innerHTML = `
 
         <div>
             <p class= 'tries4'></p>
-            <p>Problema 4</p>
+            <p>Hice una fiesta en mi casa donde invité a 50 amigos, pero después llegaron los mostrados en la imagen debajo ¿Cuántos amigos hay ahora?</p>
             <div class='items4' style=" margin: 1vh 1vw;"></div>
             <input type='text' class='count4' style=" margin: 1vh 1vw; color:#000;">
             <button class='verify4'>Revisar</button>

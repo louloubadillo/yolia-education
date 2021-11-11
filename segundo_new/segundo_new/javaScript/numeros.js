@@ -5,8 +5,8 @@
 // Que las opciones empiecen en mayuscula
  function createNumbers(str){
     let figureIcon = document.createElement('p');
-    let figures = [{"num":"578", "escrito":"quinientos setenta y ocho"},{"num":"495", "escrito":"cuatrocientos noventa y cinco"},{"num":"788", "escrito":"setecientos ochenta y ocho"},{"num":"204", "escrito":"doscientos cuatro"},{"num":"945", "escrito":"novecientos cuarenta y cinco"},{"num":"234", "escrito":"doscientos treinta y cuatro"},
-    {"num":"113", "escrito":"ciento trece"},{"num":"451", "escrito":"cuatrocientos cincuenta y uno"},{"num":"601", "escrito":"seiscientos uno"},{"num":"782", "escrito":"setecientos ochenta y dos"},{"num":"298", "escrito":"doscientos noventa y ocho"},{"num":"613", "escrito":"seiscientos trece"},{"num":"521", "escrito":"quinientos veintiuno"},{"num":"915", "escrito":"novecientos quince"},  {"num":"373", "escrito":"trescientos setenta y tres"}, {"num":"129", "escrito":"ciento veintinueve"}, {"num":"550", "escrito":"quinientos cincuenta"}, {"num":"230", "escrito":"doscientos treinta"}, {"num":"908", "escrito":"novecientos ocho"}, {"num":"851", "escrito":"ochocientos cincuenta y uno"}];
+    let figures = [{"num":"578", "escrito":"Quinientos setenta y ocho"},{"num":"495", "escrito":"Cuatrocientos noventa y cinco"},{"num":"788", "escrito":"Setecientos ochenta y ocho"},{"num":"204", "escrito":"Doscientos cuatro"},{"num":"945", "escrito":"Novecientos cuarenta y cinco"},{"num":"234", "escrito":"Doscientos treinta y cuatro"},
+    {"num":"113", "escrito":"Ciento trece"},{"num":"451", "escrito":"Cuatrocientos cincuenta y uno"},{"num":"601", "escrito":"Seiscientos uno"},{"num":"782", "escrito":"Setecientos ochenta y dos"},{"num":"298", "escrito":"Doscientos noventa y ocho"},{"num":"613", "escrito":"Seiscientos trece"},{"num":"521", "escrito":"Quinientos veintiuno"},{"num":"915", "escrito":"Novecientos quince"},  {"num":"373", "escrito":"Trescientos setenta y tres"}, {"num":"129", "escrito":"Ciento veintinueve"}, {"num":"550", "escrito":"Quinientos cincuenta"}, {"num":"230", "escrito":"Doscientos treinta"}, {"num":"908", "escrito":"Novecientos ocho"}, {"num":"851", "escrito":"Ochocientos cincuenta y uno"}];
     let limit = figures.length-1; 
     let rand = Math.round(Math.random() * limit);
     str[0] = figures[rand].escrito;
@@ -230,21 +230,21 @@ class Numeros extends HTMLElement {
 
     }
     verifyInput(str){
-        let strMod = str.toLowerCase();
+        let strMod = str//.toLowerCase();
         return strMod === this.str[0]
     }
     verifyInput2(str){
-        let strMod2 = str.toLowerCase();
+        let strMod2 = str//.toLowerCase();
         return strMod2 === this.str2[0]
     }
 
     verifyInput3(str){
-        let strMod3 = str.toLowerCase();
+        let strMod3 = str//.toLowerCase();
         return strMod3 === this.str3[0]
     }
 
     verifyInput4(str){
-        let strMod4 = str.toLowerCase();
+        let strMod4 = str//.toLowerCase();
         return strMod4 === this.str4[0]
     }
 

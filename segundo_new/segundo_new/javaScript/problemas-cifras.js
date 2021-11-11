@@ -5,7 +5,7 @@
 
  function createFigCifra(str){
     let figureIcon = document.createElement('img');
-    let figures = [{"icon":"./images/prob-cifras/543.png", "num":"3"}, {"icon":"./images/prob-cifras/199.png", "num":"9"}, {"icon":"./images/prob-cifras/237.png", "num":"7"}, {"icon":"./images/prob-cifras/351.png", "num":"1"}, {"icon":"./images/prob-cifras/428.png", "num":"8"}, {"icon":"./images/prob-cifras/612.png", "num":"2"}, {"icon":"./images/prob-cifras/765.png", "num":"5"}];
+    let figures = [{"icon":"./images/prob-cifras/prob1/543.png", "num":"3"}, {"icon":"./images/prob-cifras/prob1/199.png", "num":"9"}, {"icon":"./images/prob-cifras/prob1/237.png", "num":"7"}, {"icon":"./images/prob-cifras/prob1/351.png", "num":"1"}, {"icon":"./images/prob-cifras/prob1/428.png", "num":"8"}, {"icon":"./images/prob-cifras/prob1/612.png", "num":"2"}, {"icon":"./images/prob-cifras/prob1/765.png", "num":"5"}];
     let limit = figures.length-1; 
     let rand = Math.round(Math.random() * limit);
     str[0] = figures[rand].num;
@@ -21,7 +21,12 @@
 
 function createFigCifra2(str){
     let figureIcon = document.createElement('img');
-    let figures = [{"icon":"./images/prob-cifras/543.png", "num":"3"}, {"icon":"./images/prob-cifras/199.png", "num":"9"}, {"icon":"./images/prob-cifras/237.png", "num":"7"}, {"icon":"./images/prob-cifras/351.png", "num":"1"}, {"icon":"./images/prob-cifras/428.png", "num":"8"}, {"icon":"./images/prob-cifras/612.png", "num":"2"}, {"icon":"./images/prob-cifras/765.png", "num":"5"}];
+    let figures = [{"icon":"./images/prob-cifras/prob2/80.png", "num":"8"},
+                    {"icon":"./images/prob-cifras/prob2/1150.png", "num":"5"},
+                    {"icon":"./images/prob-cifras/prob2/964.png", "num":"6"},
+                    {"icon":"./images/prob-cifras/prob2/654.png", "num":"5"},
+                    {"icon":"./images/prob-cifras/prob2/865.png", "num":"6"}
+                    ];
     let limit = figures.length-1; 
     let rand = Math.round(Math.random() * limit);
     str[0] = figures[rand].num;
@@ -37,7 +42,12 @@ function createFigCifra2(str){
 
 function createFigCifra3(str){
     let figureIcon = document.createElement('img');
-    let figures = [{"icon":"./images/prob-cifras/543.png", "num":"3"}, {"icon":"./images/prob-cifras/199.png", "num":"9"}, {"icon":"./images/prob-cifras/237.png", "num":"7"}, {"icon":"./images/prob-cifras/351.png", "num":"1"}, {"icon":"./images/prob-cifras/428.png", "num":"8"}, {"icon":"./images/prob-cifras/612.png", "num":"2"}, {"icon":"./images/prob-cifras/765.png", "num":"5"}];
+    let figures = [{"icon":"./images/prob-cifras/prob3/7893.png", "num":"8"},
+                    {"icon":"./images/prob-cifras/prob3/678.png", "num":"6"},
+                    {"icon":"./images/prob-cifras/prob3/879.png", "num":"8"},
+                    {"icon":"./images/prob-cifras/prob3/965.png", "num":"9"},
+                    {"icon":"./images/prob-cifras/prob3/123.png", "num":"1"}
+                    ];
     let limit = figures.length-1; 
     let rand = Math.round(Math.random() * limit);
     str[0] = figures[rand].num;
@@ -53,7 +63,12 @@ function createFigCifra3(str){
 
 function createFigCifra4(str){
     let figureIcon = document.createElement('img');
-    let figures = [{"icon":"./images/prob-cifras/543.png", "num":"3"}, {"icon":"./images/prob-cifras/199.png", "num":"9"}, {"icon":"./images/prob-cifras/237.png", "num":"7"}, {"icon":"./images/prob-cifras/351.png", "num":"1"}, {"icon":"./images/prob-cifras/428.png", "num":"8"}, {"icon":"./images/prob-cifras/612.png", "num":"2"}, {"icon":"./images/prob-cifras/765.png", "num":"5"}];
+    let figures = [{"icon":"./images/prob-cifras/prob4/155.png", "num":"5"},
+                    {"icon":"./images/prob-cifras/prob4/640.png", "num":"0"},
+                    {"icon":"./images/prob-cifras/prob4/940.png", "num":"0"},
+                    {"icon":"./images/prob-cifras/prob4/894.png", "num":"4"},
+                    {"icon":"./images/prob-cifras/prob4/7894.png", "num":"4"}
+                    ];
     let limit = figures.length-1; 
     let rand = Math.round(Math.random() * limit);
     str[0] = figures[rand].num;
@@ -74,7 +89,7 @@ ProbCifraTemplate.innerHTML = `
         <br>
         <div>
             <p class= 'tries'></p>
-            <p>José Ángel cumplió 7 años, su tío Gregorio le regaló los carritos que se indica abajo, ¿Cuantas unidades tiene?</p>
+            <p>José Ángel cumplió 7 años, su tío Gregorio le regaló los carritos que se indica abajo, ¿Cuántas unidades tiene?</p>
             <div class='items' style=" margin: 1vh 1vw;"></div>
             <input type='text' class='count' style=" margin: 1vh 1vw; color:#000;">
             <button class='verify'>Revisar</button>
@@ -83,7 +98,7 @@ ProbCifraTemplate.innerHTML = `
 
         <div>
             <p class= 'tries2'></p>
-            <p>Problema 2</p>
+            <p>Del número de balones mostrados debajo determina cual es la decena de ese número.</p>
             <div class='items2' style=" margin: 1vh 1vw;"></div>
             <input type='text' class='count2' style=" margin: 1vh 1vw; color:#000;">
             <button class='verify2'>Revisar</button>
@@ -92,7 +107,7 @@ ProbCifraTemplate.innerHTML = `
 
         <div>
             <p class= 'tries3'></p>
-            <p>Problema 3</p>
+            <p>Juanito fue otra vez al mercado y compro sandias. Del número de sandías mostradas abajo, ¿Cuántas centenas hay?.</p>
             <div class='items3' style=" margin: 1vh 1vw;"></div>
             <input type='text' class='count3' style=" margin: 1vh 1vw; color:#000;">
             <button class='verify3'>Revisar</button>
@@ -101,7 +116,7 @@ ProbCifraTemplate.innerHTML = `
 
         <div>
             <p class= 'tries4'></p>
-            <p>Problema 4</p>
+            <p>Del número de alumnos mostrados debajo determina cual es la unidad de ese número.</p>
             <div class='items4' style=" margin: 1vh 1vw;"></div>
             <input type='text' class='count4' style=" margin: 1vh 1vw; color:#000;">
             <button class='verify4'>Revisar</button>

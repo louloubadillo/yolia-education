@@ -6,8 +6,8 @@
 
  function createNumbersOrd(str){
     let figureIcon = document.createElement('p');
-    let figures = [{"num":"60°", "escrito":"sexagésimo"},{"num":"14°", "escrito":"decimo cuarto"},{"num":"10°", "escrito":"décimo"},{"num":"37°", "escrito":"trigésimo séptimo"},{"num":"56°", "escrito":"quincuagésimo sexto"},{"num":"72°", "escrito":"septuagésimo segundo"},
-    {"num":"28°", "escrito":"vigésimo octavo"},{"num":"13°", "escrito":"decimo tercero"},{"num":"45°", "escrito":"cuadragésimo quinto"},{"num":"41°", "escrito":"cuadragésimo primero"},{"num":"8°", "escrito":"octavo"},{"num":"18°", "escrito":"decimo octavo"},{"num":"23°", "escrito":"vigésimo tercero"},{"num":"39°", "escrito":"trigésimo noveno"}];
+    let figures = [{"num":"60°", "escrito":"Sexagésimo"},{"num":"14°", "escrito":"Decimo cuarto"},{"num":"10°", "escrito":"Décimo"},{"num":"37°", "escrito":"Trigésimo séptimo"},{"num":"56°", "escrito":"Quincuagésimo sexto"},{"num":"72°", "escrito":"Septuagésimo segundo"},
+    {"num":"28°", "escrito":"Vigésimo octavo"},{"num":"13°", "escrito":"Decimo tercero"},{"num":"45°", "escrito":"Cuadragésimo quinto"},{"num":"41°", "escrito":"Cuadragésimo primero"},{"num":"8°", "escrito":"Octavo"},{"num":"18°", "escrito":"Decimo octavo"},{"num":"23°", "escrito":"Vigésimo tercero"},{"num":"39°", "escrito":"Trigésimo noveno"}];
     let limit = figures.length-1; 
     let rand = Math.round(Math.random() * limit);
     str[0] = figures[rand].escrito;
@@ -231,21 +231,21 @@ class NumerosOrd extends HTMLElement {
 
     }
     verifyInput(str){
-        let strMod = str.toLowerCase();
+        let strMod = str//.toLowerCase();
         return strMod === this.str[0]
     }
     verifyInput2(str){
-        let strMod2 = str.toLowerCase();
+        let strMod2 = str//.toLowerCase();
         return strMod2 === this.str2[0]
     }
 
     verifyInput3(str){
-        let strMod3 = str.toLowerCase();
+        let strMod3 = str//.toLowerCase();
         return strMod3 === this.str3[0]
     }
 
     verifyInput4(str){
-        let strMod4 = str.toLowerCase();
+        let strMod4 = str//.toLowerCase();
         return strMod4 === this.str4[0]
     }
 
