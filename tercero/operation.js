@@ -104,7 +104,7 @@ class Operation {
                     <p class="sign">${sign}</p>
                     <div style="width: 4.1em;">${q}</div>
                 </div>
-                <input type="text" id="${id}" style="text-align: right; width: 5em;margin-right: 0.38em;">`)
+                <input type="number" id="${id}" style="text-align: right; width: 5em;margin-right: 0.38em;">`)
             }
         } 
         // Fill with numbers
@@ -127,7 +127,7 @@ class Operation {
 
                 this.block.insertAdjacentHTML("afterbegin", `
                 <label class="regular" for="${id}" style="width: 5em;">${question}</label>
-                <input type="text" id="${id}" style="width: 5em;">`);
+                <input type="number" id="${id}" style="width: 5em;">`);
             }
         }
 

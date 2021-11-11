@@ -13,7 +13,7 @@ sections.forEach((section, i) => {
     });
 
     // Add score button at the end of each section
-    const button = `<div class="center"><button onclick="calcSectionScore(${i})" class="verify check-score">Siguiente sección</button></div>`;
+    const button = `<div class="center" style="padding-bottom:0.6em"><button onclick="sections[${i}].removeAttribute('open')" class="verify close-section">Cerrar sección</button></div>`;
     section.insertAdjacentHTML('beforeend', button);
 });
 
@@ -25,10 +25,7 @@ function calcSectionScore(i) {
         correct += el.score;
         total += el.total;
     });
-    const score = Math.floor((correct / total) * 100);
-
-    // Close section
-    sections[i].removeAttribute('open');
+    const score = (correct / total) * 100;
 
     const scoreText = sections[i].nextElementSibling;
     scoreText.style.removeProperty('display');
@@ -41,16 +38,7 @@ function calcSectionScore(i) {
     } else {
         scoreText.style.color = '#ff9a00';
     }
-    scoreText.innerHTML = `${score}%`;
-
-    if(i < 14) {
-        // Open next section
-        sections[i+1].setAttribute('open','');
-
-        // Focus on next section
-        document.getElementById(`section-${i+1}`).scrollIntoView();
-    }
-
+    scoreText.innerHTML = score.toFixed(2);
 }
 
 function showTotalScore() {

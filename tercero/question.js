@@ -133,6 +133,8 @@ class Question {
                 icon.className = "fas fa-heart-broken";
                 icon.style.backgroundColor = '#FF0076';
             }
+
+            calcSectionScore(section)
         });
 
 

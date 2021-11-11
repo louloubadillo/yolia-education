@@ -19,6 +19,7 @@ class Decimals {
 
         const fraction = new Fraction(numer, denom, true);
         const inpt = document.createElement('input');
+        inpt.setAttribute('type', 'number');
         inpt.style.alignSelf = 'center';
         inpt.style.textAlign = 'center';
         inpt.style.marginLeft = '1.6em';
