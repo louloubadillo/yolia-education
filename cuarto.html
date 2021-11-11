@@ -50,8 +50,9 @@
         <div class="content">
             <hr>
             <div class="tema">
-                <h3>Líneas poligoniales</h3>
-                <p style="margin-top: 10px;">Observa las siguientes figuras. Señala qué clase de línea poligonial es.</p>
+                <h3>Líneas poligonales</h3>
+                <p style="margin-top: 10px;">Observa las siguientes figuras. Señala qué clase de línea poligonal es.</p>
+                <p class="notas" style="margin-top: 10px;">Nota: una línea poligonal es aquella formada por varios segmentos de recta.</p>
                 <p style="margin-top: 10px; color: red; font-weight: bold;" id=tries1>Intentos restantes: 3</p>
                 <div class="ejercicios">
                     <ejercicio-figuras id="p1">
@@ -81,6 +82,13 @@
         <div class="tema">
                 <h3>Polígonos</h3>
                 <p style="margin-top: 10px;">En cada una de las siguientes figuras señala el número de lados y vértices.</p>
+                <p class="notas" style="margin-top: 10px;">Notas:
+                    <ul class="notas">
+                        <li>- Un polígono es una figura geométrica conformada de tres o más segmentos rectos.</li>
+                        <li>- Estos segmentos se llaman lados.</li>
+                        <li>- Los vértices son los puntos en donde se intersectan los lados.</li>
+                    </ul>
+                </p>
                 <div class="ejercicios">
                     <ejercicio-figuras id="p5">
                         <img src="images/triangulo.png"/>
@@ -125,6 +133,13 @@
             <div class="tema">
                 <h3>Clasificando triángulos</h3>
                 <p style="margin-top: 10px;">Clasifica los triángulos según sus lados.</p>
+                <p class="notas" style="margin-top: 10px;">Notas:
+                    <ul class="notas">
+                        <li>- Equilátero: todos sus lados miden lo mismo.</li>
+                        <li>- Iscóceles: dos de sus lados miden lo mismo.</li>
+                        <li>- Escaleno: ningún lado mide lo mismo.</li>
+                    </ul>
+                </p>
                 <p style="margin-top: 10px; color: red; font-weight: bold;" id=tries_cuarto3>Intentos restantes: 3</p>
                 <div class="ejercicios">
                     <ejercicio-figuras id="cuarto3_4">
@@ -158,6 +173,12 @@
             <div class="tema">
                 <h3>Punto medio</h3>
                 <p style="margin-top: 10px;">Determina el punto medio de los siguientes segmentos.</p>
+                <p class="notas" style="margin-top: 10px;">Notas:
+                    <ul class="notas">
+                        <li>- El punto medio está a la mitad de la recta.</li>
+                        <li>- Introduce únicamente el número obtenido. Ejemplo: 4</li>
+                    </ul>
+                </p>
                 <p style="margin-top: 10px; color: red; font-weight: bold;" id=tries_cuarto4>Intentos restantes: 3</p>
                 <div class="ejercicios">
                     <ejercicio-figuras id="cuarto4_1">
@@ -203,6 +224,12 @@
             <div class="tema">
                 <h3>Fracciones de figuras</h3>
                 <p style="margin-top: 10px;">Determina la fracción coloreada de las regiones.</p>
+                <p class="notas" style="margin-top: 10px;">Notas:
+                    <ul class="notas">
+                        <li>- Una fracción es una parte de total.</li>
+                        <li>- Introduce el resultado en forma de fracción. Ejemplo: 2/3</li>
+                    </ul>
+                </p>
                 <div class="ejercicios">
                     <ejercicio-figuras id="cuarto5_1">
                         <div>
@@ -249,8 +276,85 @@
             </div>
             <hr>
             <div class="tema">
+                <h3>Fracciones propias e impropias</h3>
+                <p style="margin-top: 10px;">Observa las siguientes fracciones, indica si es propia o impropia.</p>
+                <p class="notas" style="margin-top: 10px;">Notas:
+                    <ul class="notas">
+                        <li>- Fracción impropia: el denominador es menor que el numerador.</li>
+                        <li>- Fracción propia: el numerador es menor que el denominador.</li>
+                    </ul>
+                </p>
+                <p style="margin-top: 10px; color: red; font-weight: bold;" id=tries_cuarto9>Intentos restantes: 3</p>
+                <div class="ejercicios">
+                    <ejercicio-figuras id="cuarto9_1">
+                        <p style="margin-bottom:10px; margin-top:10px;">3/4</p>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers9('p91_1')">Fracción propia</button>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers9('p91_2')">Fracción impropia</button>
+                    </ejercicio-figuras>
+                    <ejercicio-figuras id="cuarto9_2">
+                        <p style="margin-bottom:10px; margin-top:10px;">5/14</p>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers9('p92_1')">Fracción propia</button>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers9('p92_2')">Fracción impropia</button>
+                    </ejercicio-figuras>
+                    <ejercicio-figuras id="cuarto9_3">
+                        <p style="margin-bottom:10px; margin-top:10px;">9/7</p>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers9('p93_2')">Fracción propia</button>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers9('p93_1')">Fracción impropia</button>
+                    </ejercicio-figuras>
+                    <ejercicio-figuras id="cuarto9_4">
+                        <p style="margin-bottom:10px; margin-top:10px;">12/9</p>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers9('p94_2')">Fracción propia</button>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers9('p94_1')">Fracción impropia</button>
+                    </ejercicio-figuras>
+                </div>
+                <p style="margin-top: 10px; color: green; font-weight: bold;" id=percentage9></p>
+            </div>
+            <hr>
+            <div class="tema">
+                <h3>Fracciones equivalentes</h3>
+                <p style="margin-top: 10px;">Observa las siguientes fracciones, determina si son equivalentes.</p>
+                <p class="notas" style="margin-top: 10px;">Notas:
+                    <ul class="notas">
+                        <li>- Fracciones equivalentes: dos fracciones que representan el mismo valor.</li>
+                        <li>- Fracciones equivalentes: dos fracciones que representan valores distintos.</li>
+                    </ul>
+                </p>
+                <p style="margin-top: 10px; color: red; font-weight: bold;" id=tries_cuarto10>Intentos restantes: 3</p>
+                <div class="ejercicios">
+                    <ejercicio-figuras id="cuarto10_1">
+                        <p style="margin-bottom:10px; margin-top:10px;">1/5 &nbsp &nbsp y &nbsp &nbsp 916/4580</p>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers10('p101_1')">Equivalentes</button>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers10('p101_2')">No equivalentes</button>
+                    </ejercicio-figuras>
+                    <ejercicio-figuras id="cuarto10_2">
+                        <p style="margin-bottom:10px; margin-top:10px;">7/7 &nbsp &nbsp y &nbsp &nbsp 77/78</p>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers10('p102_2')">Equivalentes</button>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers10('p102_1')">No equivalentes</button>
+                    </ejercicio-figuras>
+                    <ejercicio-figuras id="cuarto10_3">
+                        <p style="margin-bottom:10px; margin-top:10px;">10/2 &nbsp &nbsp y &nbsp &nbsp 5/1</p>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers10('p103_1')">Equivalentes</button>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers10('p103_2')">No equivalentes</button>
+                    </ejercicio-figuras>
+                    <ejercicio-figuras id="cuarto10_4">
+                        <p style="margin-bottom:10px; margin-top:10px;">150/1200 &nbsp &nbsp y &nbsp &nbsp 30/240</p>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers10('p104_1')">Equivalentes</button>
+                        <button type="button" class="boton-ejercicio" onclick="checkAnswers10('p104_2')">No equivalentes</button>
+                    </ejercicio-figuras>
+                </div>
+                <p style="margin-top: 10px; color: green; font-weight: bold;" id=percentage10></p>
+            </div>
+            <hr>
+            <div class="tema">
                 <h3>Mayor, menor o igual</h3>
                 <p style="margin-top: 10px;">Coloca dentro del cuadro de texto el signo &lt,&gt ó = que corresponda.</p>
+                <p class="notas" style="margin-top: 10px;">Notas:
+                    <ul class="notas">
+                        <li>- Mayor a: &gt </li>
+                        <li>- Menor a: &lt </li>
+                        <li>- Igual a: = </li>
+                    </ul>
+                </p>
                 <p style="margin-top: 10px; color: red; font-weight: bold; margin-bottom: 20px;" id=tries_cuarto6>Intentos restantes: 3</p>
                 <div class="ejercicios">
                     <ejercicio-figuras id="cuarto6_1">
@@ -300,6 +404,13 @@
             <div class="tema">
                 <h3>Mayor, menor o igual con fracciones impropias</h3>
                 <p style="margin-top: 10px;">Coloca dentro del cuadro de texto el signo &lt,&gt ó = que corresponda.</p>
+                <p class="notas" style="margin-top: 10px;">Notas:
+                    <ul class="notas">
+                        <li>- Mayor a: &gt </li>
+                        <li>- Menor a: &lt </li>
+                        <li>- Igual a: = </li>
+                    </ul>
+                </p>
                 <p style="margin-top: 10px; color: red; font-weight: bold; margin-bottom: 20px;" id=tries_cuarto7>Intentos restantes: 3</p>
                 <div class="ejercicios">
                     <ejercicio-figuras id="cuarto7_1">
@@ -349,6 +460,11 @@
              <div class="tema">
                 <h3>Quién comió más torta</h3>
                 <p style="margin-top: 10px;">Coloca el nombre de la persona que comió más torta.</p>
+                <p class="notas" style="margin-top: 10px;">Notas:
+                    <ul class="notas">
+                        <li>- Escribe el nombre con mayúscula y buena ortografía. </li>
+                    </ul>
+                </p>
                 <p style="margin-top: 10px; color: red; font-weight: bold; margin-bottom: 20px;" id=tries_cuarto8>Intentos restantes: 3</p>
                 <div class="ejercicios">
                     <ejercicio-figuras id="cuarto8_1">
@@ -384,66 +500,13 @@
             </div>
             <hr>
             <div class="tema">
-                <h3>Fracciones propias e impropias</h3>
-                <p style="margin-top: 10px;">Observa las siguientes fracciones, indica si es propia o impropia.</p>
-                <p style="margin-top: 10px; color: red; font-weight: bold;" id=tries_cuarto9>Intentos restantes: 3</p>
-                <div class="ejercicios">
-                    <ejercicio-figuras id="cuarto9_1">
-                        <p style="margin-bottom:10px; margin-top:10px;">3/4</p>
-                        <button type="button" class="boton-ejercicio" onclick="checkAnswers9('p91_1')">Fracción propia</button>
-                        <button type="button" class="boton-ejercicio" onclick="checkAnswers9('p91_2')">Fracción impropia</button>
-                    </ejercicio-figuras>
-                    <ejercicio-figuras id="cuarto9_2">
-                        <p style="margin-bottom:10px; margin-top:10px;">5/14</p>
-                        <button type="button" class="boton-ejercicio" onclick="checkAnswers9('p92_1')">Fracción propia</button>
-                        <button type="button" class="boton-ejercicio" onclick="checkAnswers9('p92_2')">Fracción impropia</button>
-                    </ejercicio-figuras>
-                    <ejercicio-figuras id="cuarto9_3">
-                        <p style="margin-bottom:10px; margin-top:10px;">9/7</p>
-                        <button type="button" class="boton-ejercicio" onclick="checkAnswers9('p93_2')">Fracción propia</button>
-                        <button type="button" class="boton-ejercicio" onclick="checkAnswers9('p93_1')">Fracción impropia</button>
-                    </ejercicio-figuras>
-                    <ejercicio-figuras id="cuarto9_4">
-                        <p style="margin-bottom:10px; margin-top:10px;">12/9</p>
-                        <button type="button" class="boton-ejercicio" onclick="checkAnswers9('p94_2')">Fracción propia</button>
-                        <button type="button" class="boton-ejercicio" onclick="checkAnswers9('p94_1')">Fracción impropia</button>
-                    </ejercicio-figuras>
-                </div>
-                <p style="margin-top: 10px; color: green; font-weight: bold;" id=percentage9></p>
-            </div>
-            <hr>
-            <div class="tema">
-                <h3>Fracciones equivalentes</h3>
-                <p style="margin-top: 10px;">Observa las siguientes fracciones, determina si son equivalentes.</p>
-                <p style="margin-top: 10px; color: red; font-weight: bold;" id=tries_cuarto10>Intentos restantes: 3</p>
-                <div class="ejercicios">
-                    <ejercicio-figuras id="cuarto10_1">
-                        <p style="margin-bottom:10px; margin-top:10px;">1/5 &nbsp &nbsp y &nbsp &nbsp 916/4580</p>
-                        <button type="button" class="boton-ejercicio" onclick="checkAnswers10('p101_1')">Equivalentes</button>
-                        <button type="button" class="boton-ejercicio" onclick="checkAnswers10('p101_2')">No equivalentes</button>
-                    </ejercicio-figuras>
-                    <ejercicio-figuras id="cuarto10_2">
-                        <p style="margin-bottom:10px; margin-top:10px;">7/7 &nbsp &nbsp y &nbsp &nbsp 77/78</p>
-                        <button type="button" class="boton-ejercicio" onclick="checkAnswers10('p102_2')">Equivalentes</button>
-                        <button type="button" class="boton-ejercicio" onclick="checkAnswers10('p102_1')">No equivalentes</button>
-                    </ejercicio-figuras>
-                    <ejercicio-figuras id="cuarto10_3">
-                        <p style="margin-bottom:10px; margin-top:10px;">10/2 &nbsp &nbsp y &nbsp &nbsp 5/1</p>
-                        <button type="button" class="boton-ejercicio" onclick="checkAnswers10('p103_1')">Equivalentes</button>
-                        <button type="button" class="boton-ejercicio" onclick="checkAnswers10('p103_2')">No equivalentes</button>
-                    </ejercicio-figuras>
-                    <ejercicio-figuras id="cuarto10_4">
-                        <p style="margin-bottom:10px; margin-top:10px;">150/1200 &nbsp &nbsp y &nbsp &nbsp 30/240</p>
-                        <button type="button" class="boton-ejercicio" onclick="checkAnswers10('p104_1')">Equivalentes</button>
-                        <button type="button" class="boton-ejercicio" onclick="checkAnswers10('p104_2')">No equivalentes</button>
-                    </ejercicio-figuras>
-                </div>
-                <p style="margin-top: 10px; color: green; font-weight: bold;" id=percentage10></p>
-            </div>
-            <hr>
-            <div class="tema">
                 <h3>Fracción a decimal</h3>
                 <p style="margin-top: 10px;">Escribe las siguientes fracciones en forma de número decimal.</p>
+                <p class="notas" style="margin-top: 10px;">Notas:
+                    <ul class="notas">
+                        <li>- Las fracciones también se pueden representar en forma de decimales. </li>
+                    </ul>
+                </p>
                 <div class="ejercicios">
                     <ejercicio-figuras id="cuarto11_1">
                         <div>
@@ -484,6 +547,11 @@
             <div class="tema">
                 <h3>Comparando cifras</h3>
                 <p style="margin-top: 10px; margin-bottom:20px;">Compara las cifras y determina lo que se te pide</p>
+                <p class="notas" style="margin-top: 10px;">Notas:
+                    <ul class="notas">
+                        <li>- Escribe la respuesta con mayúscula y buena ortografía. </li>
+                    </ul>
+                </p>
                 <p style="margin-top: 10px; color: red; font-weight: bold; margin-bottom: 20px;" id=tries_cuarto12>Intentos restantes: 3</p>
                 <div class="ejercicios">
                     <ejercicio-figuras id="cuarto12_1">
@@ -521,6 +589,14 @@
             <div class="tema">
                 <h3>Orden de evaluación</h3>
                 <p style="margin-top: 10px;">Realiza las siguientes operaciones siguiendo la jerarquía de operaciones y paréntesis.</p>
+                <p class="notas" style="margin-top: 10px;">Notas:
+                    <ul class="notas">
+                        <li>Orden de evaluación:</li>
+                        <li>1) Paréntesis </li>
+                        <li>2) Multiplicaciones y divisiones </li>
+                        <li>3) Sumas y restas </li>
+                    </ul>
+                </p>
                 <div class="ejercicios">
                     <ejercicio-figuras id="cuarto13_1">
                         <div>
@@ -561,6 +637,11 @@
             <div class="tema">
                 <h3>Divisiones con decimales</h3>
                 <p style="margin-top: 10px;">Realiza las siguientes divisiones. Utiliza todos los decimales necesarios.</p>
+                <p class="notas" style="margin-top: 10px;">Notas:
+                    <ul class="notas">
+                        <li>Escribe la respuesta como un número decimal. Ejemplo: 2.543 </li>
+                    </ul>
+                </p>
                 <div class="ejercicios">
                     <ejercicio-figuras id="cuarto14_1">
                         <div>
@@ -601,6 +682,11 @@
             <div class="tema">
                 <h3>Multiplicaciones con decimales</h3>
                 <p style="margin-top: 10px;">Realiza las siguientes multiplicaciones. Utiliza todos los decimales necesarios.</p>
+                <p class="notas" style="margin-top: 10px;">Notas:
+                    <ul class="notas">
+                        <li>Escribe la respuesta como un número decimal. Ejemplo: 10.56 </li>
+                    </ul>
+                </p>
                 <div class="ejercicios">
                     <ejercicio-figuras id="cuarto15_1">
                         <div>

@@ -29,7 +29,7 @@ let percent4=0;
 function checkAnswers4(id){
     let percent = document.getElementById("percentage4");
     if (counter41==0){
-        percent.textContent="Porcentaje: " + percent4+"%";
+        percent.textContent="Calificación: " + percent4;
         return;
     }
     let tag;
@@ -69,7 +69,7 @@ function checkAnswers4(id){
         tag.textContent= "Correcto!";
         globalCounter++;
         percent4+=25;
-        percent.textContent="Porcentaje: " + percent4+"%";
+        percent.textContent="Calificación: " + percent4;
     }
     else{
         counter41--;

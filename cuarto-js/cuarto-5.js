@@ -39,7 +39,7 @@ function checkAnswers5(id){
     let oneCor;
     if (id[3]=="1"){
         if (p5_1done){
-            percent.textContent="Porcentaje: " + percent5+"%";
+            percent.textContent="Calificación: " + percent5;
             return;
         }
         tag=tag5_1;
@@ -51,7 +51,7 @@ function checkAnswers5(id){
     }
     else if (id[3]=="2"){
         if (p5_2done){
-            percent.textContent="Porcentaje: " + percent5+"%";
+            percent.textContent="Calificación: " + percent5;
             return;
         }
         tag=tag5_2;
@@ -63,7 +63,7 @@ function checkAnswers5(id){
     }
     else if (id[3]=="3"){
         if (p5_3done){
-            percent.textContent="Porcentaje: " + percent5+"%";
+            percent.textContent="Calificación: " + percent5;
             return;
         }
         tag=tag5_3;
@@ -75,7 +75,7 @@ function checkAnswers5(id){
     }
     else if (id[3]=="4"){
         if (p5_4done){
-            percent.textContent="Porcentaje: " + percent5+"%";
+            percent.textContent="Calificación: " + percent5;
             return;
         }
         tag=tag5_4;
@@ -92,7 +92,7 @@ function checkAnswers5(id){
         tag.textContent= "Correcto!";
         globalCounter++;
         percent5+=25;
-        percent.textContent="Porcentaje: " + percent5+"%";
+        percent.textContent="Calificación: " + percent5;
     }
     else{
         tag.textContent= "Incorrecto!";

@@ -28,7 +28,7 @@ let percent7=0;
 function checkAnswers7(id){
     let percent = document.getElementById("percentage7");
     if (counter71==0){
-        percent.textContent="Porcentaje: " + percent7+"%";
+        percent.textContent="Calificación: " + percent7;
         return;
     }
     let tag;
@@ -68,7 +68,7 @@ function checkAnswers7(id){
         tag.textContent= "Correcto!";
         globalCounter++;
         percent7+=25;
-        percent.textContent="Porcentaje: " + percent7+"%";
+        percent.textContent="Calificación: " + percent7;
     }
     else{
         counter71--;

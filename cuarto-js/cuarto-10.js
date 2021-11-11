@@ -28,7 +28,7 @@ let percent10=0;
 function checkAnswers10(id){
     let percent = document.getElementById("percentage10");
     if (counter101==0){
-        percent.textContent="Porcentaje: " + percent10+"%";
+        percent.textContent="Calificación: " + percent10;
         return;
     }
     newID=id[5]
@@ -52,7 +52,7 @@ function checkAnswers10(id){
         tag.textContent= "Correcto!";
         globalCounter++;
         percent10+=25;
-        percent.textContent="Porcentaje: " + percent10+"%";
+        percent.textContent="Calificación: " + percent10;
     }
     else if (newID=="2"){
         counter101--;
