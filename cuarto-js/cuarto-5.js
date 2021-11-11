@@ -75,7 +75,7 @@ function checkAnswers5(id){
     }
     else if (id[3]=="4"){
         if (p5_4done){
-            percent.textContent=="Calificación: " + percent5;
+            percent.textContent="Calificación: " + percent5;
             return;
         }
         tag=tag5_4;
@@ -92,7 +92,7 @@ function checkAnswers5(id){
         tag.textContent= "Correcto!";
         globalCounter++;
         percent5+=25;
-        percent.textContent=="Calificación: " + percent5;
+        percent.textContent="Calificación: " + percent5;
     }
     else{
         tag.textContent= "Incorrecto!";
