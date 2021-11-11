@@ -21,4 +21,19 @@ Nuestro objetivo fue implementar ejercicios divertidos y atractivos para niños 
     - Tiempo
 2. Segundo Grado
 3. Tercer Grado
-4. Cuarto grado
+    - Sumas
+    - Restas
+    - Sumas y restas con decimales
+    - Multiplicaciones cortas
+    - Multiplicaciones intermedias e incompletas
+    - Multiplicaciones largas
+    - Divisiones cortas
+    - Divisiones intermedias e incompletas
+    - Divisiones largas
+    - Multiplicaciones y divisiones
+    - Órdenes de magnitud
+    - Redondeo en el zoológico
+    - Fracciones
+    - Decimales
+    - Unidades de medida
+5. Cuarto grado
