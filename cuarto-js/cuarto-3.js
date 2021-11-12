@@ -29,7 +29,7 @@ let percent3=0;
 function checkAnswers3(id){
     let percent = document.getElementById("percentage3");
     if (counter31==0){
-        percent.textContent="Porcentaje: " + percent3+"%";
+        percent.textContent="Calificación: " + percent3;
         return;
     }
     newID=id[4]
@@ -53,7 +53,7 @@ function checkAnswers3(id){
         tag.textContent= "Correcto!";
         globalCounter++;
         percent3+=25;
-        percent.textContent="Porcentaje: " + percent3+"%";
+        percent.textContent="Calificación: " + percent3;
     }
     else{
         counter31--;

@@ -39,7 +39,7 @@ function checkAnswers11(id){
     let oneCor;
     if (id[4]=="1"){
         if (p11_1done){
-            percent.textContent="Porcentaje: " + percent11+"%";
+            percent.textContent="Calificación: " + percent11;
             return;
         }
         tag=tag11_1;
@@ -51,7 +51,7 @@ function checkAnswers11(id){
     }
     else if (id[4]=="2"){
         if (p11_2done){
-            percent.textContent="Porcentaje: " + percent11+"%";
+            percent.textContent="Calificación: " + percent11;
             return;
         }
         tag=tag11_2;
@@ -63,7 +63,7 @@ function checkAnswers11(id){
     }
     else if (id[4]=="3"){
         if (p11_3done){
-            percent.textContent="Porcentaje: " + percent11+"%";
+            percent.textContent="Calificación: " + percent11;
             return;
         }
         tag=tag11_3;
@@ -75,7 +75,7 @@ function checkAnswers11(id){
     }
     else if (id[4]=="4"){
         if (p11_4done){
-            percent.textContent="Porcentaje: " + percent11+"%";
+            percent.textContent="Calificación: " + percent11;
             return;
         }
         tag=tag11_4;
@@ -92,7 +92,7 @@ function checkAnswers11(id){
         tag.textContent= "Correcto!";
         globalCounter++;
         percent11+=25;
-        percent.textContent="Porcentaje: " + percent11+"%";
+        percent.textContent="Calificación: " + percent11;
     }
     else{
         tag.textContent= "Incorrecto!";
