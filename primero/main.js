@@ -137,35 +137,35 @@ const questionTemplates = [[ //A contar
 ],
 [ //Símbolos
     [
-        "seleccionar",
+        "simbolos",
         "¿Qué significa este símbolo?",
         ["Paz"],
         [[1,12]],
-        "s",
+        "z",
         [["fas fa-peace ", ""]]
     ],
     [
-        "seleccionar",
+        "simbolos",
         "¿Qué significa este símbolo?",
         ["Amor"],
         [[1,12]],
-        "s",
+        "z",
         [["fas fa-heart ", ""]]
     ],
     [
-        "seleccionar",
+        "simbolos",
         "¿Qué significa este símbolo?",
         ["Reciclaje"],
         [[1,12]],
-        "s",
+        "z",
         [["fas fa-recycle ", ""]]
     ],
     [
-        "seleccionar",
+        "simbolos",
         "¿Qué significa este símbolo?",
         ["Igual"],
         [[1,12]],
-        "s",
+        "z",
         [["fas fa-equals ", ""]]
     ],
     
@@ -173,35 +173,35 @@ const questionTemplates = [[ //A contar
 [ //Escribir Números
     [
         "escribir",
-        "Escribe en letra el número",
-        ["Quince"],
+        "Selecciona el número en letra",
+        ["Doce"],
         [[1,5]],
-        "e",
-        [["15 ", ""]]
+        "n",
+        [["12 ", ""]]
     ],
     [
         "escribir",
-        "Escribe en letra el número",
-        ["Veintitrés"],
+        "Selecciona el número en letra",
+        ["Cinco"],
         [[1,5]],
-        "e",
-        [["23 ", ""]]
+        "n",
+        [["5 ", ""]]
     ],
     [
         "escribir",
-        "Escribe en letra el número",
-        ["Trece"],
+        "Selecciona el número en letra",
+        ["Ocho"],
         [[1,5]],
-        "e",
-        [["13 ", ""]]
+        "n",
+        [["8 ", ""]]
     ],
     [
         "escribir",
-        "Escribe en letra el número",
-        ["Veintiocho"],
+        "Selecciona el número en letra",
+        ["Diez"],
         [[1,5]],
-        "e",
-        [["28 ", ""]]
+        "n",
+        [["10 ", ""]]
     ],
     
 ],
@@ -230,7 +230,7 @@ const questionTemplates = [[ //A contar
         ["int1", "int2"],
         [[2, 10]],
         "+",
-        [["fas fa-apple-alt", "font-size: 12vw;"], ["fas fa-lemon","font-size: 12vw;"]]
+        [["fas fa-apple-alt", "font-size: 7vw;"], ["fas fa-lemon","font-size: 7vw;"]]
     ],
     [
         "basic",
@@ -238,7 +238,7 @@ const questionTemplates = [[ //A contar
         ["int1", "int2"],
         [[2, 10]],
         "+",
-        [["fas fa-cat", "font-size: 12vw;"], ["fas fa-horse", "font-size: 12vw;"]]
+        [["fas fa-cat", "font-size: 7vw;"], ["fas fa-horse", "font-size: 7vw;"]]
     ],
     [
         "basic",
@@ -246,7 +246,7 @@ const questionTemplates = [[ //A contar
         ["int1", "int2"],
         [[2, 10]],
         "+",
-        [["fas fa-book", "font-size: 12vw;"], ["fas fa-laptop", "font-size: 12vw;"]]
+        [["fas fa-book", "font-size: 7vw;"], ["fas fa-laptop", "font-size: 7vw;"]]
     ],
     [
         "basic",
@@ -254,7 +254,7 @@ const questionTemplates = [[ //A contar
         ["int1", "int2"],
         [[2, 10]],
         "+",
-        [["fas fa-fish", "font-size: 12vw;"], ["fas fa-dog", "font-size: 12vw;"]]
+        [["fas fa-fish", "font-size: 7vw;"], ["fas fa-dog", "font-size: 7vw;"]]
     ]
 
 ],
@@ -265,7 +265,7 @@ const questionTemplates = [[ //A contar
         ["int1", "int2"],
         [[2, 20]],
         "+",
-        [["fas fa-motorcycle", "font-size: 12vw;"], ["fas fa-bicycle", "font-size: 12vw;"]]
+        [["fas fa-motorcycle", "font-size: 7vw;"], ["fas fa-bicycle", "font-size: 7vw;"]]
     ],
     [
         "basic",
@@ -273,7 +273,7 @@ const questionTemplates = [[ //A contar
         ["int1", "int2"],
         [[2, 20]],
         "+",
-        [["fas fa-cat", "font-size: 12vw;"], ["fas fa-horse", "font-size: 12vw;"]]
+        [["fas fa-cat", "font-size: 7vw;"], ["fas fa-horse", "font-size: 7vw;"]]
     ],
     [
         "basic",
@@ -281,7 +281,7 @@ const questionTemplates = [[ //A contar
         ["int1", "int2"],
         [[2, 20]],
         "+",
-        [["fas fa-car", "font-size: 12vw;"], ["fas fa-taxi", "font-size: 12vw;"]]
+        [["fas fa-car", "font-size: 7vw;"], ["fas fa-taxi", "font-size: 7vw;"]]
     ],
     [
         "basic",
@@ -289,7 +289,7 @@ const questionTemplates = [[ //A contar
         ["int1", "int2"],
         [[2, 20]],
         "+",
-        [["fas fa-ice-cream", "font-size: 12vw;"], ["fas fa-ice-cream", "font-size: 12vw;"]]
+        [["fas fa-ice-cream", "font-size: 7vw;"], ["fas fa-ice-cream", "font-size: 7vw;"]]
     ]
 ],
 [ //Sumemos Decenas
@@ -333,7 +333,7 @@ const questionTemplates = [[ //A contar
         ["int1", "int2"],
         [[2, 10]],
         "-",
-        [["fas fa-puzzle-piece", "font-size: 12vw;"], ["fas fa-puzzle-piece","font-size: 12vw;"]]
+        [["fas fa-puzzle-piece", "font-size: 7vw;"], ["fas fa-puzzle-piece","font-size: 7vw;"]]
     ],
     [
         "basic",
@@ -341,7 +341,7 @@ const questionTemplates = [[ //A contar
         ["int1", "int2"],
         [[2, 10]],
         "-",
-        [["fas fa-cookie", "font-size: 12vw;"], ["fas fa-cookie", "font-size: 12vw;"]]
+        [["fas fa-cookie", "font-size: 7vw;"], ["fas fa-cookie", "font-size: 7vw;"]]
     ],
     [
         "basic",
@@ -349,7 +349,7 @@ const questionTemplates = [[ //A contar
         ["int1", "int2"],
         [[2, 10]],
         "-",
-        [["fas fa-book", "font-size: 12vw;"], ["fas fa-book", "font-size: 12vw;"]]
+        [["fas fa-book", "font-size: 7vw;"], ["fas fa-book", "font-size: 7vw;"]]
     ],
     [
         "basic",
@@ -357,7 +357,7 @@ const questionTemplates = [[ //A contar
         ["int1", "int2"],
         [[2, 10]],
         "-",
-        [["fas fa-leaf", "font-size: 12vw;"], ["fab fa-canadian-maple-leaf", "font-size: 12vw;"]]
+        [["fas fa-leaf", "font-size: 7vw;"], ["fab fa-canadian-maple-leaf", "font-size: 7vw;"]]
     ]
 
 ],
@@ -368,7 +368,7 @@ const questionTemplates = [[ //A contar
         ["int1", "int2"],
         [[2, 40]],
         "-",
-        [["fas fa-camera", "font-size: 12vw;"], ["fas fa-images", "font-size: 12vw;"]]
+        [["fas fa-camera", "font-size: 7vw;"], ["fas fa-images", "font-size: 7vw;"]]
     ],
     [
         "basic-drag",
@@ -376,7 +376,7 @@ const questionTemplates = [[ //A contar
         ["int1", "int2"],
         [[2, 40]],
         "-",
-        [["fas fa-money-bill-wave", "font-size: 12vw;"], ["fas fa-car", "font-size: 12vw;"]]
+        [["fas fa-money-bill-wave", "font-size: 7vw;"], ["fas fa-car", "font-size: 7vw;"]]
     ],
     [
         "basic",
@@ -384,7 +384,7 @@ const questionTemplates = [[ //A contar
         ["int1", "int2"],
         [[2, 40]],
         "-",
-        [["fas fa-ice-cream", "font-size: 12vw;"], ["fas fa-money-bill-wave", "font-size: 12vw;"]]
+        [["fas fa-ice-cream", "font-size: 7vw;"], ["fas fa-money-bill-wave", "font-size: 7vw;"]]
     ],
     [
         "basic",
@@ -392,41 +392,41 @@ const questionTemplates = [[ //A contar
         ["int1", "int2"],
         [[2, 40]],
         "-",
-        [["fas fa-cookie", "font-size: 12vw;"], ["fas fa-ice-cream", "font-size: 12vw;"]]
+        [["fas fa-cookie", "font-size: 7vw;"], ["fas fa-ice-cream", "font-size: 7vw;"]]
     ]
 ],
 [ //Números Odinales
     [
         "escribir",
-        "Escribe en letra el número ordinal",
+        "Selecciona el número ordinal",
         ["Tercero"],
         [[1,5]],
-        "e",
+        "o",
         [["3°", ""]]
     ],
     [
         "escribir",
-        "Escribe en letra el número ordinal",
-        ["Vigésimo séptimo"],
+        "Selecciona el número ordinal",
+        ["Séptimo"],
         [[1,5]],
-        "e",
-        [["27°", ""]]
+        "o",
+        [["7°", ""]]
     ],
     [
         "escribir",
-        "Escribe en letra el número ordinal",
-        ["Décimo quinto"],
+        "Selecciona el número ordinal",
+        ["Quinto"],
         [[1,5]],
-        "e",
-        [["15° ", ""]]
+        "o",
+        [["5° ", ""]]
     ],
     [
         "escribir",
-        "Escribe en letra el número ordinal",
-        ["Trigésimo"],
+        "Selecciona el número ordinal",
+        ["Décimo tercero"],
         [[1,5]],
-        "e",
-        [["30° ", ""]]
+        "o",
+        [["13° ", ""]]
     ],
 ],
 [ //Medidas
@@ -542,7 +542,7 @@ function calcSectionScore(i) {
     } else {
         scoreText.style.color = '#ff9a00';
     }
-    scoreText.innerHTML = `${score}%`;
+    scoreText.innerHTML = `Calificación de la sección: ${score}/100`;
 
     if(i < 14) {
         // Open next section
@@ -574,5 +574,5 @@ function showTotalScore() {
         totalText.style.color = '#ff9a00';
     }
 
-    totalText.innerHTML = `<em>Calificación: </em>${totalScore.toFixed(2)}`;
+    totalText.innerHTML = `<em>Calificación general: </em>${totalScore.toFixed(2)}/100`;
 }

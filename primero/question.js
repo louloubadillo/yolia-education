@@ -83,6 +83,13 @@ class Question {
                 questionCont = e.block;
             break; 
 
+            case "simbolos":
+                let z = new Simbolos(info, id);
+                text = z.text;
+                opr = z.opr;
+                questionCont = z.block;
+            break; 
+
             case "identificar":
                 let i = new Identificar(info, id);
                 text = i.text;
@@ -153,4 +160,5 @@ class Question {
         this.finalCont.append(questionCont);
         this.finalCont.append(button);
     }
+
 }

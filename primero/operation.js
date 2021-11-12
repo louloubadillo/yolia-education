@@ -44,6 +44,68 @@ class Operation {
                 this.block.style ="flex-direction: row;";
                 this.block.insertAdjacentHTML("afterbegin", `  
                 <div style="display: flex;flex-direction: column; padding: unset; margin: unset;">
+                    <select name="figures" id="figures">
+                        <option value="Triángulo">Triángulo</option>
+                        <option value="Cuadrado">Cuadrado</option>
+                        <option value="Círculo">Círculo</option>
+                        <option value="Rombo">Rombo</option>
+                        <option value="Rectángulo">Rectángulo</option>
+                        <option value="Hexágono">Hexágono</option>
+                    </select>
+                </div>`);
+            }
+            else if(sign == 'n'){
+                this.block.style ="flex-direction: row;";
+                this.block.insertAdjacentHTML("afterbegin", `  
+                <div style="display: flex;flex-direction: column; padding: unset; margin: unset;">
+                    <select name="numbers" id="numbers">
+                        <option value="Uno">Uno</option>
+                        <option value="Dos">Dos</option>
+                        <option value="Tres">Tres</option>
+                        <option value="Cuatro">Cuatro</option>
+                        <option value="Cinco">Cinco</option>
+                        <option value="Seis">Seis</option>
+                        <option value="Siete">Siete</option>
+                        <option value="Ocho">Ocho</option>
+                        <option value="Nueve">Nueve</option>
+                        <option value="Diez">Diez</option>
+                        <option value="Once">Once</option>
+                        <option value="Doce">Doce</option>
+                    </select>
+                </div>`);
+            }
+            else if(sign == 'o'){
+                this.block.style ="flex-direction: row;";
+                this.block.insertAdjacentHTML("afterbegin", `  
+                <div style="display: flex;flex-direction: column; padding: unset; margin: unset;">
+                    <select name="numbers" id="numbers">
+                        <option value="Primero">Primero</option>
+                        <option value="Segundo">Segundo</option>
+                        <option value="Tercero">Tercero</option>
+                        <option value="Cuarto">Cuarto</option>
+                        <option value="Quinto">Quinto</option>
+                        <option value="Sexto">Sexto</option>
+                        <option value="Séptimo">Séptimo</option>
+                        <option value="Octavo">Octavo</option>
+                        <option value="Noveno">Noveno</option>
+                        <option value="Décimo">Décimo</option>
+                        <option value="Décimo primero">Décimo primero</option>
+                        <option value="Décimo segundo">Décimo segundo</option>
+                        <option value="Décimo tercero">Décimo tercero</option>
+                        <option value="Décimo cuarto">Décimo cuarto</option>
+                        <option value="Décimo quinto">Décimo quinto</option>
+                        <option value="Décimo sexto">Décimo sexto</option>
+                        <option value="Décimo séptimo">Décimo séptimo</option>
+                        <option value="Décimo octavo">Décimo octavo</option>
+                        <option value="Décimo noveno">Décimo noveno</option>
+                        <option value="Vigésimo">Vigésimo</option>
+                    </select>
+                </div>`);
+            }
+            else if(sign == 'z'){
+                this.block.style ="flex-direction: row;";
+                this.block.insertAdjacentHTML("afterbegin", `  
+                <div style="display: flex;flex-direction: column; padding: unset; margin: unset;">
                     <input type="text" id="${id}" style="width: 8em;text-align: center;">
                 </div>`);
             }
@@ -101,6 +163,13 @@ class Operation {
                     <input type="number" id="${id}" style="width: 3em;text-align: center;">
                 </div>`);
             }
+            else if(sign == 'z'){
+                this.block.style ="flex-direction: row;";
+                this.block.insertAdjacentHTML("afterbegin", `  
+                <div style="display: flex;flex-direction: column; padding: unset; margin: unset;">
+                    <input type="text" id="${id}" style="width: 8em;text-align: center;">
+                </div>`);
+            }
             else {
                 // Make question
                 let question = '';
@@ -115,27 +184,54 @@ class Operation {
             }
         }
 
-        this.makeStiff = (color) => {
-            this.block.style.backgroundColor = color;
-    
-            let inpt = this.block.getElementsByTagName('input')[0];
-            inpt.setAttribute('disabled', 'true');
-            inpt.style.background = '#fff0'
-            inpt.style.color = 'black';
-            inpt.style.fontWeight = 'bold';
-            inpt.style.border = 'none';
-            inpt.value = answer;
+        if(sign!='s' && sign!='n' && sign!='o'){
+            this.makeStiff = (color) => {
+                this.block.style.backgroundColor = color;
+        
+                let inpt = this.block.getElementsByTagName('input')[0];
+                inpt.setAttribute('disabled', 'true');
+                inpt.style.background = '#fff0'
+                inpt.style.color = 'black';
+                inpt.style.fontWeight = 'bold';
+                inpt.style.border = 'none';
+                inpt.value = answer;
+            }
+        }else{
+            this.makeStiff = (color) => {
+                this.block.style.backgroundColor = color;
+        
+                let inpt = this.block.getElementsByTagName('select')[0];
+                inpt.setAttribute('disabled', 'true');
+                inpt.style.background = '#fff0'
+                inpt.style.color = 'black';
+                inpt.style.fontWeight = 'bold';
+                inpt.style.border = 'none';
+                inpt.value = answer;
+            }
         }
 
         this.isCorrect = () => {
-            if(this.block.getElementsByTagName('input')[0].value == answer) {
-                this.makeStiff('#9fff9f77');
-                this.block.classList.remove('incorrect');
-                return 1;
-            } else {
-                this.block.classList.add('incorrect');
-                this.block.getElementsByTagName('input')[0].style.borderColor = "#fff0";
-                return 0;
+            if(sign != 's' && sign != 'n' && sign!='o'){
+                if(this.block.getElementsByTagName('input')[0].value == answer) {
+                    this.makeStiff('#9fff9f77');
+                    this.block.classList.remove('incorrect');
+                    return 1;
+                } else {
+                    this.block.classList.add('incorrect');
+                    this.block.getElementsByTagName('input')[0].style.borderColor = "#fff0";
+                    return 0;
+                }
+            }
+            else{
+                if(this.block.getElementsByTagName('select')[0].value == answer) {
+                    this.makeStiff('#9fff9f77');
+                    this.block.classList.remove('incorrect');
+                    return 1;
+                } else {
+                    this.block.classList.add('incorrect');
+                    this.block.getElementsByTagName('select')[0].style.borderColor = "#fff0";
+                    return 0;
+                }
             }
         }
     }

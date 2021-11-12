@@ -204,3 +204,17 @@ hr{
     border-color: #92C9DB;
     border-width: .1px;
 }
+
+#leyenda{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2vh 0;
+}
+#leyenda p{
+    margin: 3vh 0;
+    padding: 2vh 3vw;
+    border: 3px solid #0c366b;
+    border-radius: 6px;
+}
