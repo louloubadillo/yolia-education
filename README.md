@@ -36,4 +36,18 @@ Nuestro objetivo fue implementar ejercicios divertidos y atractivos para niños 
     - Fracciones
     - Decimales
     - Unidades de medida
-5. Cuarto grado
+4. Cuarto grado
+    - Polígonos 
+    - Clasificando triángulos 
+    - Punto medio 
+    - Fracciones de figuras 
+    - Mayor, menor o igual
+    - Mayor, menor o igual con fracciones impropias 
+    - Quién comió más torta
+    - Fracciones propias e impropias
+    - Fracciones equivalentes
+    - Fracción a decimal
+    - Comparando cifras 
+    - Orden de evaluación
+    - Divisiones con decimales
+    - Multiplicaciones con decimales
