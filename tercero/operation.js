@@ -74,7 +74,7 @@ function makeRandom(amt, sign, range) {
 // - multiplication
 // - division
 class Operation {
-    constructor(nums, sign, id, answer) {
+    constructor(nums, sign, id, answer, drag) {
         this.block = document.createElement('div');
         this.block.className = 'part';
         this.total = 1;
@@ -82,15 +82,15 @@ class Operation {
         let length = answer.toString().length*0.6 + 0.6;
 
         // Fill with droppable objects
-        if(nums.length == 1) {
+        if(drag) {
             if(sign == '/') {
                 this.block.style = "flex-direction: row;";
                 this.block.insertAdjacentHTML("afterbegin", `
-                <div class="droppable" style="margin-right: 0.29em;"></div>
+                <div class="droppable check" correct="${nums[0]}" style="margin-right: 0.29em;"></div>
                 <div style="flex-direction: column;">
                     <input type="number" id="${id}" style="width: ${length}em;text-align: left;padding-left: 0.3em;margin-right: 0.38em;margin-left: 0.29em;">
                     <label class="divisions" for="${id}">
-                        <div class="droppable"></div>
+                        <div class="droppable check" correct="${nums[1]}"></div>
                     </label>
                 </div>`);
             } else {

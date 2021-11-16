@@ -38,7 +38,7 @@ class Units {
         }
 
         this.isCorrect = () => {
-            if(inpt.value == answer) {
+            if(inpt.value == answer || inpt.value == parseFloat(answer)) {
                 makeStiff('#9fff9f77');
                 return 1;
             } else {

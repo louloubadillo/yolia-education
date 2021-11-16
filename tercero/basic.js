@@ -7,11 +7,9 @@ class Basic {
         const randoms = makeRandom(info[2].length, info[4], info[3]);
 
         let imgCntt = '';
-        let firstArg = 0;
+        let drag = true;
         if(info[0] == "basic") {
-            firstArg = randoms[0];
-        } else {
-            firstArg = [info[2].length];
+            drag = false;
         }
 
         // Images and text question
@@ -42,9 +40,9 @@ class Basic {
 
         
         if(info[4] == '×' && randoms[0][0] >= 10 && randoms[0][1] >= 10) {
-            this.opr = new BigMultiplication(firstArg, id+'-0', randoms[1]);
+            this.opr = new BigMultiplication(randoms[0], id+'-0', randoms[1], drag);
         } else {
-            this.opr = new Operation(firstArg, info[4], id+'-0', randoms[1]);
+            this.opr = new Operation(randoms[0], info[4], id+'-0', randoms[1], drag);
         }
         
         this.block = document.createElement('div');

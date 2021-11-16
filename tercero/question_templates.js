@@ -360,28 +360,28 @@ const questionTemplates = [
     [ // √ sección 15
         [
             "units",
-            "Un río tiene int1 <em>kilómetros</em> de longitud. <br> ¿Cuántos <em>metros</em> de longitud tiene el río?",
+            "Un río tiene int1 <em>kilómetros</em> de longitud. <br> ¿Cuántos <em>metros</em> de longitud tiene el río? <popup-info>1 kilómetro = 1000 metros</popup-info>",
             [3, 8, 1],
             3,
             "fas fa-water"
         ],
         [
             "units",
-            "Una cama mide int1 <em>centímetros</em> de largo. <br> ¿Cuántos <em>metros</em> mide de largo?",
+            "Una cama mide int1 <em>centímetros</em> de largo. <br> ¿Cuántos <em>metros</em> mide de largo? <popup-info>1 centímetro = 0.01 metros</popup-info>",
             [150, 200, 0],
             -2,
             "fas fa-bed"
         ],
         [
             "units",
-            "Para hacer pollo hervido se necesita llenar una olla con int1 <em>litros</em> de agua. <br> ¿Cuántos <em>mililitros</em> de agua se necesitan para llenar la olla?",
+            "Para hacer pollo hervido se necesita llenar una olla con int1 <em>litros</em> de agua. <br> ¿Cuántos <em>mililitros</em> de agua se necesitan para llenar la olla? <popup-info>1 litro = 1000 militros</popup-info>",
             [6, 10, 2],
             3,
             "fas fa-drumstick-bite"
         ],
         [
             "units",
-            "El equipaje de Fernando pesa int1 <em>gramos</em>.  <br> ¿Cuántos <em>kilogramos</em> pesa?",
+            "El equipaje de Fernando pesa int1 <em>gramos</em>.  <br> ¿Cuántos <em>kilogramos</em> pesa? <popup-info>1 gramo = 0.001 kilogramos</popup-info>",
             [2000, 3000, 0],
             -3,
             "fas fa-suitcase-rolling"
