@@ -95,8 +95,9 @@ class Operation {
                 </div>`);
             } else {
                 let q = '';
-                for(let i = 0; i < nums[0]; i++){
-                    q += '<div class="droppable"></div>';
+                for(let i = 0; i < nums.length; i++){
+                    let c = sign == '-' ? ` check" correct="${nums[i]}` : '';
+                    q += `<div class="droppable${c}"></div>`;
                 }
 
                 this.block.insertAdjacentHTML("afterbegin", `
