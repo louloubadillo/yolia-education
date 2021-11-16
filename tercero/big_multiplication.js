@@ -15,7 +15,7 @@ class BigMultiplication {
         // Fill with droppable objects
         if(drag) {
             let q = '';
-            for(let i = 0; i < nums[0]; i++){
+            for(let i = 0; i < nums.length; i++){
                 q += '<div class="droppable"></div>';
             }
 

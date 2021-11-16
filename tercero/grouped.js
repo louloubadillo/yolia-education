@@ -37,8 +37,8 @@ class Grouped {
         const ans2 = calcOperation([nums[2], nums[0]], info[6][1]);
 
         // Generate operations
-        const op1 = new Operation([2], info[6][0], id+'-a', ans1);
-        const op2 = new Operation([2], info[6][1], id+'-b', ans2);
+        const op1 = new Operation([nums[1], nums[0]], info[6][0], id+'-a', ans1, true);
+        const op2 = new Operation([nums[0], nums[2]], info[6][1], id+'-b', ans2, true);
 
         const operations = document.createElement('div');
         operations.style.flexDirection = 'row';

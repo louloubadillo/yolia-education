@@ -271,7 +271,7 @@ const questionTemplates = [
             "¿Cuántas cajas se pueden llenar? <br> Arrastra los dibujos para armar la división.",
             "Un kilo de chiles cuesta int3 pesos. <br> ¿Cuánto costarán los int1 kilos? <br> Arrastra los dibujos para armar la multiplicación.",
             ["int1", "int2", "int3"],
-            [[50, 150], [2, 5]],
+            [[100, 300], [5, 10]],
             ["/", "×"],
             [["fas fa-pepper-hot", ""], ["fas fa-box-open", ""], ["fas fa-coins", ""]]
         ]
