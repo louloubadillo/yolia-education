@@ -37,6 +37,7 @@ Nuestro objetivo fue implementar ejercicios divertidos y atractivos para niños 
     - Decimales
     - Unidades de medida
 4. Cuarto grado
+    - Líneas poligonales
     - Polígonos 
     - Clasificando triángulos 
     - Punto medio 
