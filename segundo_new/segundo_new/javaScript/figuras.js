@@ -32,7 +32,7 @@ FigurasTemplate.innerHTML = `
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <div style="display: flex;flex-direction: row;justify-content: center;">
             <br>
-            <div style="margin: 2vh 4vw; max-width: 250px;">
+            <div style="margin: 2vh 4vw; max-width: 300px;">
                 <p class='tries'></p>
                 <div class='items' style=" margin: 1vh 1vw;"></div> 
                 <p>¿Qué figura es?</p>
@@ -47,7 +47,7 @@ FigurasTemplate.innerHTML = `
                 <p class="verify-icon-A"></p>
             </div>
 
-            <div style="margin: 2vh 4vw; max-width: 250px;">
+            <div style="margin: 2vh 4vw; max-width: 300px;">
                 <p class='tries2'></p>
                 <div class='items2' style=" margin: 1vh 1vw;"></div> 
                 <p>¿Qué figura es?</p>
@@ -62,7 +62,7 @@ FigurasTemplate.innerHTML = `
                 <p class="verify-icon-A2"></p>
             </div>
 
-            <div style="margin: 2vh 4vw; max-width: 250px;">
+            <div style="margin: 2vh 4vw; max-width: 300px;">
                 <p class='tries3'></p>
                 <div class='items3' style=" margin: 1vh 1vw;"></div> 
                 <p>¿Qué figura es?</p>
@@ -77,7 +77,7 @@ FigurasTemplate.innerHTML = `
                 <p class="verify-icon-A3"></p>
             </div>
 
-            <div style="margin: 2vh 4vw; max-width: 250px;">
+            <div style="margin: 2vh 4vw; max-width: 300px;">
                 <p class='tries4'></p>
                 <div class='items4' style=" margin: 1vh 1vw;"></div> 
                 <p>¿Qué figura es?</p>
@@ -239,20 +239,20 @@ class Figuras extends HTMLElement {
             const tries_total = [this.tries, this.tries2, this.tries3, this.tries4];
             const countOcurrences = (arr, val) => arr.reduce((a, v) => (v === val ? a + 1: a), 0);
             if(tries_total.find(element => element == 0) == undefined){
-                this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 100%";
+                this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 10";
                 this.shadowRoot.querySelector('.verify-icon-T').style.color = "#25ac8a";
             }else{
                 if (countOcurrences(tries_total, 0) == 1){
-                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 75%";
+                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 7.5";
                     this.shadowRoot.querySelector('.verify-icon-T').style.color = "#25ac8a";
                 }else if(countOcurrences(tries_total, 0) == 2){
-                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 50%";
+                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 5";
                     this.shadowRoot.querySelector('.verify-icon-T').style.color = "#25ac8a";
                 }else if(countOcurrences(tries_total, 0) == 3){
-                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 25%";
+                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 2.5";
                     this.shadowRoot.querySelector('.verify-icon-T').style.color = "#25ac8a";
                 }else{
-                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 0% :(";
+                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 0 :(";
                     this.shadowRoot.querySelector('.verify-icon-T').style.color = "#25ac8a";
                 
                 }

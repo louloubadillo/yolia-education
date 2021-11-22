@@ -7,7 +7,7 @@
  function createSumas(str){
     let figureIcon = document.createElement('p');
     let figures = [{"suma":"80 + 3", "res":"83"}, {"suma":"70 + 7", "res":"77"}, {"suma":"64 + 2", "res":"66"}, {"suma":"56 + 22", "res":"78"}, {"suma":"44 + 23", "res":"67"}, {"suma":"65 + 33", "res":"98"}, {"suma":"94 + 15", "res":"109"}, {"suma":"34 + 17", "res":"51"}, 
-    {"suma":"71 + 4", "res":"75"}, {"suma":"29 + 7", "res":"36"}, {"suma":"48 + 4", "res":"52"} ];
+    {"suma":"71 + 4", "res":"75"}, {"suma":"29 + 7", "res":"36"}, {"suma":"48 + 4", "res":"52"}, {"suma":"31 + 4", "res":"35"}, {"suma":"12 + 13", "res":"25"}, {"suma":"14 + 8", "res":"22"}, {"suma":"31 + 11", "res":"42"}, {"suma":"32 + 3", "res":"35"}, {"suma":"47 + 4", "res":"51"}, {"suma":"17 + 14", "res":"31"}, {"suma":"55 + 6", "res":"61"}, {"suma":"63 + 7", "res":"70"}, {"suma":"37 + 8", "res":"45"}, {"suma":"64 + 13", "res":"77"}, {"suma":"55 + 4", "res":"59"}, {"suma":"34 + 11", "res":"45"}, {"suma":"28 + 27", "res":"55"} ];
     let limit = figures.length-1; 
     let rand = Math.round(Math.random() * limit);
     str[0] = figures[rand].res;
@@ -212,20 +212,20 @@ class Sumas extends HTMLElement {
             const tries_total = [this.tries, this.tries2, this.tries3, this.tries4];
             const countOcurrences = (arr, val) => arr.reduce((a, v) => (v === val ? a + 1: a), 0);
             if(tries_total.find(element => element == 0) == undefined){
-                this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 100%";
+                this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 10";
                 this.shadowRoot.querySelector('.verify-icon-T').style.color = "#25ac8a";
             }else{
                 if (countOcurrences(tries_total, 0) == 1){
-                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 75%";
+                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 7.5";
                     this.shadowRoot.querySelector('.verify-icon-T').style.color = "#25ac8a";
                 }else if(countOcurrences(tries_total, 0) == 2){
-                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 50%";
+                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 5";
                     this.shadowRoot.querySelector('.verify-icon-T').style.color = "#25ac8a";
                 }else if(countOcurrences(tries_total, 0) == 3){
-                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 25%";
+                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 2.5";
                     this.shadowRoot.querySelector('.verify-icon-T').style.color = "#25ac8a";
                 }else{
-                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 0% :(";
+                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 0 :(";
                     this.shadowRoot.querySelector('.verify-icon-T').style.color = "#25ac8a";
                 
                 }

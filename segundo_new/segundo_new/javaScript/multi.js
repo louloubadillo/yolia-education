@@ -6,7 +6,8 @@
  function createMulti(str){
     let figureIcon = document.createElement('p');
     let figures = [{"multi":"7 x 8", "res":"56"}, {"multi":"8 x 5", "res":"40"}, {"multi":"8 x 9", "res":"72"}, {"multi":"9 x 3", "res":"27"}, {"multi":"3 x 8", "res":"24"}, {"multi":"9 x 0", "res":"0"}, {"multi":"9 x 9", "res":"81"}, {"multi":"8 x 7", "res":"56"}, 
-    {"multi":"2 x 4", "res":"8"}, {"multi":"3 x 5", "res":"15"}, {"multi":"8 x 8", "res":"64"}, {"multi":"9 x 2", "res":"18"}];
+    {"multi":"2 x 4", "res":"8"}, {"multi":"3 x 5", "res":"15"}, {"multi":"8 x 8", "res":"64"}, {"multi":"9 x 2", "res":"18"}, {"multi":"5 x 8", "res":"40"}, {"multi":"5 x 2", "res":"10"}, {"multi":"6 x 4", "res":"24"}, {"multi":"7 x 3", "res":"21"}, {"multi":"8 x 4", "res":"32"}, {"multi":"7 x 9", "res":"63"}, {"multi":"4 x 4", "res":"16"}, {"multi":"3 x 8", "res":"24"}, {"multi":"8 x 5", "res":"40"}, {"multi":"2 x 4", "res":"8"}, {"multi":"6 x 6", "res":"36"}, {"multi":"7 x 7", "res":"49"}, {"multi":"9 x 3", "res":"27"}
+    ];
     let limit = figures.length-1; 
     let rand = Math.round(Math.random() * limit);
     str[0] = figures[rand].res;
@@ -211,20 +212,20 @@ class Multi extends HTMLElement {
             const tries_total = [this.tries, this.tries2, this.tries3, this.tries4];
             const countOcurrences = (arr, val) => arr.reduce((a, v) => (v === val ? a + 1: a), 0);
             if(tries_total.find(element => element == 0) == undefined){
-                this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 100%";
+                this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 10";
                 this.shadowRoot.querySelector('.verify-icon-T').style.color = "#25ac8a";
             }else{
                 if (countOcurrences(tries_total, 0) == 1){
-                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 75%";
+                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 7.5";
                     this.shadowRoot.querySelector('.verify-icon-T').style.color = "#25ac8a";
                 }else if(countOcurrences(tries_total, 0) == 2){
-                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 50%";
+                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 5";
                     this.shadowRoot.querySelector('.verify-icon-T').style.color = "#25ac8a";
                 }else if(countOcurrences(tries_total, 0) == 3){
-                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 25%";
+                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 2.5";
                     this.shadowRoot.querySelector('.verify-icon-T').style.color = "#25ac8a";
                 }else{
-                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 0% :(";
+                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 0 :(";
                     this.shadowRoot.querySelector('.verify-icon-T').style.color = "#25ac8a";
                 
                 }

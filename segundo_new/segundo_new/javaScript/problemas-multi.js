@@ -95,7 +95,7 @@ ProbMultiTemplate.innerHTML = `
             <button class='verify'>Revisar</button>
             <p class="verify-icon"></p>
         </div>
-
+        <br>
         <div>
             <p class= 'tries2'></p>
             <p>Hay 6 amigos en una habitación, si cada uno coopera para comprar una pizza con la cantidad de dinero mostrada debajo ¿Cuánto dinero tenemos en total?</p>
@@ -105,7 +105,7 @@ ProbMultiTemplate.innerHTML = `
             <button class='verify2'>Revisar</button>
             <p class="verify-icon2"></p>
         </div>
-
+        <br>
         <div>
             <p class= 'tries3'></p>
             <p>Por cada profesor hay 10 alumnos, si tenemos la cantidad de profesores mostrada en la imágen de abajo. ¿Cuántos alumnos hay?</p>
@@ -114,7 +114,7 @@ ProbMultiTemplate.innerHTML = `
             <button class='verify3'>Revisar</button>
             <p class="verify-icon3"></p>
         </div>
-
+        <br>
         <div>
             <p class= 'tries4'></p>
             <p>Por cada canasta hay 7 balones de fútbol soccer y tenemos el número de canastas mostradas debajo ¿Cuántos balones hay?</p>
@@ -275,20 +275,20 @@ class ProbMulti extends HTMLElement {
             const tries_total = [this.tries, this.tries2, this.tries3, this.tries4];
             const countOcurrences = (arr, val) => arr.reduce((a, v) => (v === val ? a + 1: a), 0);
             if(tries_total.find(element => element == 0) == undefined){
-                this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 100%";
+                this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 10";
                 this.shadowRoot.querySelector('.verify-icon-T').style.color = "#25ac8a";
             }else{
                 if (countOcurrences(tries_total, 0) == 1){
-                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 75%";
+                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 7.5";
                     this.shadowRoot.querySelector('.verify-icon-T').style.color = "#25ac8a";
                 }else if(countOcurrences(tries_total, 0) == 2){
-                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 50%";
+                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 5";
                     this.shadowRoot.querySelector('.verify-icon-T').style.color = "#25ac8a";
                 }else if(countOcurrences(tries_total, 0) == 3){
-                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 25%";
+                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 2.5";
                     this.shadowRoot.querySelector('.verify-icon-T').style.color = "#25ac8a";
                 }else{
-                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 0% :(";
+                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 0 :(";
                     this.shadowRoot.querySelector('.verify-icon-T').style.color = "#25ac8a";
                 
                 }

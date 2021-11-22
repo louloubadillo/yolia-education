@@ -5,7 +5,8 @@
 
  function createMedidas(str){
     let figureIcon = document.createElement('p');
-    let figures = [{"medida":"2m + 70dm + 23cm", "res":"923cm"}, {"medida":"1m + 8dm + 115cm", "res":"295cm"}, {"medida":"3m + 13dm + 58cm", "res":"488cm"}, {"medida":"4m + 37dm + 12cm", "res":"782cm"}, {"medida":"3m + 41dm + 36cm", "res":"746cm"}, {"medida":"2m + 70dm + 23cm", "res":"923cm"},  {"medida":"10m + 20dm + 11cm", "res":"1211cm"}, {"medida":"0m + 12dm + 1000cm", "res":"1120cm"}, {"medida":"7m + 1dm + 22cm", "res":"732cm"}, {"medida":"10m + 0dm + 26cm", "res":"1026cm"}, {"medida":"3m + 70dm + 23cm", "res":"1023cm"}, {"medida":"12m + 100dm +0cm", "res":"2200cm"}];
+    let figures = [{"medida":"2m", "res":"200cm"}, {"medida":"1m", "res":"100cm"}, {"medida":"3m", "res":"300cm"}, {"medida":"4m", "res":"400cm"}, {"medida":"5dm", "res":"50cm"}, {"medida":"7dm", "res":"70cm"},  {"medida":"2dm", "res":"20cm"}, {"medida":"12dm", "res":"120cm"}, {"medida":"1dm", "res":"10cm"}, {"medida":"5m", "res":"500cm"}, {"medida":"6m", "res":"600cm"}, {"medida":"12m", "res":"1200cm"}, {"medida":"4dm", "res":"40cm"}, {"medida":"27dm", "res":"270cm"}, {"medida":"13m", "res":"1300cm"}, {"medida":"13dm", "res":"130cm"}, {"medida":"8m", "res":"800cm"}, {"medida":"6dm", "res":"60cm"}, {"medida":"14dm", "res":"140cm"}, {"medida":"7m", "res":"700cm"}, {"medida":"10m", "res":"1000cm"}, {"medida":"21dm", "res":"210cm"}, {"medida":"11m", "res":"110cm"}, {"medida":"18m", "res":"1800cm"}, {"medida":"16dm", "res":"160cm"}
+    ];
     let limit = figures.length-1; 
     let rand = Math.round(Math.random() * limit);
     str[0] = figures[rand].res;
@@ -24,7 +25,7 @@ MedidasTemplate.innerHTML = `
         <br>
         <div>
             <p class= 'tries'></p>
-            <p>Transforma todas las cantidades a centímetros y efectúa la suma. Escribe tu resultado con la unidad correspondiente.</p>
+            <p>Transforma todas las cantidades a centímetros. Escribe tu resultado con la unidad correspondiente.</p>
             <div class='items' style=" margin: 1vh 1vw;"></div> 
             <input type='text' class='count' style=" margin: 1vh 1vw; color:#000;">
             <button class='verify'>Revisar</button>
@@ -213,20 +214,20 @@ class Medidas extends HTMLElement {
             const tries_total = [this.tries, this.tries2, this.tries3, this.tries4];
             const countOcurrences = (arr, val) => arr.reduce((a, v) => (v === val ? a + 1: a), 0);
             if(tries_total.find(element => element == 0) == undefined){
-                this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 100%";
+                this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 10";
                 this.shadowRoot.querySelector('.verify-icon-T').style.color = "#25ac8a";
             }else{
                 if (countOcurrences(tries_total, 0) == 1){
-                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 75%";
+                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 7.5";
                     this.shadowRoot.querySelector('.verify-icon-T').style.color = "#25ac8a";
                 }else if(countOcurrences(tries_total, 0) == 2){
-                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 50%";
+                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 5";
                     this.shadowRoot.querySelector('.verify-icon-T').style.color = "#25ac8a";
                 }else if(countOcurrences(tries_total, 0) == 3){
-                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 25%";
+                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 2.5";
                     this.shadowRoot.querySelector('.verify-icon-T').style.color = "#25ac8a";
                 }else{
-                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 0% :(";
+                    this.shadowRoot.querySelector('.verify-icon-T').innerHTML = "Calificación: 0 :(";
                     this.shadowRoot.querySelector('.verify-icon-T').style.color = "#25ac8a";
                 
                 }
