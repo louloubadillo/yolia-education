@@ -23,6 +23,7 @@ NumerosTemplate.innerHTML = `
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <div style="display: flex;flex-direction: row;justify-content: center;">
         <br>
+        <p>Escribe tu resultado inicando con mayuscula</p>
         <div style="margin: 2vh 4vw; max-width: 250px;">
             <p class= 'tries'></p>
             <p>Escribe el número con letra</p>

@@ -5,7 +5,11 @@
 
  function createMedidas(str){
     let figureIcon = document.createElement('p');
-    let figures = [{"medida":"2m", "res":"200cm"}, {"medida":"1m", "res":"100cm"}, {"medida":"3m", "res":"300cm"}, {"medida":"4m", "res":"400cm"}, {"medida":"5dm", "res":"50cm"}, {"medida":"7dm", "res":"70cm"},  {"medida":"2dm", "res":"20cm"}, {"medida":"12dm", "res":"120cm"}, {"medida":"1dm", "res":"10cm"}, {"medida":"5m", "res":"500cm"}, {"medida":"6m", "res":"600cm"}, {"medida":"12m", "res":"1200cm"}, {"medida":"4dm", "res":"40cm"}, {"medida":"27dm", "res":"270cm"}, {"medida":"13m", "res":"1300cm"}, {"medida":"13dm", "res":"130cm"}, {"medida":"8m", "res":"800cm"}, {"medida":"6dm", "res":"60cm"}, {"medida":"14dm", "res":"140cm"}, {"medida":"7m", "res":"700cm"}, {"medida":"10m", "res":"1000cm"}, {"medida":"21dm", "res":"210cm"}, {"medida":"11m", "res":"110cm"}, {"medida":"18m", "res":"1800cm"}, {"medida":"16dm", "res":"160cm"}
+    let figures = [
+        {"medida":"2cm + 4cm", "res":"6cm"}, {"medida":"12cm + 4cm", "res":"16cm"}, {"medida":"8cm + 3cm", "res":"11cm"}, {"medida":"2cm + 8cm", "res":"10cm"}, {"medida":"14cm + 5cm", "res":"19cm"}, {"medida":"3cm + 2cm", "res":"5cm"}, {"medida":"5cm + 2cm", "res":"7cm"}, {"medida":"8cm + 5cm", "res":"13cm"}, {"medida":"15cm + 3cm", "res":"18cm"}, {"medida":"16cm + 6cm", "res":"22cm"}, {"medida":"4cm + 4cm", "res":"8cm"}, {"medida":"9cm + 5cm", "res":"14cm"}, {"medida":"17cm + 8cm", "res":"25cm"}, {"medida":"16cm + 8cm", "res":"24cm"},
+        {"medida":"11cm + 8cm", "res":"19cm"}, {"medida":"10cm + 3cm", "res":"13cm"}, {"medida":"13cm + 4cm", "res":"17cm"}, {"medida":"20cm + 6cm", "res":"26cm"}, 
+        {"medida":"23cm + 5cm", "res":"28cm"}, {"medida":"7cm + 4cm", "res":"11cm"}, {"medida":"13cm + 7cm", "res":"20cm"}, {"medida":"5cm + 5cm", "res":"10cm"}, {"medida":"4cm + 11cm", "res":"15cm"}, {"medida":"3cm + 8cm", "res":"11cm"}
+
     ];
     let limit = figures.length-1; 
     let rand = Math.round(Math.random() * limit);
@@ -25,7 +29,7 @@ MedidasTemplate.innerHTML = `
         <br>
         <div>
             <p class= 'tries'></p>
-            <p>Transforma todas las cantidades a centímetros. Escribe tu resultado con la unidad correspondiente.</p>
+            <p>Realiza las siguientes sumas de medidas y escribe tu resultado en la unidad correspondiente.</p>
             <div class='items' style=" margin: 1vh 1vw;"></div> 
             <input type='text' class='count' style=" margin: 1vh 1vw; color:#000;">
             <button class='verify'>Revisar</button>

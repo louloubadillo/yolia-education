@@ -69,15 +69,6 @@ CentenasTemplate.innerHTML = `
         </div>
 
         <div style="margin: 2vh 4vw; max-width: 250px;">
-            <p class= 'tries2'></p>
-            <p>Escribe cúal es la centena del siguiente número</p>
-            <div class='items2' style=" margin: 1vh 1vw;"></div> 
-            <input type='text' class='count2' style=" margin: 1vh 1vw; color:#000;">
-            <button class='verify2'>Revisar</button>
-            <p class="verify-icon2"></p>
-        </div>
-
-        <div style="margin: 2vh 4vw; max-width: 250px;">
             <p class= 'tries3'></p>
             <p>Escribe cúal es la decena del siguiente número</p>
             <div class='items3' style=" margin: 1vh 1vw;"></div> 
@@ -94,7 +85,18 @@ CentenasTemplate.innerHTML = `
             <button class='verify4'>Revisar</button>
             <p class="verify-icon4"></p>
         </div>
+
+        <div style="margin: 2vh 4vw; max-width: 250px;">
+            <p class= 'tries2'></p>
+            <p>Escribe cúal es la unidad del siguiente número</p>
+            <div class='items2' style=" margin: 1vh 1vw;"></div> 
+            <input type='text' class='count2' style=" margin: 1vh 1vw; color:#000;">
+            <button class='verify2'>Revisar</button>
+            <p class="verify-icon2"></p>
+        </div>
     </div>
+
+    
 
     <div style="margin: 2vh 4vw; max-width: 250px;">
             <button class='verify-T'>Revisar Preguntas</button>
@@ -125,7 +127,7 @@ class Centenas extends HTMLElement {
         console.log(this.items)
         this.items.forEach(item => {
             this.shadowRoot.querySelector('.items').append( createNumbersCen(this.str) );
-            this.shadowRoot.querySelector('.items2').append( createNumbersCen(this.str2) );
+            this.shadowRoot.querySelector('.items2').append( createNumbersUni(this.str2) );
             this.shadowRoot.querySelector('.items3').append( createNumbersDec(this.str3) );
             this.shadowRoot.querySelector('.items4').append( createNumbersUni(this.str4) );
         })

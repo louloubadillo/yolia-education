@@ -6,15 +6,15 @@
 
  function createNumbersOrd(str){
     let figureIcon = document.createElement('p');
-    let figures = [{"num":"60°", "escrito":"Sexagésimo"},{"num":"14°", "escrito":"Decimo cuarto"},{"num":"10°", "escrito":"Décimo"},{"num":"37°", "escrito":"Trigésimo séptimo"},{"num":"56°", "escrito":"Quincuagésimo sexto"},{"num":"72°", "escrito":"Septuagésimo segundo"},
-    {"num":"28°", "escrito":"Vigésimo octavo"},{"num":"13°", "escrito":"Decimo tercero"},{"num":"45°", "escrito":"Cuadragésimo quinto"},{"num":"41°", "escrito":"Cuadragésimo primero"},{"num":"8°", "escrito":"Octavo"},{"num":"18°", "escrito":"Decimo octavo"},{"num":"23°", "escrito":"Vigésimo tercero"},{"num":"39°", "escrito":"Trigésimo noveno"}];
+    let figures = [{"num":"60", "escrito":"Sexagésimo"},{"num":"14", "escrito":"Decimo cuarto"},{"num":"10", "escrito":"Décimo"},{"num":"37", "escrito":"Trigésimo séptimo"},{"num":"56", "escrito":"Quincuagésimo sexto"},{"num":"72", "escrito":"Septuagésimo segundo"},
+    {"num":"28", "escrito":"Vigésimo octavo"},{"num":"13", "escrito":"Decimo tercero"},{"num":"45", "escrito":"Cuadragésimo quinto"},{"num":"41", "escrito":"Cuadragésimo primero"},{"num":"8", "escrito":"Octavo"},{"num":"18", "escrito":"Decimo octavo"},{"num":"23", "escrito":"Vigésimo tercero"},{"num":"39", "escrito":"Trigésimo noveno"}];
     let limit = figures.length-1; 
     let rand = Math.round(Math.random() * limit);
-    str[0] = figures[rand].escrito;
-    figureIcon.innerText = figures[rand].num;
+    str[0] = figures[rand].num;
+    figureIcon.innerText = figures[rand].escrito;
     figureIcon.ariaHidden = true;
     figureIcon.style.margin = "0px 3px";
-    figureIcon.style.fontSize = "40px";
+    figureIcon.style.fontSize = "25px";
     figureIcon.style.display = "inline";
     return figureIcon
 }
@@ -26,7 +26,7 @@ NumerosOrdTemplate.innerHTML = `
         <br>
         <div style="margin: 2vh 4vw; max-width: 250px;">
             <p class= 'tries'></p>
-            <p>Escribe con letra el número ordinal</p>
+            <p>Escribe el número que corresponda con el ordinal escrito.</p>
             <div class='items' style=" margin: 1vh 1vw;"></div> 
             <input type='text' class='count' style=" margin: 1vh 1vw; color:#000;">
             <button class='verify'>Revisar</button>
@@ -35,7 +35,7 @@ NumerosOrdTemplate.innerHTML = `
 
         <div style="margin: 2vh 4vw; max-width: 250px;">
             <p class= 'tries2'></p>
-            <p>Escribe con letra el número ordinal</p>
+            <p>Escribe el número que corresponda con el ordinal escrito.</p>
             <div class='items2' style=" margin: 1vh 1vw;"></div> 
             <input type='text' class='count2' style=" margin: 1vh 1vw; color:#000;">
             <button class='verify2'>Revisar</button>
@@ -44,7 +44,7 @@ NumerosOrdTemplate.innerHTML = `
 
         <div style="margin: 2vh 4vw; max-width: 250px;">
             <p class= 'tries3'></p>
-            <p>Escribe con letra el número ordinal</p>
+            <p>Escribe el número que corresponda con el ordinal escrito.</p>
             <div class='items3' style=" margin: 1vh 1vw;"></div> 
             <input type='text' class='count3' style=" margin: 1vh 1vw; color:#000;">
             <button class='verify3'>Revisar</button>
@@ -53,7 +53,7 @@ NumerosOrdTemplate.innerHTML = `
 
         <div style="margin: 2vh 4vw; max-width: 250px;">
             <p class= 'tries4'></p>
-            <p>Escribe con letra el número ordinal</p>
+            <p>Escribe el número que corresponda con el ordinal escrito.</p>
             <div class='items4' style=" margin: 1vh 1vw;"></div> 
             <input type='text' class='count4' style=" margin: 1vh 1vw; color:#000;">
             <button class='verify4'>Revisar</button>
