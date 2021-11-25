@@ -7,7 +7,7 @@
  function createRestas(str){
     let figureIcon = document.createElement('p');
     let figures = [{"resta":"17 - 5", "res":"12"}, {"resta":"157 - 100", "res":"57"}, {"resta":"204 - 101", "res":"103"}, {"resta":"34 - 3", "res":"31"}, {"resta":"58 - 9", "res":"49"}, {"resta":"85 - 11", "res":"74"}, {"resta":"87 - 5", "res":"82"}, {"resta":"78 - 23", "res":"55"},
-    {"resta":"85 - 13", "res":"72"}, {"resta":"20 - 18", "res":"2"}, {"resta":"99 - 19", "res":"80"}, {"resta":"44 - 4", "res":"40"}, {"resta":"51 - 3", "res":"48"}, {"resta":"22 - 9", "res":"13"}, {"resta":"67 - 25", "res":"42"}, {"resta":"84 - 15", "res":"69"}, {"resta":"18 - 5", "res":"13"}, {"resta":"33 - 4", "res":"29"}, {"resta":"56 - 16", "res":"40"}, {"resta":"81 - 4", "res":"77"}, {"resta":"90 - 13", "res":"77"}, {"resta":"75 - 21", "res":"54"}, {"resta":"68 - 15", "res":"53"}, {"resta":"12 - 9", "res":"3"}, {"resta":"34 - 8", "res":"26"}
+    {"resta":"85 - 13", "res":"72"}, {"resta":"20 - 18", "res":"2"}, {"resta":"99 - 19", "res":"80"}, {"resta":"44 - 4", "res":"40"}, {"resta":"51 - 3", "res":"48"}, {"resta":"22 - 9", "res":"13"}, {"resta":"67 - 25", "res":"42"}, {"resta":"84 - 15", "res":"69"}, {"resta":"18 - 5", "res":"13"}, {"resta":"33 - 4", "res":"29"}, {"resta":"56 - 16", "res":"40"}, {"resta":"81 - 4", "res":"77"}, {"resta":"90 - 13", "res":"77"}, {"resta":"75 - 21", "res":"54"}, {"resta":"68 - 15", "res":"53"}, {"resta":"12 - 9", "res":"3"}, {"resta":"34 - 8", "res":"26"}, {"resta":"5 - 2", "res":"3"},{"resta":"4 - 2", "res":"2"},{"resta":"10 - 8", "res":"2"},{"resta":"55 - 8", "res":"47"},{"resta":"30 - 8", "res":"22"},{"resta":"30 - 6", "res":"24"},{"resta":"12 - 8", "res":"4"}
     ];
     let limit = figures.length-1; 
     let rand = Math.round(Math.random() * limit);
