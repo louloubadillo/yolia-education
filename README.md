@@ -20,6 +20,21 @@ Nuestro objetivo fue implementar ejercicios divertidos y atractivos para niños 
     - Medidas
     - Tiempo
 2. Segundo Grado
+    - Figuras
+    - Números
+    - Series
+    - Cifras
+    - Sumas
+    - Restas
+    - Números Ordinales
+    - Agrupar Objetos
+    - Multiplicación
+    - Problemas de Suma
+    - Problemas de Resta
+    - Problemas de Cifras
+    - Problemas de Multiplicación
+    - Meses del Calendario
+    - Medidas
 3. Tercer Grado
     - Sumas
     - Restas
