@@ -20,7 +20,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color: hsl(195, 41%, 77%)
+    background-color: hsl(0, 0%, 98%)
 }
 
 .nav img {
