@@ -4,11 +4,33 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Yolia Educación</title>
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="primero/css/styles.css">
+        <link rel="stylesheet" href="primero/css/questions.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet"> 
+        <script src="https://kit.fontawesome.com/b300d4e394.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
+        <script src="primero/operation.js" defer></script>
+        <script src="primero/sort.js" defer></script>
+        <script src="primero/basic.js" defer></script>
+        <script src="primero/clasificar.js" defer></script>
+        <script src="primero/old/numeros.js" defer></script>
+        <script src="primero/contar.js" defer></script>
+        <script src="primero/agrupar.js" defer></script>
+        <script src="primero/identificar.js" defer></script>
+        <script src="primero/seleccionar.js" defer></script>
+        <script src="primero/simbolos.js" defer></script>
+        <script src="primero/escribir.js" defer></script>
+        <script src="primero/tiempo.js" defer></script>
+        <script src="primero/decenas.js" defer></script>
+        <script src="primero/question.js" defer></script>
+        <script src="primero/main.js" defer></script>
+        <script src="primero/drag-and-drop.js" defer></script>
+        
+        
     </head>
     <body>
         <div class="nav">
@@ -23,7 +45,7 @@
         </div>
 
         <div class="grade-title">
-            <span class="fa-stack" style="color: #e47ed2;">
+            <span class="fa-stack" style="color: #fca546;">
                 <span class="fa fa-circle-o fa-stack-2x"></span>
                 <strong class="fa-stack-1x"> 1 </strong>
             </span>
@@ -32,65 +54,135 @@
         </div>
 
         <div class="content">
-            <hr>
+            <hr id="section-0">
             <div class="tema">
                 <h3>A contar</h3>
+                <details>
+                    <summary>Ver preguntas</summary>
+                </details>
+                <div class="center score" style="display: none;"></div>
             </div>
-            <hr>
-        <div class="tema">
-                <h3>Agrupemos</h3>
-            </div>
-            <hr>
+            <hr id="section-1">
             <div class="tema">
-                <h3>Clasificación</h3>
+                <h3>Agrupemos</h3>
+                <details>
+                    <summary>Ver preguntas</summary>
+                </details>
+                <div class="center score" style="display: none;"></div>
             </div>
-            <hr>
+            <hr id="section-2">
             <div class="tema">
                 <h3>Figuras</h3>
+                <details>
+                    <summary>Ver preguntas</summary>
+                </details>
+                <div class="center score" style="display: none;"></div>
             </div>
-            <hr>
+
+            <hr id="section-3">
+            <div class="tema">
+                <h3>Clasificar</h3>
+                <details>
+                    <summary>Ver preguntas</summary>
+                </details>
+                <div class="center score" style="display: none;"></div>
+            </div>
+            <hr id="section-4">
             <div class="tema">
                 <h3>Símbolos</h3>
+                <details>
+                    <summary>Ver preguntas</summary>
+                </details>
+                <div class="center score" style="display: none;"></div>
             </div>
-            <hr>
+            <hr id="section-5">
             <div class="tema">
                 <h3>Escribir Números</h3>
+                <details>
+                    <summary>Ver preguntas</summary>
+                </details>
+                <div class="center score" style="display: none;"></div>
             </div>
-            <hr>
+            <hr id="section-6">
              <div class="tema">
                 <h3>Relación de Orden</h3>
+                <details>
+                    <summary>Ver preguntas</summary>
+                </details>
+                <div class="center score" style="display: none;"></div>
             </div>
-            <hr>
+            <hr id="section-7">
             <div class="tema">
                 <h3>Sumemos hasta el 20</h3>
+                <details>
+                    <summary>Ver preguntas</summary>
+                </details>
+                <div class="center score" style="display: none;"></div>
             </div>
-            <hr>
+            <hr id="section-8">
              <div class="tema">
                 <h3>Sumemos hasta el 40</h3>
+                <details>
+                    <summary>Ver preguntas</summary>
+                </details>
+                <div class="center score" style="display: none;"></div>
             </div>
-            <hr>
+            <hr id="section-9">
             <div class="tema">
-            <h3>Decenas</h3>
+                <h3>Sumemos Decenas</h3>
+                <details>
+                    <summary>Ver preguntas</summary>
+                </details>
+                <div class="center score" style="display: none;"></div>
             </div>
-            <hr>
+            <hr id="section-10">
             <div class="tema">
                 <h3>Restemos hasta el 20</h3>
+                <details>
+                    <summary>Ver preguntas</summary>
+                </details>
+                <div class="center score" style="display: none;"></div>
             </div>
-            <hr>
+            <hr id="section-11">
             <div class="tema">
                 <h3>Restemos hasta el 40</h3>
+                <details>
+                    <summary>Ver preguntas</summary>
+                </details>
+                <div class="center score" style="display: none;"></div>
             </div>
-            <hr>
+            <hr id="section-12">
             <div class="tema">
-            <h3>Números Ordinales</h3>
+                <h3>Números Ordinales</h3>
+                <details>
+                    <summary>Ver preguntas</summary>
+                </details>
+                <div class="center score" style="display: none;"></div>
             </div>
-            <hr>
+            <hr id="section-13">
             <div class="tema">
                 <h3>Medidas</h3>
+                <details>
+                    <summary>Ver preguntas</summary>
+                </details>
+                <div class="center score" style="display: none;"></div>
             </div>
-            <hr>
+            <hr id="section-14">
             <div class="tema">
                 <h3>Tiempo</h3>
+                <details>
+                    <div id="leyenda"><p>Recuerda que las horas en la mañana son de las 00 a las 11 y en la tarde son de las 12 a las 23.<br>
+                    También recuerda que el formato de hora es el siguiente: HH:MM. <br>
+                    Por ejemplo: las tres y cuarenta y siete de la mañana son las 03:47 </p></div>
+                    <summary>Ver preguntas</summary>
+                </details>
+                <div class="center score" style="display: none;"></div>
+            </div>
+
+            <hr>
+            <div class="tema">
+                <button class="verify check-grade" onclick="showTotalScore()">Terminar prueba</button>
+                <p id="total-score">Calificación</p>
             </div>
         </div>
     </body>
