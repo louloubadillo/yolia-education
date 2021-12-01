@@ -1,7 +1,7 @@
 // Block for multiplication of two numbers greater than 10
 
 class BigMultiplication {
-    constructor(nums, id, answer) {
+    constructor(nums, id, answer, drag) {
         this.block = document.createElement('div');
         this.block.className = 'part';
         this.total = 1;
@@ -13,9 +13,9 @@ class BigMultiplication {
         inpt.style.alignSelf = 'flex-end';
 
         // Fill with droppable objects
-        if(nums.length == 1) {
+        if(drag) {
             let q = '';
-            for(let i = 0; i < nums[0]; i++){
+            for(let i = 0; i < nums.length; i++){
                 q += '<div class="droppable"></div>';
             }
 

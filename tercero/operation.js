@@ -74,7 +74,7 @@ function makeRandom(amt, sign, range) {
 // - multiplication
 // - division
 class Operation {
-    constructor(nums, sign, id, answer) {
+    constructor(nums, sign, id, answer, drag) {
         this.block = document.createElement('div');
         this.block.className = 'part';
         this.total = 1;
@@ -82,21 +82,22 @@ class Operation {
         let length = answer.toString().length*0.6 + 0.6;
 
         // Fill with droppable objects
-        if(nums.length == 1) {
+        if(drag) {
             if(sign == '/') {
                 this.block.style = "flex-direction: row;";
                 this.block.insertAdjacentHTML("afterbegin", `
-                <div class="droppable" style="margin-right: 0.29em;"></div>
+                <div class="droppable check" correct="${nums[0]}" style="margin-right: 0.29em;"></div>
                 <div style="flex-direction: column;">
                     <input type="number" id="${id}" style="width: ${length}em;text-align: left;padding-left: 0.3em;margin-right: 0.38em;margin-left: 0.29em;">
                     <label class="divisions" for="${id}">
-                        <div class="droppable"></div>
+                        <div class="droppable check" correct="${nums[1]}"></div>
                     </label>
                 </div>`);
             } else {
                 let q = '';
-                for(let i = 0; i < nums[0]; i++){
-                    q += '<div class="droppable"></div>';
+                for(let i = 0; i < nums.length; i++){
+                    let c = sign == '-' ? ` check" correct="${nums[i]}` : '';
+                    q += `<div class="droppable${c}"></div>`;
                 }
 
                 this.block.insertAdjacentHTML("afterbegin", `
@@ -104,7 +105,7 @@ class Operation {
                     <p class="sign">${sign}</p>
                     <div style="width: 4.1em;">${q}</div>
                 </div>
-                <input type="text" id="${id}" style="text-align: right; width: 5em;margin-right: 0.38em;">`)
+                <input type="number" id="${id}" style="text-align: right; width: 5em;margin-right: 0.38em;">`)
             }
         } 
         // Fill with numbers
@@ -127,7 +128,7 @@ class Operation {
 
                 this.block.insertAdjacentHTML("afterbegin", `
                 <label class="regular" for="${id}" style="width: 5em;">${question}</label>
-                <input type="text" id="${id}" style="width: 5em;">`);
+                <input type="number" id="${id}" style="width: 5em;">`);
             }
         }
 

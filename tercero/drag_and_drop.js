@@ -3,7 +3,7 @@
 const moverElements = document.querySelectorAll('.mover');
 const draggableElements = document.querySelectorAll(".draggable");
 const droppableElements = document.querySelectorAll(".droppable");
-
+const checkElements = document.querySelectorAll(".check");
 
 draggableElements.forEach(elem => {
     elem.addEventListener("dragstart", dragStart); // Fires as soon as the user starts dragging an item - This is where we can define the drag data
@@ -26,6 +26,11 @@ moverElements.forEach(elem => {
     elem.addEventListener("dragover", dragOver);
     elem.addEventListener("dragleave", dragLeave);
     elem.addEventListener("drop", moverDrop);
+});
+
+checkElements.forEach(elem => {
+    elem.removeEventListener("drop", drop);
+    elem.addEventListener("drop", dropCheck);
 });
 
 function moverDragStart(event) {
@@ -99,4 +104,22 @@ function drop(event) {
     let cntt = event.dataTransfer.getData("text");
     event.target.innerText = cntt;
     event.target.style.width = `${cntt.length*0.6 + 0.6}em`;
+}
+
+function dropCheck(event) {
+    event.preventDefault();
+
+    // Only if object to be dropped is the correct number
+    const corr = event.target.getAttribute('correct');
+    const cntt = event.dataTransfer.getData("text");
+
+    if(cntt == corr) {
+        // Change colour
+        event.target.classList.remove("drag-enter");
+        event.target.style.backgroundColor = "#ffffff7e";
+        
+        // Add text and reshape
+        event.target.innerText = cntt;
+        event.target.style.width = `${cntt.length*0.6 + 0.6}em`;
+    }
 }

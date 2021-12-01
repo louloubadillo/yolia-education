@@ -245,13 +245,14 @@ input {
     background-color: #85177d;
 }
 
-.check-score {
-    background-color: #25ac8a;
-    width: 10em;
+.close-section {
+    color: black;
+    background-color: #98b2c1;
+    width: 8.5em;
     margin-top: 1em;
 }
-.check-score:hover {
-    background-color: #219477;
+.close-section:hover {
+    background-color: #80939d;
 }
 
 .center {
@@ -345,4 +346,12 @@ svg {
     margin-bottom: 2vh;
     font-size: 1.2em;
     font-weight: bold;
+}
+
+.question:last-child {
+    margin-bottom: 0;
+}
+
+popup-info {
+    cursor: help;
 }

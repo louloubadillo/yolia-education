@@ -31,7 +31,7 @@ const questionTemplates = [
         ],
         [
             "basic",
-            "Cristina y Marcos fueron a comparar juguetes. El juguete costó int1 pesos y ellos tenían int2 pesos. <br><br> ¿Cuánto dinero les quedó?",
+            "Cristina y Marcos fueron a comparar juguetes. El juguete costó int2 pesos y ellos tenían int1 pesos. <br><br> ¿Cuánto dinero les quedó?",
             ["int1", "int2"],
             [[10, 20, 2], [20, 30, 2]],
             "-",
@@ -75,7 +75,7 @@ const questionTemplates = [
             "basic-drag",
             "Pedro decidió ahorrar para comprarse un juego de Nintendo. Todos los meses ahorra int1 pesos. <br><br> ¿Cuánto llevará ahorrado al cabo de int2 meses? <br>Arrastra los dibujos para armar la multiplicación.",
             ["int1", "int2"],
-            [[20, 30], [6, 11]],
+            [[10, 20], [6, 10]],
             "×",
             [["fas fa-coins", ""], ["far fa-calendar-alt", ""]]
         ],
@@ -83,7 +83,7 @@ const questionTemplates = [
             "basic",
             "Un frutero vende el kilo de manzanas a int1 pesos. Estefanía compró int2 kilos. <br><br>¿Cuánto gastó?",
             ["int1", "int2"],
-            [[50, 70], [2, 4]],
+            [[10, 30], [2, 4]],
             "×",
             [["fas fa-apple-alt", ""], ["fas fa-weight", ""]]
         ]
@@ -169,7 +169,7 @@ const questionTemplates = [
             ["int2", "int1"],
             [4, 10, 0],
             "/",
-            [["fas fa-random", ""], ["fas fa-layer-group", ""]]
+            [["fas fa-layer-group", ""], ["fas fa-random", ""]]
         ],
         [
             "basic",
@@ -213,11 +213,11 @@ const questionTemplates = [
         ],
         [
             "basic-drag",
-            "En tercer grado hay int1 alumnos. Hay int2 secciones. <br><br> ¿Cuántos alumnos hay en cada sección?  <br> Arrastra los dibujos para armar la división.",
+            "En tercer grado hay int1 alumnos. Se quiere dividir el grado en int2 secciones. <br><br> ¿Cuántos alumnos hay en cada sección?  <br> Arrastra los dibujos para armar la división.",
             ["int2", "int1"],
             [30, 40, 0],
             "/",
-            [["fas fa-users", ""], ["fas fa-object-group", ""]]
+            [["fas fa-object-group", ""], ["fas fa-users", ""]]
         ],
     ],
     [ // √ sección 9
@@ -231,7 +231,7 @@ const questionTemplates = [
         ],
         [
             "basic-drag",
-            "En una hacienda se sembraron int1 plantas de zanahoria en int2 filas. <br><br> ¿Cuántas plantas hay en cada fila? <br> Arrastra los dibujos para armar la división.",
+            "En una hacienda se repartieron int1 plantas de zanahoria en int2 filas. <br><br> ¿Cuántas plantas hay en cada fila? <br> Arrastra los dibujos para armar la división.",
             ["int2", "int1"],
             [120, 140, 0],
             "/",
@@ -251,7 +251,7 @@ const questionTemplates = [
             ["int2", "int1"],
             [160, 180, 0],
             "/",
-            [["fas fa-boxes", ""], ["fas fa-apple-alt", ""]]
+            [["fas fa-filter", "font-size: 13vh;"], ["fas fa-apple-alt", ""]]
         ]
     ],
     [ // √ sección 10
@@ -271,7 +271,7 @@ const questionTemplates = [
             "¿Cuántas cajas se pueden llenar? <br> Arrastra los dibujos para armar la división.",
             "Un kilo de chiles cuesta int3 pesos. <br> ¿Cuánto costarán los int1 kilos? <br> Arrastra los dibujos para armar la multiplicación.",
             ["int1", "int2", "int3"],
-            [[150, 180], [2, 5]],
+            [[100, 300], [5, 10]],
             ["/", "×"],
             [["fas fa-pepper-hot", ""], ["fas fa-box-open", ""], ["fas fa-coins", ""]]
         ]
@@ -360,28 +360,28 @@ const questionTemplates = [
     [ // √ sección 15
         [
             "units",
-            "Un río tiene int1 <em>kilómetros</em> de longitud. <br> ¿Cuántos <em>metros</em> de longitud tiene el río?",
+            "Un río tiene int1 <em>kilómetros</em> de longitud. <br> ¿Cuántos <em>metros</em> de longitud tiene el río? <popup-info>1 kilómetro = 1000 metros</popup-info>",
             [3, 8, 1],
             3,
             "fas fa-water"
         ],
         [
             "units",
-            "Una cama mide int1 <em>centímetros</em> de largo. <br> ¿Cuántos <em>metros</em> mide de largo?",
+            "Una cama mide int1 <em>centímetros</em> de largo. <br> ¿Cuántos <em>metros</em> mide de largo? <popup-info>1 centímetro = 0.01 metros</popup-info>",
             [150, 200, 0],
             -2,
             "fas fa-bed"
         ],
         [
             "units",
-            "Para hacer pollo hervido se necesita llenar una olla con int1 <em>litros</em> de agua. <br> ¿Cuántos <em>mililitros</em> de agua se necesitan para llenar la olla?",
+            "Para hacer pollo hervido se necesita llenar una olla con int1 <em>litros</em> de agua. <br> ¿Cuántos <em>mililitros</em> de agua se necesitan para llenar la olla? <popup-info>1 litro = 1000 militros</popup-info>",
             [6, 10, 2],
             3,
             "fas fa-drumstick-bite"
         ],
         [
             "units",
-            "El equipaje de Fernando pesa int1 <em>gramos</em>.  <br> ¿Cuántos <em>kilogramos</em> pesa?",
+            "El equipaje de Fernando pesa int1 <em>gramos</em>.  <br> ¿Cuántos <em>kilogramos</em> pesa? <popup-info>1 gramo = 0.001 kilogramos</popup-info>",
             [2000, 3000, 0],
             -3,
             "fas fa-suitcase-rolling"
